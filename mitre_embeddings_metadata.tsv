@@ -1,0 +1,824 @@
+ID	Name	Type
+T1055.011	Extra Window Memory Injection	Adversaries may inject malicious code into process via Extra Window Memory (EWM) in order to evade p
+T1053.005	Scheduled Task	Adversaries may abuse the Windows Task Scheduler to perform task scheduling for initial or recurring
+T1205.002	Socket Filters	Adversaries may attach filters to a network socket to monitor then activate backdoors used for persi
+T1066	Indicator Removal from Tools	If a malicious tool is detected and quarantined or otherwise curtailed, an adversary may be able to 
+T1560.001	Archive via Utility	Adversaries may use utilities to compress and/or encrypt collected data prior to exfiltration. Many 
+T1021.005	VNC	Adversaries may use [Valid Accounts](https://attack.mitre.org/techniques/T1078) to remotely control 
+T1047	Windows Management Instrumentation	Adversaries may abuse Windows Management Instrumentation (WMI) to execute malicious commands and pay
+T1156	Malicious Shell Modification	Adversaries may establish persistence through executing malicious commands triggered by a user’s she
+T1113	Screen Capture	Adversaries may attempt to take screen captures of the desktop to gather information over the course
+T1027.011	Fileless Storage	Adversaries may store data in "fileless" formats to conceal malicious activity from defenses. Filele
+T1067	Bootkit	A bootkit is a malware variant that modifies the boot sectors of a hard drive, including the Master 
+T1037	Boot or Logon Initialization Scripts	Adversaries may use scripts automatically executed at boot or logon initialization to establish pers
+T1557	Adversary-in-the-Middle	Adversaries may attempt to position themselves between two or more networked devices using an advers
+T1033	System Owner/User Discovery	Adversaries may attempt to identify the primary user, currently logged in user, set of users that co
+T1583	Acquire Infrastructure	Adversaries may buy, lease, rent, or obtain infrastructure that can be used during targeting. A wide
+T1218.011	Rundll32	Adversaries may abuse rundll32.exe to proxy execution of malicious code. Using rundll32.exe, vice ex
+T1613	Container and Resource Discovery	Adversaries may attempt to discover containers and other resources that are available within a conta
+T1583.007	Serverless	Adversaries may purchase and configure serverless cloud infrastructure, such as Cloudflare Workers, 
+T1143	Hidden Window	Adversaries may implement hidden windows to conceal malicious activity from the plain sight of users
+T1161	LC_LOAD_DYLIB Addition	Mach-O binaries have a series of headers that are used to perform certain operations when a binary i
+T1132.001	Standard Encoding	Adversaries may encode data with a standard data encoding system to make the content of command and 
+T1027.009	Embedded Payloads	Adversaries may embed payloads within other files to conceal malicious content from defenses. Otherw
+T1150	Plist Modification	Property list (plist) files contain all of the information that macOS and OS X uses to configure app
+T1556.003	Pluggable Authentication Modules	Adversaries may modify pluggable authentication modules (PAM) to access user credentials or enable o
+T1578.004	Revert Cloud Instance	An adversary may revert changes made to a cloud instance after they have performed malicious activit
+T1148	HISTCONTROL	The <code>HISTCONTROL</code> environment variable keeps track of what should be saved by the <code>h
+T1592	Gather Victim Host Information	Adversaries may gather information about the victim's hosts that can be used during targeting. Infor
+T1596.003	Digital Certificates	Adversaries may search public digital certificate data for information about victims that can be use
+T1056.001	Keylogging	Adversaries may log user keystrokes to intercept credentials as the user types them. Keylogging is l
+T1564.012	File/Path Exclusions	Adversaries may attempt to hide their file-based artifacts by writing them to specific folders or fi
+T1222.002	Linux and Mac File and Directory Permissions Modification	Adversaries may modify file or directory permissions/attributes to evade access control lists (ACLs)
+T1110.001	Password Guessing	Adversaries with no prior knowledge of legitimate credentials within the system or environment may g
+T1216.001	PubPrn	Adversaries may use PubPrn to proxy execution of malicious remote files. PubPrn.vbs is a [Visual Bas
+T1597.002	Purchase Technical Data	Adversaries may purchase technical information about victims that can be used during targeting. Info
+T1003	OS Credential Dumping	Adversaries may attempt to dump credentials to obtain account login and credential material, normall
+T1129	Shared Modules	Adversaries may execute malicious payloads via loading shared modules. Shared modules are executable
+T1602	Data from Configuration Repository	Adversaries may collect data related to managed devices from configuration repositories. Configurati
+T1561.002	Disk Structure Wipe	Adversaries may corrupt or wipe the disk data structures on a hard drive necessary to boot a system;
+T1498.001	Direct Network Flood	Adversaries may attempt to cause a denial of service (DoS) by directly sending a high-volume of netw
+T1492	Stored Data Manipulation	Adversaries may insert, delete, or manipulate data at rest in order to manipulate external outcomes 
+T1574.007	Path Interception by PATH Environment Variable	Adversaries may execute their own malicious payloads by hijacking environment variables used to load
+T1213.002	Sharepoint	Adversaries may leverage the SharePoint repository as a source to mine valuable information. SharePo
+T1006	Direct Volume Access	Adversaries may directly access a volume to bypass file access controls and file system monitoring. 
+T1044	File System Permissions Weakness	Processes may automatically execute specific binaries as part of their functionality or to perform o
+T1588.007	Artificial Intelligence	Adversaries may obtain access to generative artificial intelligence tools, such as large language mo
+T1666	Modify Cloud Resource Hierarchy	Adversaries may attempt to modify hierarchical structures in infrastructure-as-a-service (IaaS) envi
+T1564.008	Email Hiding Rules	Adversaries may use email rules to hide inbound emails in a compromised user's mailbox. Many email c
+T1491.002	External Defacement	An adversary may deface systems external to an organization in an attempt to deliver messaging, inti
+T1027.013	Encrypted/Encoded File	Adversaries may encrypt or encode files to obfuscate strings, bytes, and other specific patterns to 
+T1171	LLMNR/NBT-NS Poisoning and Relay	Link-Local Multicast Name Resolution (LLMNR) and NetBIOS Name Service (NBT-NS) are Microsoft Windows
+T1590.005	IP Addresses	Adversaries may gather the victim's IP addresses that can be used during targeting. Public IP addres
+T1499.001	OS Exhaustion Flood	Adversaries may launch a denial of service (DoS) attack targeting an endpoint's operating system (OS
+T1014	Rootkit	Adversaries may use rootkits to hide the presence of programs, files, network connections, services,
+T1546.013	PowerShell Profile	Adversaries may gain persistence and elevate privileges by executing malicious content triggered by 
+T1059.007	JavaScript	Adversaries may abuse various implementations of JavaScript for execution. JavaScript (JS) is a plat
+T1590.002	DNS	Adversaries may gather information about the victim's DNS that can be used during targeting. DNS inf
+T1501	Systemd Service	Systemd services can be used to establish persistence on a Linux system. The systemd service manager
+T1485.001	Lifecycle-Triggered Deletion	Adversaries may modify the lifecycle policies of a cloud storage bucket to destroy all objects store
+T1514	Elevated Execution with Prompt	Adversaries may leverage the AuthorizationExecuteWithPrivileges API to escalate privileges by prompt
+T1123	Audio Capture	An adversary can leverage a computer's peripheral devices (e.g., microphones and webcams) or applica
+T1543	Create or Modify System Process	Adversaries may create or modify system-level processes to repeatedly execute malicious payloads as 
+T1133	External Remote Services	Adversaries may leverage external-facing remote services to initially access and/or persist within a
+T1109	Component Firmware	Some adversaries may employ sophisticated means to compromise computer components and install malici
+T1546.006	LC_LOAD_DYLIB Addition	Adversaries may establish persistence by executing malicious content triggered by the execution of t
+T1539	Steal Web Session Cookie	An adversary may steal web application or service session cookies and use them to gain access to web
+T1053.007	Container Orchestration Job	Adversaries may abuse task scheduling functionality provided by container orchestration tools such a
+T1568.002	Domain Generation Algorithms	Adversaries may make use of Domain Generation Algorithms (DGAs) to dynamically identify a destinatio
+T1036.007	Double File Extension	Adversaries may abuse a double extension in the filename as a means of masquerading the true file ty
+T1548.002	Bypass User Account Control	Adversaries may bypass UAC mechanisms to elevate process privileges on system. Windows User Account 
+T1099	Timestomp	Adversaries may take actions to hide the deployment of new, or modification of existing files to obf
+T1496.003	SMS Pumping	Adversaries may leverage messaging services for SMS pumping, which may impact system and/or hosted s
+T1016.001	Internet Connection Discovery	Adversaries may check for Internet connectivity on compromised systems. This may be performed during
+T1548.003	Sudo and Sudo Caching	Adversaries may perform sudo caching and/or use the sudoers file to elevate privileges. Adversaries 
+T1560.003	Archive via Custom Method	An adversary may compress or encrypt data that is collected prior to exfiltration using a custom met
+T1578	Modify Cloud Compute Infrastructure	An adversary may attempt to modify a cloud account's compute service infrastructure to evade defense
+T1584.008	Network Devices	Adversaries may compromise third-party network devices that can be used during targeting. Network de
+T1583.008	Malvertising	Adversaries may purchase online advertisements that can be abused to distribute malware to victims. 
+T1069	Permission Groups Discovery	Adversaries may attempt to discover group and permission settings. This information can help adversa
+T1114	Email Collection	Adversaries may target user email to collect sensitive information. Emails may contain sensitive dat
+T1003.002	Security Account Manager	Adversaries may attempt to extract credential material from the Security Account Manager (SAM) datab
+T1596.002	WHOIS	Adversaries may search public WHOIS data for information about victims that can be used during targe
+T1542.001	System Firmware	Adversaries may modify system firmware to persist on systems.The BIOS (Basic Input/Output System) an
+T1594	Search Victim-Owned Websites	Adversaries may search websites owned by the victim for information that can be used during targetin
+T1069.003	Cloud Groups	Adversaries may attempt to find cloud groups and permission settings. The knowledge of cloud permiss
+T1574.011	Services Registry Permissions Weakness	Adversaries may execute their own malicious payloads by hijacking the Registry entries used by servi
+T1596.001	DNS/Passive DNS	Adversaries may search DNS data for information about victims that can be used during targeting. DNS
+T1499.003	Application Exhaustion Flood	Adversaries may target resource intensive features of applications to cause a denial of service (DoS
+T1163	Rc.common	During the boot process, macOS executes <code>source /etc/rc.common</code>, which is a shell script 
+T1195.001	Compromise Software Dependencies and Development Tools	Adversaries may manipulate software dependencies and development tools prior to receipt by a final c
+T1588.004	Digital Certificates	Adversaries may buy and/or steal SSL/TLS certificates that can be used during targeting. SSL/TLS cer
+T1583.002	DNS Server	Adversaries may set up their own Domain Name System (DNS) servers that can be used during targeting.
+T1561	Disk Wipe	Adversaries may wipe or corrupt raw disk data on specific systems or in large numbers in a network t
+T1071.004	DNS	Adversaries may communicate using the Domain Name System (DNS) application layer protocol to avoid d
+T1552.005	Cloud Instance Metadata API	Adversaries may attempt to access the Cloud Instance Metadata API to collect credentials and other s
+T1555.002	Securityd Memory	An adversary with root access may gather credentials by reading `securityd`’s memory. `securityd` is
+T1615	Group Policy Discovery	Adversaries may gather information on Group Policy settings to identify paths for privilege escalati
+T1542.003	Bootkit	Adversaries may use bootkits to persist on systems. A bootkit is a malware variant that modifies the
+T1025	Data from Removable Media	Adversaries may search connected removable media on computers they have compromised to find files of
+T1116	Code Signing	Code signing provides a level of authenticity on a binary from the developer and a guarantee that th
+T1218.013	Mavinject	Adversaries may abuse mavinject.exe to proxy execution of malicious code. Mavinject.exe is the Micro
+T1522	Cloud Instance Metadata API	Adversaries may attempt to access the Cloud Instance Metadata API to collect credentials and other s
+T1093	Process Hollowing	Process hollowing occurs when a process is created in a suspended state then its memory is unmapped 
+T1074.001	Local Data Staging	Adversaries may stage collected data in a central location or directory on the local system prior to
+T1036.005	Match Legitimate Resource Name or Location	Adversaries may match or approximate the name or location of legitimate files, Registry keys, or oth
+T1172	Domain Fronting	Domain fronting takes advantage of routing schemes in Content Delivery Networks (CDNs) and other ser
+T1587.003	Digital Certificates	Adversaries may create self-signed SSL/TLS certificates that can be used during targeting. SSL/TLS c
+T1565.001	Stored Data Manipulation	Adversaries may insert, delete, or manipulate data at rest in order to influence external outcomes o
+T1110.002	Password Cracking	Adversaries may use password cracking to attempt to recover usable credentials, such as plaintext pa
+T1178	SID-History Injection	The Windows security identifier (SID) is a unique value that identifies a user or group account. SID
+T1114.001	Local Email Collection	Adversaries may target user email on local systems to collect sensitive information. Files containin
+T1555.001	Keychain	Adversaries may acquire credentials from Keychain. Keychain (or Keychain Services) is the macOS cred
+T1547	Boot or Logon Autostart Execution	Adversaries may configure system settings to automatically execute a program during system boot or l
+T1003.004	LSA Secrets	Adversaries with SYSTEM access to a host may attempt to access Local Security Authority (LSA) secret
+T1013	Port Monitors	A port monitor can be set through the (Citation: AddMonitor) API call to set a DLL to be loaded at s
+T1600	Weaken Encryption	Adversaries may compromise a network device’s encryption capability in order to bypass encryption th
+T1606.002	SAML Tokens	An adversary may forge SAML tokens with any permissions claims and lifetimes if they possess a valid
+T1192	Spearphishing Link	Spearphishing with a link is a specific variant of spearphishing. It is different from other forms o
+T1036.008	Masquerade File Type	Adversaries may masquerade malicious payloads as legitimate files through changes to the payload's f
+T1489	Service Stop	Adversaries may stop or disable services on a system to render those services unavailable to legitim
+T1587.001	Malware	Adversaries may develop malware and malware components that can be used during targeting. Building m
+T1121	Regsvcs/Regasm	Regsvcs and Regasm are Windows command-line utilities that are used to register .NET Component Objec
+T1652	Device Driver Discovery	Adversaries may attempt to enumerate local device drivers on a victim host. Information about device
+T1206	Sudo Caching	The <code>sudo</code> command "allows a system administrator to delegate authority to give certain u
+T1087.002	Domain Account	Adversaries may attempt to get a listing of domain accounts. This information can help adversaries d
+T1547.014	Active Setup	Adversaries may achieve persistence by adding a Registry key to the Active Setup of the local machin
+T1564	Hide Artifacts	Adversaries may attempt to hide artifacts associated with their behaviors to evade detection. Operat
+T1559.002	Dynamic Data Exchange	Adversaries may use Windows Dynamic Data Exchange (DDE) to execute arbitrary commands. DDE is a clie
+T1204.002	Malicious File	An adversary may rely upon a user opening a malicious file in order to gain execution. Users may be 
+T1591.003	Identify Business Tempo	Adversaries may gather information about the victim's business tempo that can be used during targeti
+T1063	Security Software Discovery	Adversaries may attempt to get a listing of security software, configurations, defensive tools, and 
+T1071.005	Publish/Subscribe Protocols	Adversaries may communicate using publish/subscribe (pub/sub) application layer protocols to avoid d
+T1592.001	Hardware	Adversaries may gather information about the victim's host hardware that can be used during targetin
+T1080	Taint Shared Content	Adversaries may deliver payloads to remote systems by adding content to shared storage locations, su
+T1484.002	Trust Modification	Adversaries may add new domain trusts, modify the properties of existing domain trusts, or otherwise
+T1213.006	Databases	Adversaries may leverage databases to mine valuable information. These databases may be hosted on-pr
+T1573.001	Symmetric Cryptography	Adversaries may employ a known symmetric encryption algorithm to conceal command and control traffic
+T1087.001	Local Account	Adversaries may attempt to get a listing of local system accounts. This information can help adversa
+T1167	Securityd Memory	In OS X prior to El Capitan, users with root access can read plaintext keychain passwords of logged-
+T1586.001	Social Media Accounts	Adversaries may compromise social media accounts that can be used during targeting. For operations i
+T1176.001	Browser Extensions	Adversaries may abuse internet browser extensions to establish persistent access to victim systems. 
+T1527	Application Access Token	Adversaries may use application access tokens to bypass the typical authentication process and acces
+T1562.009	Safe Mode Boot	Adversaries may abuse Windows safe mode to disable endpoint defenses. Safe mode starts up the Window
+T1180	Screensaver	Screensavers are programs that execute after a configurable time of user inactivity and consist of P
+T1542.005	TFTP Boot	Adversaries may abuse netbooting to load an unauthorized network device operating system from a Triv
+T1543.003	Windows Service	Adversaries may create or modify Windows services to repeatedly execute malicious payloads as part o
+T1568.001	Fast Flux DNS	Adversaries may use Fast Flux DNS to hide a command and control channel behind an array of rapidly c
+T1497.001	System Checks	Adversaries may employ various system checks to detect and avoid virtualization and analysis environ
+T1053.003	Cron	Adversaries may abuse the <code>cron</code> utility to perform task scheduling for initial or recurr
+T1069.002	Domain Groups	Adversaries may attempt to find domain-level groups and permission settings. The knowledge of domain
+T1588.006	Vulnerabilities	Adversaries may acquire information about vulnerabilities that can be used during targeting. A vulne
+T1566.002	Spearphishing Link	Adversaries may send spearphishing emails with a malicious link in an attempt to gain access to vict
+T1165	Startup Items	Per Apple’s documentation, startup items execute during the final phase of the boot process and cont
+T1070.002	Clear Linux or Mac System Logs	Adversaries may clear system logs to hide evidence of an intrusion. macOS and Linux both keep track 
+T1499.004	Application or System Exploitation	Adversaries may exploit software vulnerabilities that can cause an application or system to crash an
+T1137	Office Application Startup	Adversaries may leverage Microsoft Office-based applications for persistence between startups. Micro
+T1218.004	InstallUtil	Adversaries may use InstallUtil to proxy execution of code through a trusted Windows utility. Instal
+T1598.003	Spearphishing Link	Adversaries may send spearphishing messages with a malicious link to elicit sensitive information th
+T1021.004	SSH	Adversaries may use [Valid Accounts](https://attack.mitre.org/techniques/T1078) to log into remote m
+T1098.003	Additional Cloud Roles	An adversary may add additional roles or permissions to an adversary-controlled cloud account to mai
+T1547.012	Print Processors	Adversaries may abuse print processors to run malicious DLLs during system boot for persistence and/
+T1089	Disabling Security Tools	Adversaries may disable security tools to avoid possible detection of their tools and activities. Th
+T1487	Disk Structure Wipe	Adversaries may corrupt or wipe the disk data structures on hard drive necessary to boot systems; ta
+T1566.001	Spearphishing Attachment	Adversaries may send spearphishing emails with a malicious attachment in an attempt to gain access t
+T1214	Credentials in Registry	The Windows Registry stores configuration information that can be used by the system or other progra
+T1027.008	Stripped Payloads	Adversaries may attempt to make a payload difficult to analyze by removing symbols, strings, and oth
+T1559.001	Component Object Model	Adversaries may use the Windows Component Object Model (COM) for local code execution. COM is an int
+T1574.001	DLL	Adversaries may abuse dynamic-link library files (DLLs) in order to achieve persistence, escalate pr
+T1119	Automated Collection	Once established within a system or network, an adversary may use automated techniques for collectin
+T1115	Clipboard Data	Adversaries may collect data stored in the clipboard from users copying information within or betwee
+T1003.007	Proc Filesystem	Adversaries may gather credentials from the proc filesystem or `/proc`. The proc filesystem is a pse
+T1583.005	Botnet	Adversaries may buy, lease, or rent a network of compromised systems that can be used during targeti
+T1555.005	Password Managers	Adversaries may acquire user credentials from third-party password managers.(Citation: ise Password 
+T1103	AppInit DLLs	Dynamic-link libraries (DLLs) that are specified in the AppInit_DLLs value in the Registry keys <cod
+T1553.001	Gatekeeper Bypass	Adversaries may modify file attributes and subvert Gatekeeper functionality to evade user prompts an
+T1675	ESXi Administration Command	Adversaries may abuse ESXi administration services to execute commands on guest machines hosted with
+T1608.004	Drive-by Target	Adversaries may prepare an operational environment to infect systems that visit a website over the n
+T1007	System Service Discovery	Adversaries may try to gather information about registered local system services. Adversaries may ob
+T1040	Network Sniffing	Adversaries may passively sniff network traffic to capture information about an environment, includi
+T1017	Application Deployment Software	Adversaries may deploy malicious software to systems within a network using application deployment s
+T1553.002	Code Signing	Adversaries may create, acquire, or steal code signing materials to sign their malware or tools. Cod
+T1530	Data from Cloud Storage	Adversaries may access data from cloud storage. Many IaaS providers offer solutions for online data 
+T1565.003	Runtime Data Manipulation	Adversaries may modify systems in order to manipulate the data as it is accessed and displayed to an
+T1552.002	Credentials in Registry	Adversaries may search the Registry on compromised systems for insecurely stored credentials. The Wi
+T1135	Network Share Discovery	Adversaries may look for folders and drives shared on remote systems as a means of identifying sourc
+T1120	Peripheral Device Discovery	Adversaries may attempt to gather information about attached peripheral devices and components conne
+T1036.009	Break Process Trees	An adversary may attempt to evade process tree-based analysis by modifying executed malware's parent
+T1590.004	Network Topology	Adversaries may gather information about the victim's network topology that can be used during targe
+T1587.002	Code Signing Certificates	Adversaries may create self-signed code signing certificates that can be used during targeting. Code
+T1222.001	Windows File and Directory Permissions Modification	Adversaries may modify file or directory permissions/attributes to evade access control lists (ACLs)
+T1137.006	Add-ins	Adversaries may abuse Microsoft Office add-ins to obtain persistence on a compromised system. Office
+T1505.002	Transport Agent	Adversaries may abuse Microsoft transport agents to establish persistent access to systems. Microsof
+T1082	System Information Discovery	An adversary may attempt to get detailed information about the operating system and hardware, includ
+T1071	Application Layer Protocol	Adversaries may communicate using OSI application layer protocols to avoid detection/network filteri
+T1574.014	AppDomainManager	Adversaries may execute their own malicious payloads by hijacking how the .NET `AppDomainManager` lo
+T1074.002	Remote Data Staging	Adversaries may stage data collected from multiple systems in a central location or directory on one
+T1098.006	Additional Container Cluster Roles	An adversary may add additional roles or permissions to an adversary-controlled user or service acco
+T1053	Scheduled Task/Job	Adversaries may abuse task scheduling functionality to facilitate initial or recurring execution of 
+T1218.007	Msiexec	Adversaries may abuse msiexec.exe to proxy execution of malicious payloads. Msiexec.exe is the comma
+T1162	Login Item	MacOS provides the option to list specific applications to run when a user logs in. These applicatio
+T1590.003	Network Trust Dependencies	Adversaries may gather information about the victim's network trust dependencies that can be used du
+T1498.002	Reflection Amplification	Adversaries may attempt to cause a denial of service (DoS) by reflecting a high-volume of network tr
+T1556.002	Password Filter DLL	Adversaries may register malicious password filter dynamic link libraries (DLLs) into the authentica
+T1505.005	Terminal Services DLL	Adversaries may abuse components of Terminal Services to enable persistent access to systems. Micros
+T1059.002	AppleScript	Adversaries may abuse AppleScript for execution. AppleScript is a macOS scripting language designed 
+T1176	Software Extensions	Adversaries may abuse software extensions to establish persistent access to victim systems. Software
+T1499.002	Service Exhaustion Flood	Adversaries may target the different network services provided by systems to conduct a denial of ser
+T1195.003	Compromise Hardware Supply Chain	Adversaries may manipulate hardware components in products prior to receipt by a final consumer for 
+T1106	Native API	Adversaries may interact with the native OS application programming interface (API) to execute behav
+T1558.005	Ccache Files	Adversaries may attempt to steal Kerberos tickets stored in credential cache files (or ccache). Thes
+T1070.007	Clear Network Connection History and Configurations	Adversaries may clear or remove evidence of malicious network connections in order to clean up trace
+T1558.004	AS-REP Roasting	Adversaries may reveal credentials of accounts that have disabled Kerberos preauthentication by [Pas
+T1058	Service Registry Permissions Weakness	Windows stores local service configuration information in the Registry under <code>HKLM\SYSTEM\Curre
+T1584.003	Virtual Private Server	Adversaries may compromise third-party Virtual Private Servers (VPSs) that can be used during target
+T1059.010	AutoHotKey & AutoIT	Adversaries may execute commands and perform malicious tasks using AutoIT and AutoHotKey automation 
+T1600.001	Reduce Key Space	Adversaries may reduce the level of effort required to decrypt data transmitted over the network by 
+T1070.003	Clear Command History	In addition to clearing system logs, an adversary may clear the command history of a compromised acc
+T1202	Indirect Command Execution	Adversaries may abuse utilities that allow for command execution to bypass security restrictions tha
+T1024	Custom Cryptographic Protocol	Adversaries may use a custom cryptographic protocol or algorithm to hide command and control traffic
+T1536	Revert Cloud Instance	An adversary may revert changes made to a cloud instance after they have performed malicious activit
+T1091	Replication Through Removable Media	Adversaries may move onto systems, possibly those on disconnected or air-gapped networks, by copying
+T1005	Data from Local System	Adversaries may search local system sources, such as file systems, configuration files, local databa
+T1140	Deobfuscate/Decode Files or Information	Adversaries may use [Obfuscated Files or Information](https://attack.mitre.org/techniques/T1027) to 
+T1137.005	Outlook Rules	Adversaries may abuse Microsoft Outlook rules to obtain persistence on a compromised system. Outlook
+T1562	Impair Defenses	Adversaries may maliciously modify components of a victim environment in order to hinder or disable 
+T1586.003	Cloud Accounts	Adversaries may compromise cloud accounts that can be used during targeting. Adversaries can use com
+T1586.002	Email Accounts	Adversaries may compromise email accounts that can be used during targeting. Adversaries can use com
+T1098.007	Additional Local or Domain Groups	An adversary may add additional local or domain groups to an adversary-controlled account to maintai
+T1608.001	Upload Malware	Adversaries may upload malware to third-party or adversary controlled infrastructure to make it acce
+T1195	Supply Chain Compromise	Adversaries may manipulate products or product delivery mechanisms prior to receipt by a final consu
+T1190	Exploit Public-Facing Application	Adversaries may attempt to exploit a weakness in an Internet-facing host or system to initially acce
+T1558	Steal or Forge Kerberos Tickets	Adversaries may attempt to subvert Kerberos authentication by stealing or forging Kerberos tickets t
+T1555	Credentials from Password Stores	Adversaries may search for common password storage locations to obtain user credentials.(Citation: F
+T1567	Exfiltration Over Web Service	Adversaries may use an existing, legitimate external Web service to exfiltrate data rather than thei
+T1219	Remote Access Tools	An adversary may use legitimate remote access tools to establish an interactive command and control 
+T1583.001	Domains	Adversaries may acquire domains that can be used during targeting. Domain names are the human readab
+T1560.002	Archive via Library	An adversary may compress or encrypt data that is collected prior to exfiltration using 3rd party li
+T1055.003	Thread Execution Hijacking	Adversaries may inject malicious code into hijacked processes in order to evade process-based defens
+T1079	Multilayer Encryption	An adversary performs C2 communications using multiple layers of encryption, typically (but not excl
+T1036	Masquerading	Adversaries may attempt to manipulate features of their artifacts to make them appear legitimate or 
+T1546.011	Application Shimming	Adversaries may establish persistence and/or elevate privileges by executing malicious content trigg
+T1552	Unsecured Credentials	Adversaries may search compromised systems to find and obtain insecurely stored credentials. These c
+T1547.010	Port Monitors	Adversaries may use port monitors to run an adversary supplied DLL during system boot for persistenc
+T1070.008	Clear Mailbox Data	Adversaries may modify mail and mail application data to remove evidence of their activity. Email ap
+T1037.002	Login Hook	Adversaries may use a Login Hook to establish persistence executed upon user logon. A login hook is 
+T1659	Content Injection	Adversaries may gain access and continuously communicate with victims by injecting malicious content
+T1055	Process Injection	Adversaries may inject code into processes in order to evade process-based defenses as well as possi
+T1567.004	Exfiltration Over Webhook	Adversaries may exfiltrate data to a webhook endpoint rather than over their primary command and con
+T1139	Bash History	Bash keeps track of the commands users type on the command-line with the "history" utility. Once a u
+T1205	Traffic Signaling	Adversaries may use traffic signaling to hide open ports or other malicious functionality used for p
+T1021.008	Direct Cloud VM Connections	Adversaries may leverage [Valid Accounts](https://attack.mitre.org/techniques/T1078) to log directly
+T1503	Credentials from Web Browsers	Adversaries may acquire credentials from web browsers by reading files specific to the target browse
+T1218	System Binary Proxy Execution	Adversaries may bypass process and/or signature-based defenses by proxying execution of malicious co
+T1038	DLL Search Order Hijacking	Windows systems use a common method to look for required DLLs to load into a program. (Citation: Mic
+T1050	New Service	When operating systems boot up, they can start programs or applications called services that perform
+T1070.006	Timestomp	Adversaries may modify file time attributes to hide new files or changes to existing files. Timestom
+T1557.004	Evil Twin	Adversaries may host seemingly genuine Wi-Fi access points to deceive users into connecting to malic
+T1620	Reflective Code Loading	Adversaries may reflectively load code into a process in order to conceal the execution of malicious
+T1016.002	Wi-Fi Discovery	Adversaries may search for information about Wi-Fi networks, such as network names and passwords, on
+T1480.002	Mutual Exclusion	Adversaries may constrain execution or actions based on the presence of a mutex associated with malw
+T1564.011	Ignore Process Interrupts	Adversaries may evade defensive mechanisms by executing commands that hide from process interrupt si
+T1611	Escape to Host	Adversaries may break out of a container or virtualized environment to gain access to the underlying
+T1518.002	Backup Software Discovery	Adversaries may attempt to get a listing of backup software or configurations that are installed on 
+T1547.009	Shortcut Modification	Adversaries may create or modify shortcuts that can execute a program during system boot or user log
+T1010	Application Window Discovery	Adversaries may attempt to get a listing of open application windows. Window listings could convey i
+T1569.003	Systemctl	Adversaries may abuse systemctl to execute commands or programs. Systemctl is the primary interface 
+T1032	Standard Cryptographic Protocol	Adversaries may explicitly employ a known encryption algorithm to conceal command and control traffi
+T1087.003	Email Account	Adversaries may attempt to get a listing of email addresses and accounts. Adversaries may try to dum
+T1497.003	Time Based Checks	Adversaries may employ various time-based methods to detect virtualization and analysis environments
+T1182	AppCert DLLs	Dynamic-link libraries (DLLs) that are specified in the AppCertDLLs Registry key under <code>HKEY_LO
+T1218.003	CMSTP	Adversaries may abuse CMSTP to proxy execution of malicious code. The Microsoft Connection Manager P
+T1563.001	SSH Hijacking	Adversaries may hijack a legitimate user's SSH session to move laterally within an environment. Secu
+T1562.002	Disable Windows Event Logging	Adversaries may disable Windows event logging to limit data that can be leveraged for detections and
+T1029	Scheduled Transfer	Adversaries may schedule data exfiltration to be performed only at certain times of day or at certai
+T1021.002	SMB/Windows Admin Shares	Adversaries may use [Valid Accounts](https://attack.mitre.org/techniques/T1078) to interact with a r
+T1525	Implant Internal Image	Adversaries may implant cloud or container images with malicious code to establish persistence after
+T1572	Protocol Tunneling	Adversaries may tunnel network communications to and from a victim system within a separate protocol
+T1218.002	Control Panel	Adversaries may abuse control.exe to proxy execution of malicious payloads. The Windows Control Pane
+T1599.001	Network Address Translation Traversal	Adversaries may bridge network boundaries by modifying a network device’s Network Address Translatio
+T1608.002	Upload Tool	Adversaries may upload tools to third-party or adversary controlled infrastructure to make it access
+T1547.005	Security Support Provider	Adversaries may abuse security support providers (SSPs) to execute DLLs when the system boots. Windo
+T1036.011	Overwrite Process Arguments	Adversaries may modify a process's in-memory arguments to change its name in order to appear as a le
+T1004	Winlogon Helper DLL	Winlogon.exe is a Windows component responsible for actions at logon/logoff as well as the secure at
+T1009	Binary Padding	Adversaries can use binary padding to add junk data and change the on-disk representation of malware
+T1550	Use Alternate Authentication Material	Adversaries may use alternate authentication material, such as password hashes, Kerberos tickets, an
+T1076	Remote Desktop Protocol	Remote desktop is a common feature in operating systems. It allows a user to log into an interactive
+T1597.001	Threat Intel Vendors	Adversaries may search private data from threat intelligence vendors for information that can be use
+T1011	Exfiltration Over Other Network Medium	Adversaries may attempt to exfiltrate data over a different network medium than the command and cont
+T1602.002	Network Device Configuration Dump	Adversaries may access network configuration files to collect sensitive data about the device and th
+T1589	Gather Victim Identity Information	Adversaries may gather information about the victim's identity that can be used during targeting. In
+T1131	Authentication Package	Windows Authentication Package DLLs are loaded by the Local Security Authority (LSA) process at syst
+T1181	Extra Window Memory Injection	Before creating a window, graphical Windows-based processes must prescribe to or register a windows 
+T1562.004	Disable or Modify System Firewall	Adversaries may disable or modify system firewalls in order to bypass controls limiting network usag
+T1560	Archive Collected Data	An adversary may compress and/or encrypt data that is collected prior to exfiltration. Compressing t
+T1152	Launchctl	Launchctl controls the macOS launchd process which handles things like launch agents and launch daem
+T1553.003	SIP and Trust Provider Hijacking	Adversaries may tamper with SIP and trust provider components to mislead the operating system and ap
+T1483	Domain Generation Algorithms	Adversaries may make use of Domain Generation Algorithms (DGAs) to dynamically identify a destinatio
+T1185	Browser Session Hijacking	Adversaries may take advantage of security vulnerabilities and inherent functionality in browser sof
+T1021	Remote Services	Adversaries may use [Valid Accounts](https://attack.mitre.org/techniques/T1078) to log into a servic
+T1071.003	Mail Protocols	Adversaries may communicate using application layer protocols associated with electronic mail delive
+T1556.007	Hybrid Identity	Adversaries may patch, modify, or otherwise backdoor cloud authentication processes that are tied to
+T1595.002	Vulnerability Scanning	Adversaries may scan victims for vulnerabilities that can be used during targeting. Vulnerability sc
+T1059.009	Cloud API	Adversaries may abuse cloud APIs to execute malicious commands. APIs available in cloud environments
+T1596	Search Open Technical Databases	Adversaries may search freely available technical databases for information about victims that can b
+T1218.015	Electron Applications	Adversaries may abuse components of the Electron framework to execute malicious code. The Electron f
+T1562.012	Disable or Modify Linux Audit System	Adversaries may disable or modify the Linux audit system to hide malicious activity and avoid detect
+T1207	Rogue Domain Controller	Adversaries may register a rogue Domain Controller to enable manipulation of Active Directory data. 
+T1553.006	Code Signing Policy Modification	Adversaries may modify code signing policies to enable execution of unsigned or self-signed code. Co
+T1610	Deploy Container	Adversaries may deploy a container into an environment to facilitate execution or evade defenses. In
+T1107	File Deletion	Adversaries may delete files left behind by the actions of their intrusion activity. Malware, tools,
+T1145	Private Keys	Private cryptographic keys and certificates are used for authentication, encryption/decryption, and 
+T1112	Modify Registry	Adversaries may interact with the Windows Registry as part of a variety of other techniques to aid i
+T1543.004	Launch Daemon	Adversaries may create or modify Launch Daemons to execute malicious payloads as part of persistence
+T1580	Cloud Infrastructure Discovery	An adversary may attempt to discover infrastructure and resources that are available within an infra
+T1555.003	Credentials from Web Browsers	Adversaries may acquire credentials from web browsers by reading files specific to the target browse
+T1574.008	Path Interception by Search Order Hijacking	Adversaries may execute their own malicious payloads by hijacking the search order used to load othe
+T1491	Defacement	Adversaries may modify visual content available internally or externally to an enterprise network, t
+T1535	Unused/Unsupported Cloud Regions	Adversaries may create cloud instances in unused geographic service regions in order to evade detect
+T1557.003	DHCP Spoofing	Adversaries may redirect network traffic to adversary-owned systems by spoofing Dynamic Host Configu
+T1155	AppleScript	macOS and OS X applications send AppleEvent messages to each other for interprocess communications (
+T1563	Remote Service Session Hijacking	Adversaries may take control of preexisting sessions with remote services to move laterally in an en
+T1564.013	Bind Mounts	Adversaries may abuse bind mounts on file structures to hide their activity and artifacts from nativ
+T1027.001	Binary Padding	Adversaries may use binary padding to add junk data and change the on-disk representation of malware
+T1505.003	Web Shell	Adversaries may backdoor web servers with web shells to establish persistent access to systems. A We
+T1484.001	Group Policy Modification	Adversaries may modify Group Policy Objects (GPOs) to subvert the intended discretionary access cont
+T1217	Browser Information Discovery	Adversaries may enumerate information about browsers to learn more about compromised environments. D
+T1552.004	Private Keys	Adversaries may search for private key certificate files on compromised systems for insecurely store
+T1583.004	Server	Adversaries may buy, lease, rent, or obtain physical servers that can be used during targeting. Use 
+T1021.006	Windows Remote Management	Adversaries may use [Valid Accounts](https://attack.mitre.org/techniques/T1078) to interact with rem
+T1011.001	Exfiltration Over Bluetooth	Adversaries may attempt to exfiltrate data over Bluetooth rather than the command and control channe
+T1078.001	Default Accounts	Adversaries may obtain and abuse credentials of a default account as a means of gaining Initial Acce
+T1547.003	Time Providers	Adversaries may abuse time providers to execute DLLs when the system boots. The Windows Time service
+T1183	Image File Execution Options Injection	Image File Execution Options (IFEO) enable a developer to attach a debugger to an application. When 
+T1085	Rundll32	The rundll32.exe program can be called to execute an arbitrary binary. Adversaries may take advantag
+T1031	Modify Existing Service	Windows service configuration information, including the file path to the service's executable or re
+T1546.005	Trap	Adversaries may establish persistence by executing malicious content triggered by an interrupt signa
+T1574.006	Dynamic Linker Hijacking	Adversaries may execute their own malicious payloads by hijacking environment variables the dynamic 
+T1136.001	Local Account	Adversaries may create a local account to maintain access to victim systems. Local accounts are thos
+T1681	Search Threat Vendor Data	Threat actors may seek information/indicators from closed or open threat intelligence sources gather
+T1674	Input Injection	Adversaries may simulate keystrokes on a victim’s computer by various means to perform any type of a
+T1092	Communication Through Removable Media	Adversaries can perform command and control between compromised hosts on potentially disconnected ne
+T1070.001	Clear Windows Event Logs	Adversaries may clear Windows Event Logs to hide the activity of an intrusion. Windows Event Logs ar
+T1585.002	Email Accounts	Adversaries may create email accounts that can be used during targeting. Adversaries can use account
+T1557.001	LLMNR/NBT-NS Poisoning and SMB Relay	By responding to LLMNR/NBT-NS network traffic, adversaries may spoof an authoritative source for nam
+T1222	File and Directory Permissions Modification	Adversaries may modify file or directory permissions/attributes to evade access control lists (ACLs)
+T1003.001	LSASS Memory	Adversaries may attempt to access credential material stored in the process memory of the Local Secu
+T1053.001	At (Linux)	Adversaries may abuse the [at](https://attack.mitre.org/software/S0110) utility to perform task sche
+T1176.002	IDE Extensions	Adversaries may abuse an integrated development environment (IDE) extension to establish persistent 
+T1179	Hooking	Windows processes often leverage application programming interface (API) functions to perform tasks 
+T1595	Active Scanning	Adversaries may execute active reconnaissance scans to gather information that can be used during ta
+T1027.016	Junk Code Insertion	Adversaries may use junk code / dead code to obfuscate a malware’s functionality. Junk code is code 
+T1547.011	Plist Modification	Adversaries can modify property list files (plist files) to execute their code as part of establishi
+T1548	Abuse Elevation Control Mechanism	Adversaries may circumvent mechanisms designed to control elevate privileges to gain higher-level pe
+T1134.002	Create Process with Token	Adversaries may create a new process with an existing token to escalate privileges and bypass access
+T1548.001	Setuid and Setgid	An adversary may abuse configurations where an application has the setuid or setgid bits set in orde
+T1547.004	Winlogon Helper DLL	Adversaries may abuse features of Winlogon to execute DLLs and/or executables when a user logs in. W
+T1019	System Firmware	The BIOS (Basic Input/Output System) and The Unified Extensible Firmware Interface (UEFI) or Extensi
+T1021.003	Distributed Component Object Model	Adversaries may use [Valid Accounts](https://attack.mitre.org/techniques/T1078) to interact with rem
+T1042	Change Default File Association	When a file is opened, the default program used to open the file (also called the file association o
+T1117	Regsvr32	Regsvr32.exe is a command-line program used to register and unregister object linking and embedding 
+T1110.003	Password Spraying	Adversaries may use a single or small list of commonly used passwords against many different account
+T1090.002	External Proxy	Adversaries may use an external proxy to act as an intermediary for network communications to a comm
+T1056.003	Web Portal Capture	Adversaries may install code on externally facing portals, such as a VPN login page, to capture and 
+T1589.002	Email Addresses	Adversaries may gather email addresses that can be used during targeting. Even if internal instances
+T1164	Re-opened Applications	Starting in Mac OS X 10.7 (Lion), users can specify certain applications to be re-opened when a user
+T1054	Indicator Blocking	An adversary may attempt to block indicators or events typically captured by sensors from being gath
+T1598.004	Spearphishing Voice	Adversaries may use voice communications to elicit sensitive information that can be used during tar
+T1193	Spearphishing Attachment	Spearphishing attachment is a specific variant of spearphishing. Spearphishing attachment is differe
+T1003.005	Cached Domain Credentials	Adversaries may attempt to access cached domain credentials used to allow authentication to occur in
+T1098.004	SSH Authorized Keys	Adversaries may modify the SSH <code>authorized_keys</code> file to maintain persistence on a victim
+T1673	Virtual Machine Discovery	An adversary may attempt to enumerate running virtual machines (VMs) after gaining access to a host 
+T1215	Kernel Modules and Extensions	Loadable Kernel Modules (or LKMs) are pieces of code that can be loaded and unloaded into the kernel
+T1101	Security Support Provider	Windows Security Support Provider (SSP) DLLs are loaded into the Local Security Authority (LSA) proc
+T1590.006	Network Security Appliances	Adversaries may gather information about the victim's network security appliances that can be used d
+T1546.012	Image File Execution Options Injection	Adversaries may establish persistence and/or elevate privileges by executing malicious content trigg
+T1218.008	Odbcconf	Adversaries may abuse odbcconf.exe to proxy execution of malicious payloads. Odbcconf.exe is a Windo
+T1593.002	Search Engines	Adversaries may use search engines to collect information about victims that can be used during targ
+T1177	LSASS Driver	The Windows security subsystem is a set of components that manage and enforce the security policy fo
+T1591.002	Business Relationships	Adversaries may gather information about the victim's business relationships that can be used during
+T1548.005	Temporary Elevated Cloud Access	Adversaries may abuse permission configurations that allow them to gain temporarily elevated access 
+T1125	Video Capture	An adversary can leverage a computer's peripheral devices (e.g., integrated cameras or webcams) or a
+T1144	Gatekeeper Bypass	In macOS and OS X, when applications or programs are downloaded from the internet, there is a specia
+T1045	Software Packing	Software packing is a method of compressing or encrypting an executable. Packing an executable chang
+T1055.013	Process Doppelgänging	Adversaries may inject malicious code into process via process doppelgänging in order to evade proce
+T1016	System Network Configuration Discovery	Adversaries may look for details about the network configuration and settings, such as IP and/or MAC
+T1578.003	Delete Cloud Instance	An adversary may delete a cloud instance after they have performed malicious activities in an attemp
+T1593.003	Code Repositories	Adversaries may search public code repositories for information about victims that can be used durin
+T1574.005	Executable Installer File Permissions Weakness	Adversaries may execute their own malicious payloads by hijacking the binaries used by an installer.
+T1546.008	Accessibility Features	Adversaries may establish persistence and/or elevate privileges by executing malicious content trigg
+T1496.002	Bandwidth Hijacking	Adversaries may leverage the network bandwidth resources of co-opted systems to complete resource-in
+T1504	PowerShell Profile	Adversaries may gain persistence and elevate privileges in certain situations by abusing [PowerShell
+T1198	SIP and Trust Provider Hijacking	In user mode, Windows Authenticode (Citation: Microsoft Authenticode) digital signatures are used to
+T1087	Account Discovery	Adversaries may attempt to get a listing of valid accounts, usernames, or email addresses on a syste
+T1090	Proxy	Adversaries may use a connection proxy to direct network traffic between systems or act as an interm
+T1059	Command and Scripting Interpreter	Adversaries may abuse command and script interpreters to execute commands, scripts, or binaries. The
+T1204.005	Malicious Library	Adversaries may rely on a user installing a malicious library to facilitate execution. Threat actors
+T1562.006	Indicator Blocking	An adversary may attempt to block indicators or events typically captured by sensors from being gath
+T1136.002	Domain Account	Adversaries may create a domain account to maintain access to victim systems. Domain accounts are th
+T1564.014	Extended Attributes	Adversaries may abuse extended attributes (xattrs) on macOS and Linux to hide their malicious data i
+T1589.003	Employee Names	Adversaries may gather employee names that can be used during targeting. Employee names be used to d
+T1677	Poisoned Pipeline Execution	Adversaries may manipulate continuous integration / continuous development (CI/CD) processes by inje
+T1482	Domain Trust Discovery	Adversaries may attempt to gather information on domain trust relationships that may be used to iden
+T1558.001	Golden Ticket	Adversaries who have the KRBTGT account password hash may forge Kerberos ticket-granting tickets (TG
+T1020	Automated Exfiltration	Adversaries may exfiltrate data, such as sensitive documents, through the use of automated processin
+T1592.004	Client Configurations	Adversaries may gather information about the victim's client configurations that can be used during 
+T1562.007	Disable or Modify Cloud Firewall	Adversaries may disable or modify a firewall within a cloud environment to bypass controls that limi
+T1219.001	IDE Tunneling	Adversaries may abuse Integrated Development Environment (IDE) software with remote development feat
+T1036.002	Right-to-Left Override	Adversaries may abuse the right-to-left override (RTLO or RLO) character (U+202E) to disguise a stri
+T1588.001	Malware	Adversaries may buy, steal, or download malware that can be used during targeting. Malicious softwar
+T1027.017	SVG Smuggling	Adversaries may smuggle data and files past content filters by hiding malicious payloads inside of s
+T1542.002	Component Firmware	Adversaries may modify component firmware to persist on systems. Some adversaries may employ sophist
+T1070	Indicator Removal	Adversaries may delete or modify artifacts generated within systems to remove evidence of their pres
+T1048.001	Exfiltration Over Symmetric Encrypted Non-C2 Protocol	Adversaries may steal data by exfiltrating it over a symmetrically encrypted network protocol other 
+T1137.001	Office Template Macros	Adversaries may abuse Microsoft Office templates to obtain persistence on a compromised system. Micr
+T1583.003	Virtual Private Server	Adversaries may rent Virtual Private Servers (VPSs) that can be used during targeting. There exist a
+T1213.001	Confluence	Adversaries may leverage Confluence repositories to mine valuable information. Often found in develo
+T1550.003	Pass the Ticket	Adversaries may “pass the ticket” using stolen Kerberos tickets to move laterally within an environm
+T1609	Container Administration Command	Adversaries may abuse a container administration service to execute commands within a container. A c
+T1083	File and Directory Discovery	Adversaries may enumerate files and directories or may search in specific locations of a host or net
+T1568	Dynamic Resolution	Adversaries may dynamically establish connections to command and control infrastructure to evade com
+T1036.004	Masquerade Task or Service	Adversaries may attempt to manipulate the name of a task or service to make it appear legitimate or 
+T1055.004	Asynchronous Procedure Call	Adversaries may inject malicious code into processes via the asynchronous procedure call (APC) queue
+T1020.001	Traffic Duplication	Adversaries may leverage traffic mirroring in order to automate data exfiltration over compromised i
+T1138	Application Shimming	The Microsoft Windows Application Compatibility Infrastructure/Framework (Application Shim) was crea
+T1647	Plist File Modification	Adversaries may modify property list files (plist files) to enable other malicious activity, while a
+T1127.003	JamPlus	Adversaries may use `JamPlus` to proxy the execution of a malicious script. `JamPlus` is a build uti
+T1546.009	AppCert DLLs	Adversaries may establish persistence and/or elevate privileges by executing malicious content trigg
+T1191	CMSTP	The Microsoft Connection Manager Profile Installer (CMSTP.exe) is a command-line program used to ins
+T1188	Multi-hop Proxy	To disguise the source of malicious traffic, adversaries may chain together multiple proxies. Typica
+T1114.003	Email Forwarding Rule	Adversaries may setup email forwarding rules to collect sensitive information. Adversaries may abuse
+T1074	Data Staged	Adversaries may stage collected data in a central location or directory prior to Exfiltration. Data 
+T1649	Steal or Forge Authentication Certificates	Adversaries may steal or forge certificates used for authentication to access remote systems or reso
+T1098.005	Device Registration	Adversaries may register a device to an adversary-controlled account. Devices may be registered in a
+T1049	System Network Connections Discovery	Adversaries may attempt to get a listing of network connections to or from the compromised system th
+T1584	Compromise Infrastructure	Adversaries may compromise third-party infrastructure that can be used during targeting. Infrastruct
+T1553.005	Mark-of-the-Web Bypass	Adversaries may abuse specific file formats to subvert Mark-of-the-Web (MOTW) controls. In Windows, 
+T1600.002	Disable Crypto Hardware	Adversaries disable a network device’s dedicated hardware encryption, which may enable them to lever
+T1542	Pre-OS Boot	Adversaries may abuse Pre-OS Boot mechanisms as a way to establish persistence on a system. During t
+T1612	Build Image on Host	Adversaries may build a container image directly on a host to bypass defenses that monitor for the r
+T1055.002	Portable Executable Injection	Adversaries may inject portable executables (PE) into processes in order to evade process-based defe
+T1218.012	Verclsid	Adversaries may abuse verclsid.exe to proxy execution of malicious code. Verclsid.exe is known as th
+T1586	Compromise Accounts	Adversaries may compromise accounts with services that can be used during targeting. For operations 
+T1569.001	Launchctl	Adversaries may abuse launchctl to execute commands or programs. Launchctl interfaces with launchd, 
+T1584.005	Botnet	Adversaries may compromise numerous third-party systems to form a botnet that can be used during tar
+T1059.008	Network Device CLI	Adversaries may abuse scripting or built-in command line interpreters (CLI) on network devices to ex
+T1552.003	Shell History	Adversaries may search the command history on compromised systems for insecurely stored credentials.
+T1562.010	Downgrade Attack	Adversaries may downgrade or use a version of system features that may be outdated, vulnerable, and/
+T1559.003	XPC Services	Adversaries can provide malicious content to an XPC service daemon for local code execution. macOS u
+T1497	Virtualization/Sandbox Evasion	Adversaries may employ various means to detect and avoid virtualization and analysis environments. T
+T1102	Web Service	Adversaries may use an existing, legitimate external Web service as a means for relaying data to/fro
+T1552.001	Credentials In Files	Adversaries may search local file systems and remote file shares for files containing insecurely sto
+T1568.003	DNS Calculation	Adversaries may perform calculations on addresses returned in DNS results to determine which port an
+T1218.005	Mshta	Adversaries may abuse mshta.exe to proxy execution of malicious .hta files and Javascript or VBScrip
+T1547.015	Login Items	Adversaries may add login items to execute upon user login to gain persistence or escalate privilege
+T1608	Stage Capabilities	Adversaries may upload, install, or otherwise set up capabilities that can be used during targeting.
+T1608.005	Link Target	Adversaries may put in place resources that are referenced by a link that can be used during targeti
+T1104	Multi-Stage Channels	Adversaries may create multiple stages for command and control that are employed under different con
+T1657	Financial Theft	Adversaries may steal monetary resources from targets through extortion, social engineering, technic
+T1480	Execution Guardrails	Adversaries may use execution guardrails to constrain execution or actions based on adversary suppli
+T1619	Cloud Storage Object Discovery	Adversaries may enumerate objects in cloud storage infrastructure. Adversaries may use this informat
+T1606.001	Web Cookies	Adversaries may forge web cookies that can be used to gain access to web applications or Internet se
+T1654	Log Enumeration	Adversaries may enumerate system and service logs to find useful data. These logs may highlight vari
+T1134.001	Token Impersonation/Theft	Adversaries may duplicate then impersonate another user's existing token to escalate privileges and 
+T1567.001	Exfiltration to Code Repository	Adversaries may exfiltrate data to a code repository rather than over their primary command and cont
+T1021.007	Cloud Services	Adversaries may log into accessible cloud services within a compromised environment using [Valid Acc
+T1205.001	Port Knocking	Adversaries may use port knocking to hide open ports used for persistence or command and control. To
+T1027.012	LNK Icon Smuggling	Adversaries may smuggle commands to download malicious payloads past content filters by hiding them 
+T1583.006	Web Services	Adversaries may register for web services that can be used during targeting. A variety of popular we
+T1528	Steal Application Access Token	Adversaries can steal application access tokens as a means of acquiring credentials to access remote
+T1598.002	Spearphishing Attachment	Adversaries may send spearphishing messages with a malicious attachment to elicit sensitive informat
+T1098.001	Additional Cloud Credentials	Adversaries may add adversary-controlled credentials to a cloud account to maintain persistent acces
+T1204	User Execution	An adversary may rely upon specific actions by a user in order to gain execution. Users may be subje
+T1491.001	Internal Defacement	An adversary may deface systems internal to an organization in an attempt to intimidate or mislead u
+T1564.002	Hidden Users	Adversaries may use hidden users to hide the presence of user accounts they create or modify. Admini
+T1134.003	Make and Impersonate Token	Adversaries may make new tokens and impersonate users to escalate privileges and bypass access contr
+T1552.006	Group Policy Preferences	Adversaries may attempt to find unsecured credentials in Group Policy Preferences (GPP). GPP are too
+T1196	Control Panel Items	Windows Control Panel items are utilities that allow users to view and adjust computer settings. Con
+T1048.002	Exfiltration Over Asymmetric Encrypted Non-C2 Protocol	Adversaries may steal data by exfiltrating it over an asymmetrically encrypted network protocol othe
+T1087.004	Cloud Account	Adversaries may attempt to get a listing of cloud accounts. Cloud accounts are those created and con
+T1057	Process Discovery	Adversaries may attempt to get information about running processes on a system. Information obtained
+T1562.003	Impair Command History Logging	Adversaries may impair command history logging to hide commands they run on a compromised system. Va
+T1556.008	Network Provider DLL	Adversaries may register malicious network provider dynamic link libraries (DLLs) to capture clearte
+T1546.003	Windows Management Instrumentation Event Subscription	Adversaries may establish persistence and elevate privileges by executing malicious content triggere
+T1596.004	CDNs	Adversaries may search content delivery network (CDN) data about victims that can be used during tar
+T1497.002	User Activity Based Checks	Adversaries may employ various user activity checks to detect and avoid virtualization and analysis 
+T1141	Input Prompt	When programs are executed that need additional privileges than are present in the current user cont
+T1496.004	Cloud Service Hijacking	Adversaries may leverage compromised software-as-a-service (SaaS) applications to complete resource-
+T1585.003	Cloud Accounts	Adversaries may create accounts with cloud providers that can be used during targeting. Adversaries 
+T1072	Software Deployment Tools	Adversaries may gain access to and use centralized software suites installed within an enterprise to
+T1041	Exfiltration Over C2 Channel	Adversaries may steal data by exfiltrating it over an existing command and control channel. Stolen d
+T1134.004	Parent PID Spoofing	Adversaries may spoof the parent process identifier (PPID) of a new process to evade process-monitor
+T1591	Gather Victim Org Information	Adversaries may gather information about the victim's organization that can be used during targeting
+T1060	Registry Run Keys / Startup Folder	Adversaries may achieve persistence by adding a program to a startup folder or referencing it with a
+T1606	Forge Web Credentials	Adversaries may forge credential materials that can be used to gain access to web applications or In
+T1621	Multi-Factor Authentication Request Generation	Adversaries may attempt to bypass multi-factor authentication (MFA) mechanisms and gain access to ac
+T1554	Compromise Host Software Binary	Adversaries may modify host software binaries to establish persistent access to systems. Software bi
+T1552.008	Chat Messages	Adversaries may directly collect unsecured credentials stored or passed through user communication s
+T1059.001	PowerShell	Adversaries may abuse PowerShell commands and scripts for execution. PowerShell is a powerful intera
+T1023	Shortcut Modification	Shortcuts or symbolic links are ways of referencing other files or programs that will be opened or e
+T1546.001	Change Default File Association	Adversaries may establish persistence by executing malicious content triggered by a file type associ
+T1055.014	VDSO Hijacking	Adversaries may inject malicious code into processes via VDSO hijacking in order to evade process-ba
+T1071.002	File Transfer Protocols	Adversaries may communicate using application layer protocols associated with transferring files to 
+T1679	Selective Exclusion	Adversaries may intentionally exclude certain files, folders, directories, file types, or system com
+T1122	Component Object Model Hijacking	The Component Object Model (COM) is a system within Windows to enable interaction between software c
+T1015	Accessibility Features	Windows contains accessibility features that may be launched with a key combination before a user ha
+T1212	Exploitation for Credential Access	Adversaries may exploit software vulnerabilities in an attempt to collect credentials. Exploitation 
+T1546.014	Emond	Adversaries may gain persistence and elevate privileges by executing malicious content triggered by 
+T1102.003	One-Way Communication	Adversaries may use an existing, legitimate external Web service as a means for sending commands to 
+T1590	Gather Victim Network Information	Adversaries may gather information about the victim's networks that can be used during targeting. In
+T1210	Exploitation of Remote Services	Adversaries may exploit remote services to gain unauthorized access to internal systems once inside 
+T1502	Parent PID Spoofing	Adversaries may spoof the parent process identifier (PPID) of a new process to evade process-monitor
+T1142	Keychain	Keychains are the built-in way for macOS to keep track of users' passwords and credentials for many 
+T1534	Internal Spearphishing	After they already have access to accounts or systems within the environment, adversaries may use in
+T1169	Sudo	The sudoers file, <code>/etc/sudoers</code>, describes which users can run which commands and from w
+T1574.010	Services File Permissions Weakness	Adversaries may execute their own malicious payloads by hijacking the binaries used by services. Adv
+T1547.001	Registry Run Keys / Startup Folder	Adversaries may achieve persistence by adding a program to a startup folder or referencing it with a
+T1199	Trusted Relationship	Adversaries may breach or otherwise leverage organizations who have access to intended victims. Acce
+T1136.003	Cloud Account	Adversaries may create a cloud account to maintain access to victim systems. With a sufficient level
+T1069.001	Local Groups	Adversaries may attempt to find local system groups and permission settings. The knowledge of local 
+T1593	Search Open Websites/Domains	Adversaries may search freely available websites and/or domains for information about victims that c
+T1562.013	Disable or Modify Network Device Firewall	Adversaries may disable network device-based firewall mechanisms entirely or add, delete, or modify 
+T1098	Account Manipulation	Adversaries may manipulate accounts to maintain and/or elevate access to victim systems. Account man
+T1170	Mshta	Mshta.exe is a utility that executes Microsoft HTML Applications (HTA). HTA files have the file exte
+T1048	Exfiltration Over Alternative Protocol	Adversaries may steal data by exfiltrating it over a different protocol than that of the existing co
+T1547.006	Kernel Modules and Extensions	Adversaries may modify the kernel to automatically execute programs on system boot. Loadable Kernel 
+T1678	Delay Execution	Adversaries may employ various time-based methods to evade detection and analysis. These techniques 
+T1056.002	GUI Input Capture	Adversaries may mimic common operating system GUI components to prompt users for credentials with a 
+T1097	Pass the Ticket	Pass the ticket (PtT) is a method of authenticating to a system using Kerberos tickets without havin
+T1588.002	Tool	Adversaries may buy, steal, or download software tools that can be used during targeting. Tools can 
+T1052.001	Exfiltration over USB	Adversaries may attempt to exfiltrate data over a USB connected physical device. In certain circumst
+T1574.013	KernelCallbackTable	Adversaries may abuse the <code>KernelCallbackTable</code> of a process to hijack its execution flow
+T1597	Search Closed Sources	Adversaries may search and gather information about victims from closed (e.g., paid, private, or oth
+T1053.006	Systemd Timers	Adversaries may abuse systemd timers to perform task scheduling for initial or recurring execution o
+T1566	Phishing	Adversaries may send phishing messages to gain access to victim systems. All forms of phishing are e
+T1542.004	ROMMONkit	Adversaries may abuse the ROM Monitor (ROMMON) by loading an unauthorized firmware with adversary co
+T1218.001	Compiled HTML File	Adversaries may abuse Compiled HTML files (.chm) to conceal malicious code. CHM files are commonly d
+T1496.001	Compute Hijacking	Adversaries may leverage the compute resources of co-opted systems to complete resource-intensive ta
+T1070.005	Network Share Connection Removal	Adversaries may remove share connections that are no longer useful in order to clean up traces of th
+T1090.003	Multi-hop Proxy	Adversaries may chain together multiple proxies to disguise the source of malicious traffic. Typical
+T1110	Brute Force	Adversaries may use brute force techniques to gain access to accounts when passwords are unknown or 
+T1059.004	Unix Shell	Adversaries may abuse Unix shell commands and scripts for execution. Unix shells are the primary com
+T1137.003	Outlook Forms	Adversaries may abuse Microsoft Outlook forms to obtain persistence on a compromised system. Outlook
+T1219.003	Remote Access Hardware	An adversary may use legitimate remote access hardware to establish an interactive command and contr
+T1157	Dylib Hijacking	macOS and OS X use a common method to look for required dynamic libraries (dylib) to load into a pro
+T1562.001	Disable or Modify Tools	Adversaries may modify and/or disable security tools to avoid possible detection of their malware/to
+T1565	Data Manipulation	Adversaries may insert, delete, or manipulate data in order to influence external outcomes or hide a
+T1559	Inter-Process Communication	Adversaries may abuse inter-process communication (IPC) mechanisms for local code or command executi
+T1001	Data Obfuscation	Adversaries may obfuscate command and control traffic to make it more difficult to detect.(Citation:
+T1039	Data from Network Shared Drive	Adversaries may search network shares on computers they have compromised to find files of interest. 
+T1584.006	Web Services	Adversaries may compromise access to third-party web services that can be used during targeting. A v
+T1601	Modify System Image	Adversaries may make changes to the operating system of embedded network devices to weaken defenses 
+T1574	Hijack Execution Flow	Adversaries may execute their own malicious payloads by hijacking the way operating systems run prog
+T1036.012	Browser Fingerprint	Adversaries may attempt to blend in with legitimate traffic by spoofing browser and system attribute
+T1059.011	Lua	Adversaries may abuse Lua commands and scripts for execution. Lua is a cross-platform scripting and 
+T1027.005	Indicator Removal from Tools	Adversaries may remove indicators from tools if they believe their malicious tool was detected, quar
+T1204.003	Malicious Image	Adversaries may rely on a user running a malicious image to facilitate execution. Amazon Web Service
+T1543.005	Container Service	Adversaries may create or modify container or container cluster management tools that run as daemons
+T1078	Valid Accounts	Adversaries may obtain and abuse credentials of existing accounts as a means of gaining Initial Acce
+T1571	Non-Standard Port	Adversaries may communicate using a protocol and port pairing that are typically not associated. For
+T1585.001	Social Media Accounts	Adversaries may create and cultivate social media accounts that can be used during targeting. Advers
+T1073	DLL Side-Loading	Programs may specify DLLs that are loaded at runtime. Programs that improperly or vaguely specify a 
+T1055.012	Process Hollowing	Adversaries may inject malicious code into suspended and hollowed processes in order to evade proces
+T1068	Exploitation for Privilege Escalation	Adversaries may exploit software vulnerabilities in an attempt to elevate privileges. Exploitation o
+T1564.009	Resource Forking	Adversaries may abuse resource forks to hide malicious code or executables to evade detection and by
+T1531	Account Access Removal	Adversaries may interrupt availability of system and network resources by inhibiting access to accou
+T1110.004	Credential Stuffing	Adversaries may use credentials obtained from breach dumps of unrelated accounts to gain access to t
+T1208	Kerberoasting	Service principal names (SPNs) are used to uniquely identify each instance of a Windows service. To 
+T1027	Obfuscated Files or Information	Adversaries may attempt to make an executable or file difficult to discover or analyze by encrypting
+T1556.006	Multi-Factor Authentication	Adversaries may disable or modify multi-factor authentication (MFA) mechanisms to enable persistent 
+T1114.002	Remote Email Collection	Adversaries may target an Exchange server, Office 365, or Google Workspace to collect sensitive info
+T1505.004	IIS Components	Adversaries may install malicious components that run on Internet Information Services (IIS) web ser
+T1036.001	Invalid Code Signature	Adversaries may attempt to mimic features of valid code signatures to increase the chance of deceivi
+T1564.006	Run Virtual Instance	Adversaries may carry out malicious operations using a virtual instance to avoid detection. A wide v
+T1154	Trap	The <code>trap</code> command allows programs and shells to specify commands that will be executed u
+T1027.014	Polymorphic Code	Adversaries may utilize polymorphic code (also known as metamorphic or mutating code) to evade detec
+T1201	Password Policy Discovery	Adversaries may attempt to access detailed information about the password policy used within an ente
+T1546	Event Triggered Execution	Adversaries may establish persistence and/or elevate privileges using system mechanisms that trigger
+T1546.004	Unix Shell Configuration Modification	Adversaries may establish persistence through executing malicious commands triggered by a user’s she
+T1187	Forced Authentication	Adversaries may gather credential material by invoking or forcing a user to automatically provide au
+T1134.005	SID-History Injection	Adversaries may use SID-History Injection to escalate privileges and bypass access controls. The Win
+T1599	Network Boundary Bridging	Adversaries may bridge network boundaries by compromising perimeter network devices or internal devi
+T1486	Data Encrypted for Impact	Adversaries may encrypt data on target systems or on large numbers of systems in a network to interr
+T1488	Disk Content Wipe	Adversaries may erase the contents of storage devices on specific systems as well as large numbers o
+T1553	Subvert Trust Controls	Adversaries may undermine security controls that will either warn users of untrusted activity or pre
+T1548.004	Elevated Execution with Prompt	Adversaries may leverage the <code>AuthorizationExecuteWithPrivileges</code> API to escalate privile
+T1592.003	Firmware	Adversaries may gather information about the victim's host firmware that can be used during targetin
+T1573	Encrypted Channel	Adversaries may employ an encryption algorithm to conceal command and control traffic rather than re
+T1174	Password Filter DLL	Windows password filters are password policy enforcement mechanisms for both domain and local accoun
+T1547.002	Authentication Package	Adversaries may abuse authentication packages to execute DLLs when the system boots. Windows authent
+T1218.010	Regsvr32	Adversaries may abuse Regsvr32.exe to proxy execution of malicious code. Regsvr32.exe is a command-l
+T1002	Data Compressed	An adversary may compress data (e.g., sensitive documents) that is collected prior to exfiltration i
+T1567.003	Exfiltration to Text Storage Sites	Adversaries may exfiltrate data to text storage sites instead of their primary command and control c
+T1081	Credentials in Files	Adversaries may search local file systems and remote file shares for files containing passwords. The
+T1592.002	Software	Adversaries may gather information about the victim's host software that can be used during targetin
+T1128	Netsh Helper DLL	Netsh.exe (also referred to as Netshell) is a command-line scripting utility used to interact with t
+T1056	Input Capture	Adversaries may use methods of capturing user input to obtain credentials or collect information. Du
+T1566.004	Spearphishing Voice	Adversaries may use voice communications to ultimately gain access to victim systems. Spearphishing 
+T1587.004	Exploits	Adversaries may develop exploits that can be used during targeting. An exploit takes advantage of a 
+T1593.001	Social Media	Adversaries may search social media for information about victims that can be used during targeting.
+T1213.004	Customer Relationship Management Software	Adversaries may leverage Customer Relationship Management (CRM) software to mine valuable informatio
+T1546.015	Component Object Model Hijacking	Adversaries may establish persistence by executing malicious content triggered by hijacked reference
+T1589.001	Credentials	Adversaries may gather credentials that can be used during targeting. Account credentials gathered b
+T1195.002	Compromise Software Supply Chain	Adversaries may manipulate application software prior to receipt by a final consumer for the purpose
+T1036.003	Rename Legitimate Utilities	Adversaries may rename legitimate / system utilities to try to evade security mechanisms concerning 
+T1102.002	Bidirectional Communication	Adversaries may use an existing, legitimate external Web service as a means for sending commands to 
+T1203	Exploitation for Client Execution	Adversaries may exploit software vulnerabilities in client applications to execute code. Vulnerabili
+T1595.003	Wordlist Scanning	Adversaries may iteratively probe infrastructure using brute-forcing and crawling techniques. While 
+T1667	Email Bombing	Adversaries may flood targeted email addresses with an overwhelming volume of messages. This may bur
+T1562.011	Spoof Security Alerting	Adversaries may spoof security alerting from tools, presenting false evidence to impair defenders’ a
+T1137.004	Outlook Home Page	Adversaries may abuse Microsoft Outlook's Home Page feature to obtain persistence on a compromised s
+T1573.002	Asymmetric Cryptography	Adversaries may employ a known asymmetric encryption algorithm to conceal command and control traffi
+T1567.002	Exfiltration to Cloud Storage	Adversaries may exfiltrate data to a cloud storage service rather than over their primary command an
+T1570	Lateral Tool Transfer	Adversaries may transfer tools or other files between systems in a compromised environment. Once bro
+T1574.009	Path Interception by Unquoted Path	Adversaries may execute their own malicious payloads by hijacking vulnerable file path references. A
+T1608.003	Install Digital Certificate	Adversaries may install SSL/TLS certificates that can be used during targeting. SSL/TLS certificates
+T1168	Local Job Scheduling	On Linux and macOS systems, multiple methods are supported for creating pre-scheduled and periodic b
+T1166	Setuid and Setgid	When the setuid or setgid bits are set on Linux or macOS for an application, this means that the app
+T1037.005	Startup Items	Adversaries may use startup items automatically executed at boot initialization to establish persist
+T1100	Web Shell	A Web shell is a Web script that is placed on an openly accessible Web server to allow an adversary 
+T1186	Process Doppelgänging	Windows Transactional NTFS (TxF) was introduced in Vista as a method to perform safe file operations
+T1184	SSH Hijacking	Secure Shell (SSH) is a standard means of remote access on Linux and macOS systems. It allows a user
+T1614.001	System Language Discovery	Adversaries may attempt to gather information about the system language of a victim in order to infe
+T1095	Non-Application Layer Protocol	Adversaries may use an OSI non-application layer protocol for communication between host and C2 serv
+T1075	Pass the Hash	Pass the hash (PtH) is a method of authenticating as a user without having access to the user's clea
+T1059.013	Container CLI/API	Adversaries may abuse built-in CLI tools or API calls to execute malicious commands in containerized
+T1027.003	Steganography	Adversaries may use steganography techniques in order to prevent the detection of hidden information
+T1584.002	DNS Server	Adversaries may compromise third-party DNS servers that can be used during targeting. During post-co
+T1671	Cloud Application Integration	Adversaries may achieve persistence by leveraging OAuth application integrations in a software-as-a-
+T1001.003	Protocol or Service Impersonation	Adversaries may impersonate legitimate protocols or web service traffic to disguise command and cont
+T1012	Query Registry	Adversaries may interact with the Windows Registry to gather information about the system, configura
+T1030	Data Transfer Size Limits	An adversary may exfiltrate data in fixed size chunks instead of whole files or limit packet sizes b
+T1028	Windows Remote Management	Windows Remote Management (WinRM) is the name of both a Windows service and a protocol that allows a
+T1550.004	Web Session Cookie	Adversaries can use stolen session cookies to authenticate to web applications and services. This te
+T1078.002	Domain Accounts	Adversaries may obtain and abuse credentials of a domain account as a means of gaining Initial Acces
+T1218.009	Regsvcs/Regasm	Adversaries may abuse Regsvcs and Regasm to proxy execution of code through a trusted Windows utilit
+T1546.018	Python Startup Hooks	Adversaries may achieve persistence by leveraging Python’s startup mechanisms, including path config
+T1506	Web Session Cookie	Adversaries can use stolen session cookies to authenticate to web applications and services. This te
+T1553.004	Install Root Certificate	Adversaries may install a root certificate on a compromised system to avoid warnings when connecting
+T1037.003	Network Logon Script	Adversaries may use network logon scripts automatically executed at logon initialization to establis
+T1499	Endpoint Denial of Service	Adversaries may perform Endpoint Denial of Service (DoS) attacks to degrade or block the availabilit
+T1027.004	Compile After Delivery	Adversaries may attempt to make payloads difficult to discover and analyze by delivering files to vi
+T1065	Uncommonly Used Port	Adversaries may conduct C2 communications over a non-standard port to bypass proxies and firewalls t
+T1614	System Location Discovery	Adversaries may gather information in an attempt to calculate the geographical location of a victim 
+T1564.007	VBA Stomping	Adversaries may hide malicious Visual Basic for Applications (VBA) payloads embedded within MS Offic
+T1197	BITS Jobs	Adversaries may abuse BITS jobs to persistently execute code and perform various background tasks. W
+T1127.001	MSBuild	Adversaries may use MSBuild to proxy execution of code through a trusted Windows utility. MSBuild.ex
+T1656	Impersonation	Adversaries may impersonate a trusted person or organization in order to persuade and trick a target
+T1578.005	Modify Cloud Compute Configurations	Adversaries may modify settings that directly affect the size, locations, and resources available to
+T1088	Bypass User Account Control	Windows User Account Control (UAC) allows a program to elevate its privileges to perform a task unde
+T1494	Runtime Data Manipulation	Adversaries may modify systems in order to manipulate the data as it is accessed and displayed to an
+T1090.004	Domain Fronting	Adversaries may take advantage of routing schemes in Content Delivery Networks (CDNs) and other serv
+T1557.002	ARP Cache Poisoning	Adversaries may poison Address Resolution Protocol (ARP) caches to position themselves between the c
+T1562.008	Disable or Modify Cloud Logs	An adversary may disable or modify cloud logging capabilities and integrations to limit what data is
+T1518.001	Security Software Discovery	Adversaries may attempt to get a listing of security software, configurations, defensive tools, and 
+T1564.003	Hidden Window	Adversaries may use hidden windows to conceal malicious activity from the plain sight of users. In s
+T1493	Transmitted Data Manipulation	Adversaries may alter data en route to storage or other systems in order to manipulate external outc
+T1127.002	ClickOnce	Adversaries may use ClickOnce applications (.appref-ms and .application files) to proxy execution of
+T1059.006	Python	Adversaries may abuse Python commands and scripts for execution. Python is a very popular scripting/
+T1070.010	Relocate Malware	Once a payload is delivered, adversaries may reproduce copies of the same malware on the victim syst
+T1591.004	Identify Roles	Adversaries may gather information about identities and roles within the victim organization that ca
+T1132	Data Encoding	Adversaries may encode data to make the content of command and control traffic more difficult to det
+T1546.010	AppInit DLLs	Adversaries may establish persistence and/or elevate privileges by executing malicious content trigg
+T1598	Phishing for Information	Adversaries may send phishing messages to elicit sensitive information that can be used during targe
+T1496	Resource Hijacking	Adversaries may leverage the resources of co-opted systems to complete resource-intensive tasks, whi
+T1585	Establish Accounts	Adversaries may create and cultivate accounts with services that can be used during targeting. Adver
+T1588	Obtain Capabilities	Adversaries may buy and/or steal capabilities that can be used during targeting. Rather than develop
+T1546.002	Screensaver	Adversaries may establish persistence by executing malicious content triggered by user inactivity. S
+T1147	Hidden Users	Every user account in macOS has a userID associated with it. When creating a user, you can specify t
+T1556.009	Conditional Access Policies	Adversaries may disable or modify conditional access policies to enable persistent access to comprom
+T1578.002	Create Cloud Instance	An adversary may create a new instance or virtual machine (VM) within the compute service of a cloud
+T1500	Compile After Delivery	Adversaries may attempt to make payloads difficult to discover and analyze by delivering files to vi
+T1555.006	Cloud Secrets Management Stores	Adversaries may acquire credentials from cloud-native secret management solutions such as AWS Secret
+T1213.003	Code Repositories	Adversaries may leverage code repositories to collect valuable information. Code repositories are to
+T1565.002	Transmitted Data Manipulation	Adversaries may alter data en route to storage or other systems in order to manipulate external outc
+T1003.008	/etc/passwd and /etc/shadow	Adversaries may attempt to dump the contents of <code>/etc/passwd</code> and <code>/etc/shadow</code
+T1543.001	Launch Agent	Adversaries may create or modify launch agents to repeatedly execute malicious payloads as part of p
+T1569	System Services	Adversaries may abuse system services or daemons to execute commands or programs. Adversaries can ex
+T1059.003	Windows Command Shell	Adversaries may abuse the Windows command shell for execution. The Windows command shell ([cmd](http
+T1055.009	Proc Memory	Adversaries may inject malicious code into processes via the /proc filesystem in order to evade proc
+T1223	Compiled HTML File	Compiled HTML files (.chm) are commonly distributed as part of the Microsoft HTML Help system. CHM f
+T1650	Acquire Access	Adversaries may purchase or otherwise acquire an existing access to a target system or network. A va
+T1601.001	Patch System Image	Adversaries may modify the operating system of a network device to introduce new capabilities or wea
+T1558.002	Silver Ticket	Adversaries who have the password hash of a target service account (e.g. SharePoint, MSSQL) may forg
+T1213	Data from Information Repositories	Adversaries may leverage information repositories to mine valuable information. Information reposito
+T1070.009	Clear Persistence	Adversaries may clear artifacts associated with previously established persistence on a host system 
+T1059.012	Hypervisor CLI	Adversaries may abuse hypervisor command line interpreters (CLIs) to execute malicious commands. Hyp
+T1146	Clear Command History	In addition to clearing system logs, an adversary may clear the command history of a compromised acc
+T1555.004	Windows Credential Manager	Adversaries may acquire credentials from the Windows Credential Manager. The Credential Manager stor
+T1036.010	Masquerade Account Name	Adversaries may match or approximate the names of legitimate accounts to make newly created ones app
+T1519	Emond	Adversaries may use Event Monitor Daemon (emond) to establish persistence by scheduling malicious co
+T1194	Spearphishing via Service	Spearphishing via service is a specific variant of spearphishing. It is different from other forms o
+T1200	Hardware Additions	Adversaries may physically introduce computer accessories, networking hardware, or other computing d
+T1219.002	Remote Desktop Software	An adversary may use legitimate desktop support software to establish an interactive command and con
+T1505	Server Software Component	Adversaries may abuse legitimate extensible development features of servers to establish persistent 
+T1485	Data Destruction	Adversaries may destroy data and files on specific systems or in large numbers on a network to inter
+T1132.002	Non-Standard Encoding	Adversaries may encode data with a non-standard data encoding system to make the content of command 
+T1556.001	Domain Controller Authentication	Adversaries may patch the authentication process on a domain controller to bypass the typical authen
+T1537	Transfer Data to Cloud Account	Adversaries may exfiltrate data by transferring the data, including through sharing/syncing and crea
+T1027.006	HTML Smuggling	Adversaries may smuggle data and files past content filters by hiding malicious payloads inside of s
+T1556.005	Reversible Encryption	An adversary may abuse Active Directory authentication encryption properties to gain access to crede
+T1027.010	Command Obfuscation	Adversaries may obfuscate content during command execution to impede detection. Command-line obfusca
+T1130	Install Root Certificate	Root certificates are used in public key cryptography to identify a root certificate authority (CA).
+T1022	Data Encrypted	Data is encrypted before being exfiltrated in order to hide the information that is being exfiltrate
+T1070.004	File Deletion	Adversaries may delete files left behind by the actions of their intrusion activity. Malware, tools,
+T1189	Drive-by Compromise	Adversaries may gain access to a system through a user visiting a website over the normal course of 
+T1498	Network Denial of Service	Adversaries may perform Network Denial of Service (DoS) attacks to degrade or block the availability
+T1651	Cloud Administration Command	Adversaries may abuse cloud management services to execute commands within virtual machines. Resourc
+T1546.016	Installer Packages	Adversaries may establish persistence and elevate privileges by using an installer to trigger the ex
+T1595.001	Scanning IP Blocks	Adversaries may scan victim IP blocks to gather information that can be used during targeting. Publi
+T1158	Hidden Files and Directories	To prevent normal users from accidentally changing special files on a system, most operating systems
+T1221	Template Injection	Adversaries may create or modify references in user document templates to conceal malicious code or 
+T1037.004	RC Scripts	Adversaries may establish persistence by modifying RC scripts, which are executed during a Unix-like
+T1134	Access Token Manipulation	Adversaries may modify access tokens to operate under a different user or system security context to
+T1209	Time Providers	The Windows Time service (W32Time) enables time synchronization across and within domains. (Citation
+T1111	Multi-Factor Authentication Interception	Adversaries may target multi-factor authentication (MFA) mechanisms, (i.e., smart cards, token gener
+T1159	Launch Agent	Per Apple’s developer documentation, when a user logs in, a per-user launchd process is started whic
+T1027.002	Software Packing	Adversaries may perform software packing or virtual machine software protection to conceal their cod
+T1584.007	Serverless	Adversaries may compromise serverless cloud infrastructure, such as Cloudflare Workers, AWS Lambda f
+T1071.001	Web Protocols	Adversaries may communicate using application layer protocols associated with web traffic to avoid d
+T1059.005	Visual Basic	Adversaries may abuse Visual Basic (VB) for execution. VB is a programming language created by Micro
+T1564.005	Hidden File System	Adversaries may use a hidden file system to conceal malicious activity from users and security tools
+T1543.002	Systemd Service	Adversaries may create or modify systemd services to repeatedly execute malicious payloads as part o
+T1668	Exclusive Control	Adversaries who successfully compromise a system may attempt to maintain persistence by “closing the
+T1563.002	RDP Hijacking	Adversaries may hijack a legitimate user’s remote desktop session to move laterally within an enviro
+T1136	Create Account	Adversaries may create an account to maintain access to victim systems.(Citation: Symantec WastedLoc
+T1547.013	XDG Autostart Entries	Adversaries may add or modify XDG Autostart Entries to execute malicious programs or commands when a
+T1584.004	Server	Adversaries may compromise third-party servers that can be used during targeting. Use of servers all
+T1672	Email Spoofing	Adversaries may fake, or spoof, a sender’s identity by modifying the value of relevant email headers
+T1526	Cloud Service Discovery	An adversary may attempt to enumerate the cloud services running on a system after gaining access. T
+T1204.004	Malicious Copy and Paste	An adversary may rely upon a user copying and pasting code in order to gain execution. Users may be 
+T1151	Space after Filename	Adversaries can hide a program's true filetype by changing the extension of a file. With certain fil
+T1018	Remote System Discovery	Adversaries may attempt to get a listing of other systems by IP address, hostname, or other logical 
+T1046	Network Service Discovery	Adversaries may attempt to get a listing of services running on remote hosts and local network infra
+T1590.001	Domain Properties	Adversaries may gather information about the victim's network domain(s) that can be used during targ
+T1518	Software Discovery	Adversaries may attempt to get a listing of software and software versions that are installed on a s
+T1538	Cloud Service Dashboard	An adversary may use a cloud service dashboard GUI with stolen credentials to gain useful informatio
+T1055.005	Thread Local Storage	Adversaries may inject malicious code into processes via thread local storage (TLS) callbacks in ord
+T1622	Debugger Evasion	Adversaries may employ various means to detect and avoid debuggers. Debuggers are typically used by 
+T1036.006	Space after Filename	Adversaries can hide a program's true filetype by changing the extension of a file. With certain fil
+T1547.007	Re-opened Applications	Adversaries may modify plist files to automatically run an application when a user logs in. When a u
+T1608.006	SEO Poisoning	Adversaries may poison mechanisms that influence search engine optimization (SEO) to further lure st
+T1550.002	Pass the Hash	Adversaries may “pass the hash” using stolen password hashes to move laterally within an environment
+T1052	Exfiltration Over Physical Medium	Adversaries may attempt to exfiltrate data via a physical medium, such as a removable drive. In cert
+T1574.002	DLL Side-Loading	Adversaries may execute their own malicious payloads by side-loading DLLs. Similar to [DLL](https://
+T1105	Ingress Tool Transfer	Adversaries may transfer tools or other files from an external system into a compromised environment
+T1216.002	SyncAppvPublishingServer	Adversaries may abuse SyncAppvPublishingServer.vbs to proxy execution of malicious [PowerShell](http
+T1098.002	Additional Email Delegate Permissions	Adversaries may grant additional permission levels to maintain persistent access to an adversary-con
+T1588.003	Code Signing Certificates	Adversaries may buy and/or steal code signing certificates that can be used during targeting. Code s
+T1126	Network Share Connection Removal	Adversaries may remove share connections that are no longer useful in order to clean up traces of th
+T1648	Serverless Execution	Adversaries may abuse serverless computing, integration, and automation services to execute arbitrar
+T1548.006	TCC Manipulation	Adversaries can manipulate or abuse the Transparency, Consent, & Control (TCC) service or database t
+T1084	Windows Management Instrumentation Event Subscription	Windows Management Instrumentation (WMI) can be used to install event filters, providers, consumers,
+T1160	Launch Daemon	Per Apple’s developer documentation, when macOS and OS X boot up, launchd is run to finish system in
+T1055.008	Ptrace System Calls	Adversaries may inject malicious code into processes via ptrace (process trace) system calls in orde
+T1653	Power Settings	Adversaries may impair a system's ability to hibernate, reboot, or shut down in order to extend acce
+T1027.007	Dynamic API Resolution	Adversaries may obfuscate then dynamically resolve API functions called by their malware in order to
+T1021.001	Remote Desktop Protocol	Adversaries may use [Valid Accounts](https://attack.mitre.org/techniques/T1078) to log into a comput
+T1037.001	Logon Script (Windows)	Adversaries may use Windows logon scripts automatically executed at logon initialization to establis
+T1055.015	ListPlanting	Adversaries may abuse list-view controls to inject malicious code into hijacked processes in order t
+T1665	Hide Infrastructure	Adversaries may manipulate network traffic in order to hide and evade detection of their C2 infrastr
+T1484	Domain or Tenant Policy Modification	Adversaries may modify the configuration settings of a domain or identity tenant to evade defenses a
+T1220	XSL Script Processing	Adversaries may bypass application control and obscure execution of code by embedding scripts inside
+T1596.005	Scan Databases	Adversaries may search within public scan databases for information about victims that can be used d
+T1564.001	Hidden Files and Directories	Adversaries may set files and directories to be hidden to evade detection mechanisms. To prevent nor
+T1578.001	Create Snapshot	An adversary may create a snapshot or data backup within a cloud account to evade defenses. A snapsh
+T1591.001	Determine Physical Locations	Adversaries may gather the victim's physical location(s) that can be used during targeting. Informat
+T1137.002	Office Test	Adversaries may abuse the Microsoft Office "Office Test" Registry key to obtain persistence on a com
+T1587	Develop Capabilities	Adversaries may build capabilities that can be used during targeting. Rather than purchasing, freely
+T1173	Dynamic Data Exchange	Windows Dynamic Data Exchange (DDE) is a client-server protocol for one-time and/or continuous inter
+T1003.003	NTDS	Adversaries may attempt to access or create a copy of the Active Directory domain database in order 
+T1602.001	SNMP (MIB Dump)	Adversaries may target the Management Information Base (MIB) to collect and/or mine valuable informa
+T1001.002	Steganography	Adversaries may use steganographic techniques to hide command and control traffic to make detection 
+T1204.001	Malicious Link	An adversary may rely upon a user clicking a malicious link in order to gain execution. Users may be
+T1550.001	Application Access Token	Adversaries may use stolen application access tokens to bypass the typical authentication process an
+T1547.008	LSASS Driver	Adversaries may modify or add LSASS drivers to obtain persistence on compromised systems. The Window
+T1569.002	Service Execution	Adversaries may abuse the Windows service control manager to execute malicious commands or payloads.
+T1078.004	Cloud Accounts	Valid accounts in cloud environments may allow adversaries to perform actions to achieve Initial Acc
+T1480.001	Environmental Keying	Adversaries may environmentally key payloads or other features of malware to evade defenses and cons
+T1008	Fallback Channels	Adversaries may use fallback or alternate communication channels if the primary channel is compromis
+T1680	Local Storage Discovery	Adversaries may enumerate local drives, disks, and/or volumes and their attributes like total or fre
+T1564.004	NTFS File Attributes	Adversaries may use NTFS file attributes to hide their malicious data in order to evade detection. E
+T1558.003	Kerberoasting	Adversaries may abuse a valid Kerberos ticket-granting ticket (TGT) or sniff network traffic to obta
+T1096	NTFS File Attributes	Every New Technology File System (NTFS) formatted partition contains a Master File Table (MFT) that 
+T1003.006	DCSync	Adversaries may attempt to access credentials and other sensitive information by abusing a Windows D
+T1124	System Time Discovery	An adversary may gather the system time and/or time zone settings from a local or remote system. The
+T1053.002	At	Adversaries may abuse the [at](https://attack.mitre.org/software/S0110) utility to perform task sche
+T1035	Service Execution	Adversaries may execute a binary, command, or script via a method that interacts with Windows servic
+T1055.001	Dynamic-link Library Injection	Adversaries may inject dynamic-link libraries (DLLs) into processes in order to evade process-based 
+T1086	PowerShell	PowerShell is a powerful interactive command-line interface and scripting environment included in th
+T1588.005	Exploits	Adversaries may buy, steal, or download exploits that can be used during targeting. An exploit takes
+T1556	Modify Authentication Process	Adversaries may modify authentication mechanisms and processes to access user credentials or enable 
+T1546.017	Udev Rules	Adversaries may maintain persistence through executing malicious content triggered using udev rules.
+T1056.004	Credential API Hooking	Adversaries may hook into Windows application programming interface (API) functions and Linux system
+T1495	Firmware Corruption	Adversaries may overwrite or corrupt the flash memory contents of system BIOS or other firmware in d
+T1490	Inhibit System Recovery	Adversaries may delete or remove built-in data and turn off services designed to aid in the recovery
+T1546.007	Netsh Helper DLL	Adversaries may establish persistence by executing malicious content triggered by Netsh Helper DLLs.
+T1566.003	Spearphishing via Service	Adversaries may send spearphishing messages via third-party services in an attempt to gain access to
+T1090.001	Internal Proxy	Adversaries may use an internal proxy to direct command and control traffic between two or more syst
+T1216	System Script Proxy Execution	Adversaries may use trusted scripts, often signed with certificates, to proxy the execution of malic
+T1094	Custom Command and Control Protocol	Adversaries may communicate using a custom command and control protocol instead of encapsulating com
+T1102.001	Dead Drop Resolver	Adversaries may use an existing, legitimate external Web service to host information that points to 
+T1118	InstallUtil	InstallUtil is a command-line utility that allows for installation and uninstallation of resources b
+T1001.001	Junk Data	Adversaries may add junk data to protocols used for command and control to make detection more diffi
+T1598.001	Spearphishing Service	Adversaries may send spearphishing messages via third-party services to elicit sensitive information
+T1505.006	vSphere Installation Bundles	Adversaries may abuse vSphere Installation Bundles (VIBs) to establish persistent access to ESXi hyp
+T1552.007	Container API	Adversaries may gather credentials via APIs within a containers environment. APIs in these environme
+T1584.001	Domains	Adversaries may hijack domains and/or subdomains that can be used during targeting. Domain registrat
+T1505.001	SQL Stored Procedures	Adversaries may abuse SQL stored procedures to establish persistent access to systems. SQL Stored Pr
+T1556.004	Network Device Authentication	Adversaries may use [Patch System Image](https://attack.mitre.org/techniques/T1601/001) to hard code
+T1561.001	Disk Content Wipe	Adversaries may erase the contents of storage devices on specific systems or in large numbers in a n
+T1213.005	Messaging Applications	Adversaries may leverage chat and messaging applications, such as Microsoft Teams, Google Chat, and 
+T1048.003	Exfiltration Over Unencrypted Non-C2 Protocol	Adversaries may steal data by exfiltrating it over an un-encrypted network protocol other than that 
+T1027.015	Compression	Adversaries may use compression to obfuscate their payloads or files. Compressed file formats such a
+T1574.004	Dylib Hijacking	Adversaries may execute their own payloads by placing a malicious dynamic library (dylib) with an ex
+T1601.002	Downgrade System Image	Adversaries may install an older version of the operating system of a network device to weaken secur
+T1078.003	Local Accounts	Adversaries may obtain and abuse credentials of a local account as a means of gaining Initial Access
+T1669	Wi-Fi Networks	Adversaries may gain initial access to target systems by connecting to wireless networks. They may a
+T1211	Exploitation for Defense Evasion	Adversaries may exploit a system or application vulnerability to bypass security features. Exploitat
+T1127	Trusted Developer Utilities Proxy Execution	Adversaries may take advantage of trusted developer utilities to proxy execution of malicious payloa
+T1529	System Shutdown/Reboot	Adversaries may shutdown/reboot systems to interrupt access to, or aid in the destruction of, those 
+T1218.014	MMC	Adversaries may abuse mmc.exe to proxy execution of malicious .msc files. Microsoft Management Conso
+T1564.010	Process Argument Spoofing	Adversaries may attempt to hide process command-line arguments by overwriting process memory. Proces
+T1077	Windows Admin Shares	Windows systems have hidden network shares that are accessible only to administrators and provide th
+T1574.012	COR_PROFILER	Adversaries may leverage the COR_PROFILER environment variable to hijack the execution flow of progr

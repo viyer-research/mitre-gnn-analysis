@@ -1,0 +1,277 @@
+{
+  "timestamp": "2025-12-23 11:53:28",
+  "summary": {
+    "total_queries": 5,
+    "rag_average": 7.866,
+    "graph_average": 7.16,
+    "rag_wins": 3,
+    "graph_wins": 2,
+    "ties": 0,
+    "improvement": -0.7059999999999995,
+    "rag_std": 1.6699640714698025,
+    "graph_std": 2.0206434618705003
+  },
+  "results": [
+    {
+      "query": "What techniques do threat actors use for credential theft?",
+      "rag": {
+        "relevance": 9,
+        "completeness": 8,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 9,
+        "overall": 9.1,
+        "confidence": 0.95,
+        "reasoning": "The response directly addresses the user's query, providing a general overview of common credential theft techniques used by threat actors. It is mostly comprehensive in its coverage of the topic, but lacks some specific examples and references to MITRE ATT&CK tactics and techniques.",
+        "strengths": [
+          "Directly answers the user's query with relevant information",
+          "Provides a clear and concise overview of common credential theft techniques",
+          "Accurately describes Phishing, Pass-the-Hash (PtH), Pass-the-Ticket (PtT), and Keylogger attacks"
+        ],
+        "weaknesses": [
+          "Does not provide more specific examples or references to MITRE ATT&CK tactics and techniques",
+          "Could be improved by including more details on detection and mitigation strategies for each technique",
+          "The initial response mentions that no relevant information was retrieved from the knowledge graph, which may indicate a potential issue with data collection"
+        ]
+      },
+      "graph": {
+        "relevance": 5,
+        "completeness": 5,
+        "accuracy": 5,
+        "specificity": 5,
+        "clarity": 5,
+        "overall": 5,
+        "confidence": 0.3,
+        "reasoning": "Parse error: {\n    \"relevance\": 9,\n    \"completeness\": 8,\n    \"accuracy\": 10,\n    \"specificity\": 9,\n    \"clarity\"",
+        "strengths": [],
+        "weaknesses": []
+      },
+      "comparison": {
+        "winner": "RAG",
+        "primary_reason": "Response A provided a more accurate and relevant answer, even though it relied on general knowledge rather than direct information from the context.",
+        "key_difference": "Response B (Graph+LLM) failed to leverage contextual information effectively, resulting in a vague and incomplete answer, whereas Response A's limitations were mitigated by its ability to generate relevant content based on prior knowledge.",
+        "recommendation": "When direct contextual information is unavailable or incomplete, use the RAG approach for more accurate and relevant responses. When context is sufficient, Graph+LLM can provide more detailed answers.",
+        "margin": 4.1
+      },
+      "performance": {
+        "rag_latency_ms": 30644.56796646118,
+        "graph_latency_ms": 30938.85850906372,
+        "rag_entities": 5,
+        "graph_entities": 5,
+        "rag_tokens": 303,
+        "graph_tokens": 351
+      }
+    },
+    {
+      "query": "How can we detect lateral movement?",
+      "rag": {
+        "relevance": 8,
+        "completeness": 7,
+        "accuracy": 9,
+        "specificity": 9,
+        "clarity": 9,
+        "overall": 8.4,
+        "confidence": 0.85,
+        "reasoning": "This response provides a thorough analysis of lateral movement detection using the MITRE ATT&CK framework, covering relevant attack patterns, entity analysis, and detection strategies.",
+        "strengths": [
+          "Comprehensive coverage of techniques and tactics",
+          "Excellent specificity with accurate T#### references",
+          "Well-structured and easy to understand"
+        ],
+        "weaknesses": [
+          "Limited contextual information (only 5 entities)",
+          "Detection strategies could be more detailed and tailored to specific scenarios",
+          "Entity analysis relies on general knowledge rather than specific entity data"
+        ]
+      },
+      "graph": {
+        "relevance": 9,
+        "completeness": 8,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 9,
+        "overall": 9.1,
+        "confidence": 0.95,
+        "reasoning": "The response effectively addresses the query about detecting lateral movement, providing a clear overview of detection strategies and relevant MITRE ATT&CK techniques. However, it lacks explicit references to specific network architecture or attack patterns.",
+        "strengths": [
+          "Provides comprehensive detection strategies for lateral movement",
+          "Mentions specific MITRE ATT&CK techniques (T1201, T1210, T1048)",
+          "Acknowledges the need for more context and future investigation"
+        ],
+        "weaknesses": [
+          "Could benefit from explicit references to specific network architecture or attack patterns",
+          "Some sections seem slightly disconnected or tangential (e.g., recommendations for future knowledge graph expansion)"
+        ]
+      },
+      "comparison": {
+        "winner": "Graph+LLM",
+        "primary_reason": "Higher Overall score, with significant improvements in Relevance, Completeness, Accuracy, and Specificity.",
+        "key_difference": "Graph+LLM provides a more comprehensive understanding of lateral movement by including relevant attack patterns and techniques in its response. It also offers a clear definition of lateral movement and related techniques.",
+        "recommendation": "Use Graph+LLM when you need a more detailed and contextualized answer to complex cybersecurity questions, especially those requiring an understanding of the underlying concepts and relationships.",
+        "margin": 1.7
+      },
+      "performance": {
+        "rag_latency_ms": 35013.572454452515,
+        "graph_latency_ms": 41630.621671676636,
+        "rag_entities": 5,
+        "graph_entities": 5,
+        "rag_tokens": 389,
+        "graph_tokens": 490
+      }
+    },
+    {
+      "query": "What are persistence mechanisms?",
+      "rag": {
+        "relevance": 9,
+        "completeness": 8,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 9,
+        "overall": 8.93,
+        "confidence": 0.95,
+        "reasoning": "This response directly addresses the user's query, providing a clear and comprehensive explanation of persistence mechanisms within the context of the MITRE ATT&CK framework. The information is accurate and well-structured, with specific examples and references to threat actors.",
+        "strengths": [
+          "Directly answers the user's query",
+          "Provides a clear and comprehensive explanation of persistence mechanisms",
+          "Incorporates specific techniques (T####) and actors (G####)"
+        ],
+        "weaknesses": [
+          "Lacks a direct reference to the MITRE ATT&CK framework in the introductory sentence",
+          "Context size is small, but not particularly relevant to the query's answer"
+        ]
+      },
+      "graph": {
+        "relevance": 9,
+        "completeness": 8,
+        "accuracy": 10,
+        "specificity": 9,
+        "clarity": 9,
+        "overall": 8.8,
+        "confidence": 0.95,
+        "reasoning": "This response thoroughly addresses the user's query on persistence mechanisms, covering common techniques, threat actors, and providing specific references to MITRE ATT&CK techniques.",
+        "strengths": [
+          "Comprehensive coverage of persistence mechanisms",
+          "Specific examples and references to MITRE ATT&CK techniques",
+          "Well-structured and easy to understand"
+        ],
+        "weaknesses": [
+          "Minor tangents (e.g., mention of CaaS actors)",
+          "Some information could be more concise or directly relevant to the query"
+        ]
+      },
+      "comparison": {
+        "winner": "RAG",
+        "primary_reason": "Slightly more accurate and complete information on the definition of persistence mechanisms.",
+        "key_difference": "Response A provides a concise and clear explanation, while Response B has some redundant information (e.g., 'In other words') and lacks a direct reference to the MITRE ATT&CK framework.",
+        "recommendation": "Use RAG for its slightly higher accuracy and completeness in defining persistence mechanisms. However, Graph+LLM can be useful when more context or examples are needed, especially with longer queries.",
+        "margin": 0.1
+      },
+      "performance": {
+        "rag_latency_ms": 36551.17845535278,
+        "graph_latency_ms": 50987.81895637512,
+        "rag_entities": 5,
+        "graph_entities": 5,
+        "rag_tokens": 434,
+        "graph_tokens": 590
+      }
+    },
+    {
+      "query": "What tools does APT28 use?",
+      "rag": {
+        "relevance": 8,
+        "completeness": 6,
+        "accuracy": 9,
+        "specificity": 8,
+        "clarity": 9,
+        "overall": 7.9,
+        "confidence": 0.95,
+        "reasoning": "The response is mostly relevant to the user's query, providing some specific techniques and actors related to APT28. However, it does not cover the full scope of the topic, as it only mentions a few techniques and lacks detailed information on detection and mitigation.",
+        "strengths": [
+          "Provides specific MITRE ATT&CK references (T1193, T1056, T1210)",
+          "Correctly attributes APT28 to Russian intelligence services",
+          "Clearly states the limitations of available information"
+        ],
+        "weaknesses": [
+          "Does not cover the full scope of APT28's tactics, techniques, and procedures",
+          "Lacks detailed information on detection and mitigation",
+          "Uses a somewhat generic tone when describing APT28's activities"
+        ]
+      },
+      "graph": {
+        "relevance": 5,
+        "completeness": 5,
+        "accuracy": 5,
+        "specificity": 5,
+        "clarity": 5,
+        "overall": 5,
+        "confidence": 0.3,
+        "reasoning": "Parse error: {\n    \"relevance\": 8,\n    \"completeness\": 6,\n    \"accuracy\": 9,\n    \"specificity\": 7,\n    \"clarity\":",
+        "strengths": [],
+        "weaknesses": []
+      },
+      "comparison": {
+        "winner": "RAG",
+        "primary_reason": "Higher accuracy and specificity in providing general information about APT28, despite not having direct answers to the query.",
+        "key_difference": "RAG was able to provide more accurate and specific information about APT28, even when it didn't have a direct answer to the question. Graph+LLM, on the other hand, struggled with relevance, completeness, accuracy, and specificity in providing general insights about APT28.",
+        "recommendation": "Use RAG for tasks requiring high accuracy and specificity, such as information gathering and research. Use Graph+LLM when you need to generate text based on complex queries or when direct answers are not available.",
+        "margin": 2.9
+      },
+      "performance": {
+        "rag_latency_ms": 24073.82106781006,
+        "graph_latency_ms": 29396.506309509277,
+        "rag_entities": 5,
+        "graph_entities": 5,
+        "rag_tokens": 277,
+        "graph_tokens": 333
+      }
+    },
+    {
+      "query": "How do we mitigate ransomware?",
+      "rag": {
+        "relevance": 5,
+        "completeness": 5,
+        "accuracy": 5,
+        "specificity": 5,
+        "clarity": 5,
+        "overall": 5,
+        "confidence": 0.3,
+        "reasoning": "Parse error: {\n    \"relevance\": 9,\n    \"completeness\": 8,\n    \"accuracy\": 10,\n    \"specificity\": 9,\n    \"clarity\"",
+        "strengths": [],
+        "weaknesses": []
+      },
+      "graph": {
+        "relevance": 9,
+        "completeness": 7,
+        "accuracy": 8,
+        "specificity": 5,
+        "clarity": 9,
+        "overall": 7.9,
+        "confidence": 0.9,
+        "reasoning": "The response provides a clear and relevant discussion on ransomware mitigation, but it falls short in terms of specificity as it does not explicitly mention specific ATT&CK techniques or actors.",
+        "strengths": [
+          "Relevant and understandable explanation of common attack patterns",
+          "Clear guidance on implementing security controls"
+        ],
+        "weaknesses": [
+          "Lack of explicit references to MITRE ATT&CK techniques and actors",
+          "Some generic statements that could be more specific"
+        ]
+      },
+      "comparison": {
+        "winner": "Graph+LLM",
+        "primary_reason": "More relevant and accurate information on ransomware mitigation strategies, despite some limitations in specificity.",
+        "key_difference": "Graph+LLM's ability to traverse the knowledge graph and provide a more nuanced understanding of common attack patterns and techniques sets it apart from RAG's more straightforward approach.",
+        "recommendation": "Use Graph+LLM for its more comprehensive and up-to-date information on ransomware mitigation strategies. For simple, well-defined queries, RAG may still be sufficient.",
+        "margin": 2.9
+      },
+      "performance": {
+        "rag_latency_ms": 43765.923261642456,
+        "graph_latency_ms": 27162.580728530884,
+        "rag_entities": 5,
+        "graph_entities": 5,
+        "rag_tokens": 496,
+        "graph_tokens": 325
+      }
+    }
+  ]
+}

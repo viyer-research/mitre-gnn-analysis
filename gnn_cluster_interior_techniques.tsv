@@ -1,0 +1,294 @@
+index	id	name	cluster	cluster_name	distance_to_centroid
+703	T1189	Drive-by Compromise	0	Evasion_Persistence	5.423333110153429
+539	T1059.004	Unix Shell	0	Evasion_Persistence	5.5556306097897385
+292	T1560	Archive Collected Data	0	Evasion_Persistence	5.976957062332687
+522	T1048	Exfiltration Over Alternative Protocol	0	Evasion_Persistence	6.086468128666501
+725	T1584.004	Server	0	Evasion_Persistence	6.146082887116285
+126	T1559.002	Dynamic Data Exchange	0	Evasion_Persistence	6.17473494565973
+692	T1505	Server Software Component	0	Evasion_Persistence	6.245135771660009
+547	T1039	Data from Network Shared Drive	0	Evasion_Persistence	6.538986945998606
+693	T1485	Data Destruction	0	Evasion_Persistence	6.539478030464062
+762	T1564.001	Hidden Files and Directories	0	Evasion_Persistence	6.669466783149889
+117	T1036.008	Masquerade File Type	0	Evasion_Persistence	6.864287539904139
+743	T1105	Ingress Tool Transfer	0	Evasion_Persistence	7.1339090991339
+297	T1021	Remote Services	0	Evasion_Persistence	7.27285868991765
+91	T1561	Disk Wipe	0	Evasion_Persistence	7.413193288034386
+4	T1560.001	Archive via Utility	0	Evasion_Persistence	7.460070041843987
+180	T1530	Data from Cloud Storage	0	Evasion_Persistence	7.876364232277457
+610	T1567.002	Exfiltration to Cloud Storage	0	Evasion_Persistence	8.030382277458285
+272	T1029	Scheduled Transfer	0	Evasion_Persistence	8.117314447882192
+339	T1092	Communication Through Removable Media	0	Evasion_Persistence	8.229481892129314
+194	T1074.002	Remote Data Staging	0	Evasion_Persistence	9.334623948999669
+97	T1025	Data from Removable Media	0	Evasion_Persistence	9.408427500894357
+219	T1091	Replication Through Removable Media	0	Evasion_Persistence	9.641625772363641
+629	T1030	Data Transfer Size Limits	0	Evasion_Persistence	10.84571894434631
+102	T1074.001	Local Data Staging	0	Evasion_Persistence	11.035745690758265
+500	T1071.002	File Transfer Protocols	0	Evasion_Persistence	12.650115180150907
+784	T1053.002	At	1	Mixed_General_Purpose	4.51286434592241
+355	T1019	System Firmware	1	Mixed_General_Purpose	5.052587792990288
+326	T1583.004	Server	1	Mixed_General_Purpose	5.098511414503433
+640	T1065	Uncommonly Used Port	1	Mixed_General_Purpose	5.1655457271445355
+330	T1547.003	Time Providers	1	Mixed_General_Purpose	5.190389914277191
+388	T1496.002	Bandwidth Hijacking	1	Mixed_General_Purpose	5.2236016242862995
+589	T1002	Data Compressed	1	Mixed_General_Purpose	5.273005631728585
+350	T1547.011	Plist Modification	1	Mixed_General_Purpose	5.296869761902342
+409	T1542.002	Component Firmware	1	Mixed_General_Purpose	5.349599211361192
+812	T1574.004	Dylib Hijacking	1	Mixed_General_Purpose	5.355663036716408
+129	T1063	Security Software Discovery	1	Mixed_General_Purpose	5.359862741117126
+414	T1213.001	Confluence	1	Mixed_General_Purpose	5.385188614603388
+365	T1598.004	Spearphishing Voice	1	Mixed_General_Purpose	5.393732582973256
+149	T1588.006	Vulnerabilities	1	Mixed_General_Purpose	5.411826990720859
+69	T1099	Timestomp	1	Mixed_General_Purpose	5.4223151830985765
+445	T1562.010	Downgrade Attack	1	Mixed_General_Purpose	5.4446648726429885
+299	T1556.007	Hybrid Identity	1	Mixed_General_Purpose	5.449353033136153
+62	T1109	Component Firmware	1	Mixed_General_Purpose	5.455520737539961
+381	T1045	Software Packing	1	Mixed_General_Purpose	5.4693970242847465
+454	T1608.005	Link Target	1	Mixed_General_Purpose	5.480538236889192
+573	T1027.014	Polymorphic Code	1	Mixed_General_Purpose	5.496898430034412
+120	T1121	Regsvcs/Regasm	1	Mixed_General_Purpose	5.530693014953219
+345	T1053.001	At (Linux)	1	Mixed_General_Purpose	5.581467573109885
+644	T1127.001	MSBuild	1	Mixed_General_Purpose	5.605205894471552
+99	T1218.013	Mavinject	1	Mixed_General_Purpose	5.618834261285241
+382	T1055.013	Process Doppelgänging	1	Mixed_General_Purpose	5.627166393036353
+55	T1590.002	DNS	1	Mixed_General_Purpose	5.635872317357754
+587	T1547.002	Authentication Package	1	Mixed_General_Purpose	5.654408488136361
+255	T1557.004	Evil Twin	1	Mixed_General_Purpose	5.664701401942486
+741	T1052	Exfiltration Over Physical Medium	1	Mixed_General_Purpose	5.6864391251344015
+302	T1596	Search Open Technical Databases	1	Mixed_General_Purpose	5.752697701980392
+738	T1547.007	Re-opened Applications	1	Mixed_General_Purpose	5.777338930096042
+106	T1565.001	Stored Data Manipulation	1	Mixed_General_Purpose	5.801800554273289
+677	T1055.009	Proc Memory	1	Mixed_General_Purpose	5.827987319583501
+200	T1498.002	Reflection Amplification	1	Mixed_General_Purpose	5.862720050920091
+570	T1036.001	Invalid Code Signature	1	Mixed_General_Purpose	5.8917937216565
+817	T1127	Trusted Developer Utilities Proxy Execution	1	Mixed_General_Purpose	5.911788632238657
+83	T1069.003	Cloud Groups	1	Mixed_General_Purpose	5.996542057070973
+314	T1574.008	Path Interception by Search Order Hijacking	1	Mixed_General_Purpose	6.0097966739949795
+124	T1547.014	Active Setup	1	Mixed_General_Purpose	6.03891347894734
+654	T1493	Transmitted Data Manipulation	1	Mixed_General_Purpose	6.044014129664702
+286	T1011	Exfiltration Over Other Network Medium	1	Mixed_General_Purpose	6.051544239776077
+371	T1101	Security Support Provider	1	Mixed_General_Purpose	6.062068459460778
+265	T1032	Standard Cryptographic Protocol	1	Mixed_General_Purpose	6.0654987828028135
+548	T1584.006	Web Services	1	Mixed_General_Purpose	6.078997859864034
+770	T1001.002	Steganography	1	Mixed_General_Purpose	6.095542038845746
+712	T1209	Time Providers	1	Mixed_General_Purpose	6.108032824832613
+332	T1085	Rundll32	1	Mixed_General_Purpose	6.108156366369134
+38	T1498.001	Direct Network Flood	1	Mixed_General_Purpose	6.126014226369992
+397	T1564.014	Extended Attributes	1	Mixed_General_Purpose	6.126946058134117
+116	T1192	Spearphishing Link	1	Mixed_General_Purpose	6.132927731701444
+542	T1157	Dylib Hijacking	1	Mixed_General_Purpose	6.137512760918756
+633	T1218.009	Regsvcs/Regasm	1	Mixed_General_Purpose	6.146651871009102
+276	T1218.002	Control Panel	1	Mixed_General_Purpose	6.162386239738869
+426	T1191	CMSTP	1	Mixed_General_Purpose	6.162607104369236
+464	T1205.001	Port Knocking	1	Mixed_General_Purpose	6.191606435080461
+282	T1009	Binary Padding	1	Mixed_General_Purpose	6.207104267997685
+44	T1588.007	Artificial Intelligence	1	Mixed_General_Purpose	6.226452688230504
+617	T1100	Web Shell	1	Mixed_General_Purpose	6.229272350250924
+76	T1583.008	Malvertising	1	Mixed_General_Purpose	6.2351608297877705
+253	T1050	New Service	1	Mixed_General_Purpose	6.2422947090965
+521	T1170	Mshta	1	Mixed_General_Purpose	6.265808925063236
+10	T1067	Bootkit	1	Mixed_General_Purpose	6.270647772881815
+525	T1056.002	GUI Input Capture	1	Mixed_General_Purpose	6.294767479906461
+364	T1054	Indicator Blocking	1	Mixed_General_Purpose	6.334366384662077
+618	T1186	Process Doppelgänging	1	Mixed_General_Purpose	6.3708733372601
+441	T1569.001	Launchctl	1	Mixed_General_Purpose	6.371316958127874
+252	T1038	DLL Search Order Hijacking	1	Mixed_General_Purpose	6.3913625192805945
+376	T1177	LSASS Driver	1	Mixed_General_Purpose	6.394954286169871
+289	T1131	Authentication Package	1	Mixed_General_Purpose	6.409053869534053
+535	T1496.001	Compute Hijacking	1	Mixed_General_Purpose	6.415346763645886
+588	T1218.010	Regsvr32	1	Mixed_General_Purpose	6.422252084023723
+565	T1208	Kerberoasting	1	Mixed_General_Purpose	6.422316708621798
+134	T1213.006	Databases	1	Mixed_General_Purpose	6.435454499762533
+279	T1547.005	Security Support Provider	1	Mixed_General_Purpose	6.450003724710325
+19	T1161	LC_LOAD_DYLIB Addition	1	Mixed_General_Purpose	6.461757675599312
+337	T1681	Search Threat Vendor Data	1	Mixed_General_Purpose	6.476922371702611
+781	T1096	NTFS File Attributes	1	Mixed_General_Purpose	6.492650710034102
+137	T1167	Securityd Memory	1	Mixed_General_Purpose	6.4938113131897985
+86	T1499.003	Application Exhaustion Flood	1	Mixed_General_Purpose	6.508835800305224
+39	T1492	Stored Data Manipulation	1	Mixed_General_Purpose	6.534142994423741
+366	T1193	Spearphishing Attachment	1	Mixed_General_Purpose	6.580466400657755
+819	T1218.014	MMC	1	Mixed_General_Purpose	6.624807008439712
+802	T1598.001	Spearphishing Service	1	Mixed_General_Purpose	6.652887368867179
+216	T1202	Indirect Command Execution	1	Mixed_General_Purpose	6.667557784443188
+612	T1574.009	Path Interception by Unquoted Path	1	Mixed_General_Purpose	6.689675538258913
+258	T1480.002	Mutual Exclusion	1	Mixed_General_Purpose	6.694600259254355
+178	T1017	Application Deployment Software	1	Mixed_General_Purpose	6.703337930108724
+726	T1672	Email Spoofing	1	Mixed_General_Purpose	6.707378302787098
+188	T1222.001	Windows File and Directory Permissions Modification	1	Mixed_General_Purpose	6.720585079242261
+476	T1048.002	Exfiltration Over Asymmetric Encrypted Non-C2 Protocol	1	Mixed_General_Purpose	6.749450855467606
+403	T1592.004	Client Configurations	1	Mixed_General_Purpose	6.764937555706655
+672	T1565.002	Transmitted Data Manipulation	1	Mixed_General_Purpose	6.766278428241716
+544	T1565	Data Manipulation	1	Mixed_General_Purpose	6.770680313467596
+625	T1584.002	DNS Server	1	Mixed_General_Purpose	6.777507284709176
+343	T1222	File and Directory Permissions Modification	1	Mixed_General_Purpose	6.782464833530082
+48	T1027.013	Encrypted/Encoded File	1	Mixed_General_Purpose	6.801566754649043
+249	T1021.008	Direct Cloud VM Connections	1	Mixed_General_Purpose	6.835629954942307
+90	T1583.002	DNS Server	1	Mixed_General_Purpose	6.868766075445876
+598	T1213.004	Customer Relationship Management Software	1	Mixed_General_Purpose	6.87401220956132
+700	T1130	Install Root Certificate	1	Mixed_General_Purpose	6.874875787271572
+358	T1117	Regsvr32	1	Mixed_General_Purpose	6.890146455428531
+657	T1070.010	Relocate Malware	1	Mixed_General_Purpose	6.900779100663503
+315	T1491	Defacement	1	Mixed_General_Purpose	6.917785226676382
+212	T1584.003	Virtual Private Server	1	Mixed_General_Purpose	6.923379299275177
+222	T1137.005	Outlook Rules	1	Mixed_General_Purpose	6.953324701487714
+483	T1497.002	User Activity Based Checks	1	Mixed_General_Purpose	6.9541043094613935
+104	T1172	Domain Fronting	1	Mixed_General_Purpose	6.958886743746602
+408	T1027.017	SVG Smuggling	1	Mixed_General_Purpose	6.960585239187596
+195	T1098.006	Additional Container Cluster Roles	1	Mixed_General_Purpose	6.9743647300779
+720	T1543.002	Systemd Service	1	Mixed_General_Purpose	7.001968298770933
+361	T1056.003	Web Portal Capture	1	Mixed_General_Purpose	7.014624793168744
+2	T1205.002	Socket Filters	1	Mixed_General_Purpose	7.025557364085996
+227	T1608.001	Upload Malware	1	Mixed_General_Purpose	7.0683376352368175
+804	T1552.007	Container API	1	Mixed_General_Purpose	7.1232571769926825
+626	T1671	Cloud Application Integration	1	Mixed_General_Purpose	7.125097354492746
+211	T1058	Service Registry Permissions Weakness	1	Mixed_General_Purpose	7.199083294864302
+559	T1073	DLL Side-Loading	1	Mixed_General_Purpose	7.20332129975229
+338	T1674	Input Injection	1	Mixed_General_Purpose	7.245181896254086
+85	T1596.001	DNS/Passive DNS	1	Mixed_General_Purpose	7.248990275511548
+181	T1565.003	Runtime Data Manipulation	1	Mixed_General_Purpose	7.32265677480124
+356	T1021.003	Distributed Component Object Model	1	Mixed_General_Purpose	7.391068791503075
+576	T1546.004	Unix Shell Configuration Modification	1	Mixed_General_Purpose	7.394362069524823
+757	T1055.015	ListPlanting	1	Mixed_General_Purpose	7.416081105522612
+505	T1546.014	Emond	1	Mixed_General_Purpose	7.450283263421677
+564	T1110.004	Credential Stuffing	1	Mixed_General_Purpose	7.458923791659338
+439	T1218.012	Verclsid	1	Mixed_General_Purpose	7.461444229541737
+744	T1216.002	SyncAppvPublishingServer	1	Mixed_General_Purpose	7.464320099148219
+374	T1218.008	Odbcconf	1	Mixed_General_Purpose	7.4697842944456285
+43	T1044	File System Permissions Weakness	1	Mixed_General_Purpose	7.519504913564665
+578	T1134.005	SID-History Injection	1	Mixed_General_Purpose	7.526328602301012
+820	T1564.010	Process Argument Spoofing	1	Mixed_General_Purpose	7.53083602489364
+0	T1055.011	Extra Window Memory Injection	1	Mixed_General_Purpose	7.536751215516923
+130	T1071.005	Publish/Subscribe Protocols	1	Mixed_General_Purpose	7.588984296454878
+416	T1609	Container Administration Command	1	Mixed_General_Purpose	7.618266788201545
+512	T1169	Sudo	1	Mixed_General_Purpose	7.6267726190531
+648	T1494	Runtime Data Manipulation	1	Mixed_General_Purpose	7.655116986444611
+450	T1568.003	DNS Calculation	1	Mixed_General_Purpose	7.681253182018463
+210	T1558.004	AS-REP Roasting	1	Mixed_General_Purpose	7.700024781536297
+552	T1059.011	Lua	1	Mixed_General_Purpose	7.733477672393318
+721	T1668	Exclusive Control	1	Mixed_General_Purpose	7.745421578169934
+155	T1218.004	InstallUtil	1	Mixed_General_Purpose	7.820555435515041
+108	T1178	SID-History Injection	1	Mixed_General_Purpose	7.825580171226436
+800	T1118	InstallUtil	1	Mixed_General_Purpose	7.842757306702983
+821	T1077	Windows Admin Shares	1	Mixed_General_Purpose	7.84429780382602
+674	T1543.001	Launch Agent	1	Mixed_General_Purpose	7.861594802109149
+681	T1558.002	Silver Ticket	1	Mixed_General_Purpose	7.886772681523834
+169	T1003.007	Proc Filesystem	1	Mixed_General_Purpose	7.911948327454123
+526	T1097	Pass the Ticket	1	Mixed_General_Purpose	7.914998977954517
+190	T1505.002	Transport Agent	1	Mixed_General_Purpose	7.972909748475393
+278	T1608.002	Upload Tool	1	Mixed_General_Purpose	7.99824287923601
+809	T1213.005	Messaging Applications	1	Mixed_General_Purpose	8.003668246069482
+318	T1155	AppleScript	1	Mixed_General_Purpose	8.014594466132518
+87	T1163	Rc.common	1	Mixed_General_Purpose	8.01503156347014
+242	T1070.008	Clear Mailbox Data	1	Mixed_General_Purpose	8.049781415969404
+349	T1027.016	Junk Code Insertion	1	Mixed_General_Purpose	8.05561861545519
+189	T1137.006	Add-ins	1	Mixed_General_Purpose	8.070312480803915
+36	T1602	Data from Configuration Repository	1	Mixed_General_Purpose	8.110241148506791
+484	T1141	Input Prompt	1	Mixed_General_Purpose	8.134590579220616
+197	T1218.007	Msiexec	1	Mixed_General_Purpose	8.137229619161264
+264	T1569.003	Systemctl	1	Mixed_General_Purpose	8.197171059161379
+689	T1194	Spearphishing via Service	1	Mixed_General_Purpose	8.291589002618881
+333	T1031	Modify Existing Service	1	Mixed_General_Purpose	8.291672710339393
+728	T1204.004	Malicious Copy and Paste	1	Mixed_General_Purpose	8.379927406570603
+244	T1659	Content Injection	1	Mixed_General_Purpose	8.391168589050183
+424	T1127.003	JamPlus	1	Mixed_General_Purpose	8.52113005002943
+290	T1181	Extra Window Memory Injection	1	Mixed_General_Purpose	8.56056029010252
+785	T1035	Service Execution	1	Mixed_General_Purpose	8.620154407460664
+280	T1036.011	Overwrite Process Arguments	1	Mixed_General_Purpose	8.622193094868985
+714	T1159	Launch Agent	1	Mixed_General_Purpose	8.678739004961622
+658	T1591.004	Identify Roles	1	Mixed_General_Purpose	8.688664587411234
+293	T1152	Launchctl	1	Mixed_General_Purpose	8.752841596357225
+506	T1102.003	One-Way Communication	1	Mixed_General_Purpose	8.77011864387591
+551	T1036.012	Browser Fingerprint	1	Mixed_General_Purpose	8.8048015166735
+226	T1098.007	Additional Local or Domain Groups	1	Mixed_General_Purpose	8.805261501510268
+749	T1548.006	TCC Manipulation	1	Mixed_General_Purpose	8.820683843529487
+175	T1608.004	Drive-by Target	1	Mixed_General_Purpose	8.877866367810748
+347	T1179	Hooking	1	Mixed_General_Purpose	8.971893398955864
+549	T1601	Modify System Image	1	Mixed_General_Purpose	9.041603788267507
+128	T1591.003	Identify Business Tempo	1	Mixed_General_Purpose	9.112476827505363
+32	T1216.001	PubPrn	1	Mixed_General_Purpose	9.119784882821964
+80	T1596.002	WHOIS	1	Mixed_General_Purpose	9.13554520367363
+153	T1499.004	Application or System Exploitation	1	Mixed_General_Purpose	9.16540656219763
+422	T1138	Application Shimming	1	Mixed_General_Purpose	9.179454076991963
+40	T1574.007	Path Interception by PATH Environment Variable	1	Mixed_General_Purpose	9.297165102229373
+386	T1574.005	Executable Installer File Permissions Weakness	1	Mixed_General_Purpose	9.370462477797174
+797	T1216	System Script Proxy Execution	1	Mixed_General_Purpose	10.509601660317877
+782	T1003.006	DCSync	2	Discovery_Reconnaissance	4.161655253601551
+788	T1588.005	Exploits	2	Discovery_Reconnaissance	4.376130966321651
+596	T1587.004	Exploits	2	Discovery_Reconnaissance	4.509399896341493
+41	T1213.002	Sharepoint	2	Discovery_Reconnaissance	4.560114440090105
+156	T1598.003	Spearphishing Link	2	Discovery_Reconnaissance	4.619086040869594
+766	T1587	Develop Capabilities	2	Discovery_Reconnaissance	4.645857236342736
+362	T1589.002	Email Addresses	2	Discovery_Reconnaissance	4.659601216342147
+150	T1566.002	Spearphishing Link	2	Discovery_Reconnaissance	4.770963452395163
+133	T1484.002	Trust Modification	2	Discovery_Reconnaissance	4.902619255458136
+789	T1556	Modify Authentication Process	2	Discovery_Reconnaissance	5.007846122355064
+341	T1585.002	Email Accounts	2	Discovery_Reconnaissance	5.094134641825225
+592	T1592.002	Software	2	Discovery_Reconnaissance	5.1319452763515825
+234	T1583.001	Domains	2	Discovery_Reconnaissance	5.208935645653416
+662	T1496	Resource Hijacking	2	Discovery_Reconnaissance	5.209684739682815
+805	T1584.001	Domains	2	Discovery_Reconnaissance	5.2350673913428105
+567	T1556.006	Multi-Factor Authentication	2	Discovery_Reconnaissance	5.251013597726176
+225	T1586.002	Email Accounts	2	Discovery_Reconnaissance	5.253961950143596
+28	T1056.001	Keylogging	2	Discovery_Reconnaissance	5.305343202417958
+239	T1546.011	Application Shimming	2	Discovery_Reconnaissance	5.382196742772865
+387	T1546.008	Accessibility Features	2	Discovery_Reconnaissance	5.401054214722685
+600	T1589.001	Credentials	2	Discovery_Reconnaissance	5.403549014109879
+664	T1588	Obtain Capabilities	2	Discovery_Reconnaissance	5.419541217581899
+240	T1552	Unsecured Credentials	2	Discovery_Reconnaissance	5.437867763878933
+359	T1110.003	Password Spraying	2	Discovery_Reconnaissance	5.447099401816287
+266	T1087.003	Email Account	2	Discovery_Reconnaissance	5.522009885479623
+695	T1556.001	Domain Controller Authentication	2	Discovery_Reconnaissance	5.5300647845927315
+796	T1090.001	Internal Proxy	2	Discovery_Reconnaissance	5.537272897634373
+467	T1528	Steal Application Access Token	2	Discovery_Reconnaissance	5.553439211301391
+182	T1552.002	Credentials in Registry	2	Discovery_Reconnaissance	5.560796012198812
+652	T1518.001	Security Software Discovery	2	Discovery_Reconnaissance	5.564420972571721
+78	T1114	Email Collection	2	Discovery_Reconnaissance	5.5952892741247515
+79	T1003.002	Security Account Manager	2	Discovery_Reconnaissance	5.596182811150062
+112	T1003.004	LSA Secrets	2	Discovery_Reconnaissance	5.6004450477333085
+740	T1550.002	Pass the Hash	2	Discovery_Reconnaissance	5.61256052432878
+543	T1562.001	Disable or Modify Tools	2	Discovery_Reconnaissance	5.698198692230141
+599	T1546.015	Component Object Model Hijacking	2	Discovery_Reconnaissance	5.702632729618989
+176	T1007	System Service Discovery	2	Discovery_Reconnaissance	5.713139187265717
+179	T1553.002	Code Signing	2	Discovery_Reconnaissance	5.735865627434709
+306	T1553.006	Code Signing Policy Modification	2	Discovery_Reconnaissance	5.775813884591794
+231	T1555	Credentials from Password Stores	2	Discovery_Reconnaissance	5.807053212664296
+694	T1132.002	Non-Standard Encoding	2	Discovery_Reconnaissance	5.819416235132449
+372	T1590.006	Network Security Appliances	2	Discovery_Reconnaissance	5.822262413917635
+440	T1586	Compromise Accounts	2	Discovery_Reconnaissance	5.847178025399419
+527	T1588.002	Tool	2	Discovery_Reconnaissance	5.91002571255811
+68	T1548.002	Bypass User Account Control	2	Discovery_Reconnaissance	5.99404322441962
+183	T1135	Network Share Discovery	2	Discovery_Reconnaissance	6.088718068397456
+125	T1564	Hide Artifacts	2	Discovery_Reconnaissance	6.1184803497817795
+493	T1621	Multi-Factor Authentication Request Generation	2	Discovery_Reconnaissance	6.151887497885594
+313	T1555.003	Credentials from Web Browsers	2	Discovery_Reconnaissance	6.1605605082416615
+367	T1003.005	Cached Domain Credentials	2	Discovery_Reconnaissance	6.169775426956398
+31	T1110.001	Password Guessing	2	Discovery_Reconnaissance	6.184040031482153
+656	T1059.006	Python	2	Discovery_Reconnaissance	6.184470503970862
+733	T1518	Software Discovery	2	Discovery_Reconnaissance	6.247215019113002
+532	T1566	Phishing	2	Discovery_Reconnaissance	6.251796034891796
+595	T1566.004	Spearphishing Voice	2	Discovery_Reconnaissance	6.304346386011845
+723	T1136	Create Account	2	Discovery_Reconnaissance	6.319567634797516
+537	T1090.003	Multi-hop Proxy	2	Discovery_Reconnaissance	6.356928815295211
+52	T1014	Rootkit	2	Discovery_Reconnaissance	6.4068253795446335
+478	T1057	Process Discovery	2	Discovery_Reconnaissance	6.5556616441937745
+396	T1136.002	Domain Account	2	Discovery_Reconnaissance	6.735530760942859
+412	T1137.001	Office Template Macros	2	Discovery_Reconnaissance	6.8097145856554135
+780	T1558.003	Kerberoasting	2	Discovery_Reconnaissance	6.81982412771493
+558	T1585.001	Social Media Accounts	2	Discovery_Reconnaissance	6.8681326972384324
+148	T1069.002	Domain Groups	2	Discovery_Reconnaissance	6.912394043978042
+300	T1595.002	Vulnerability Scanning	2	Discovery_Reconnaissance	6.972848158947554
+671	T1213.003	Code Repositories	2	Discovery_Reconnaissance	6.974338722611752
+400	T1482	Domain Trust Discovery	2	Discovery_Reconnaissance	7.0361760834005995
+663	T1585	Establish Accounts	2	Discovery_Reconnaissance	7.0690613940492435
+123	T1087.002	Domain Account	2	Discovery_Reconnaissance	7.1361034041738
+731	T1046	Network Service Discovery	2	Discovery_Reconnaissance	7.219667491701439
+791	T1056.004	Credential API Hooking	2	Discovery_Reconnaissance	7.2764000790345404
+632	T1078.002	Domain Accounts	2	Discovery_Reconnaissance	7.281173327361205
+461	T1134.001	Token Impersonation/Theft	2	Discovery_Reconnaissance	7.375260738581081
+645	T1656	Impersonation	2	Discovery_Reconnaissance	7.426126099651614
+391	T1087	Account Discovery	2	Discovery_Reconnaissance	7.451595065339709
+649	T1090.004	Domain Fronting	2	Discovery_Reconnaissance	7.634025493335348
+66	T1568.002	Domain Generation Algorithms	2	Discovery_Reconnaissance	7.691859677871105
+262	T1547.009	Shortcut Modification	2	Discovery_Reconnaissance	7.696327427892729
+620	T1614.001	System Language Discovery	2	Discovery_Reconnaissance	8.095257711029015
+398	T1589.003	Employee Names	2	Discovery_Reconnaissance	8.162569594698295
+661	T1598	Phishing for Information	2	Discovery_Reconnaissance	8.818869467991153

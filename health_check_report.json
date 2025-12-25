@@ -1,0 +1,11 @@
+{
+  "all_ok": true,
+  "checks": {
+    "packages": true,
+    "database": true,
+    "ollama": true,
+    "embedding": true,
+    "files": true
+  },
+  "timestamp": "2025-12-23T11:37:18.534230"
+}

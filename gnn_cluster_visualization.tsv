@@ -1,0 +1,824 @@
+index	id	name	cluster	cluster_name	boundary_position	dim1	dim2	distance_to_centroid
+0	T1055.011	Extra Window Memory Injection	1	Mixed_General_Purpose	Interior	0.445661	-0.53252	7.536751215516923
+1	T1053.005	Scheduled Task	2	Discovery_Reconnaissance	Boundary	0.054274	0.930705	5.974803180056081
+2	T1205.002	Socket Filters	1	Mixed_General_Purpose	Interior	-0.385918	-0.53252	7.025557364085996
+3	T1066	Indicator Removal from Tools	1	Mixed_General_Purpose	Boundary	1.723196	-0.53252	6.370024315103035
+4	T1560.001	Archive via Utility	0	Evasion_Persistence	Interior	-0.727787	-0.53252	7.460070041843987
+5	T1021.005	VNC	2	Discovery_Reconnaissance	Boundary	-0.727787	1.553678	7.632540429288122
+6	T1047	Windows Management Instrumentation	2	Discovery_Reconnaissance	Boundary	3.279428	-0.332664	8.494048032063189
+7	T1156	Malicious Shell Modification	1	Mixed_General_Purpose	Boundary	0.016751	1.943383	18.62294258632645
+8	T1113	Screen Capture	2	Discovery_Reconnaissance	Boundary	-0.727787	0.798115	7.316187100850923
+9	T1027.011	Fileless Storage	0	Evasion_Persistence	Boundary	-0.727787	-0.53252	7.682398322355121
+10	T1067	Bootkit	1	Mixed_General_Purpose	Interior	1.009759	0.308534	6.270647772881815
+11	T1037	Boot or Logon Initialization Scripts	1	Mixed_General_Purpose	Boundary	0.726357	2.281983	8.98965610172276
+12	T1557	Adversary-in-the-Middle	2	Discovery_Reconnaissance	Boundary	-0.727787	-0.53252	7.018350839869817
+13	T1033	System Owner/User Discovery	2	Discovery_Reconnaissance	Boundary	-0.036536	0.305155	7.15659074554327
+14	T1583	Acquire Infrastructure	2	Discovery_Reconnaissance	Boundary	-0.727787	-0.450549	6.418641210828548
+15	T1218.011	Rundll32	2	Discovery_Reconnaissance	Boundary	2.746118	-0.284382	7.0284391493601905
+16	T1613	Container and Resource Discovery	1	Mixed_General_Purpose	Boundary	-0.41027	-0.53252	7.575894310998534
+17	T1583.007	Serverless	1	Mixed_General_Purpose	Boundary	-0.727787	-0.53252	6.556919409686151
+18	T1143	Hidden Window	1	Mixed_General_Purpose	Boundary	-0.188189	-0.53252	6.101842012599893
+19	T1161	LC_LOAD_DYLIB Addition	1	Mixed_General_Purpose	Interior	0.852434	-0.53252	6.461757675599312
+20	T1132.001	Standard Encoding	2	Discovery_Reconnaissance	Boundary	-0.727787	-0.53252	6.011486734508505
+21	T1027.009	Embedded Payloads	0	Evasion_Persistence	Boundary	-0.727787	-0.22314	5.92297209982234
+22	T1150	Plist Modification	1	Mixed_General_Purpose	Boundary	-0.514051	-0.53252	5.535611826269808
+23	T1556.003	Pluggable Authentication Modules	1	Mixed_General_Purpose	Boundary	-0.573777	-0.226993	5.9165275826803505
+24	T1578.004	Revert Cloud Instance	1	Mixed_General_Purpose	Boundary	2.903026	-0.53252	9.062686654045137
+25	T1148	HISTCONTROL	1	Mixed_General_Purpose	Boundary	-0.727787	-0.53252	7.879026280937355
+26	T1592	Gather Victim Host Information	2	Discovery_Reconnaissance	Boundary	-0.399399	-0.53252	8.216794522216093
+27	T1596.003	Digital Certificates	1	Mixed_General_Purpose	Boundary	-0.727787	-0.53252	8.65341123517722
+28	T1056.001	Keylogging	2	Discovery_Reconnaissance	Interior	-0.727787	0.510699	5.305343202417958
+29	T1564.012	File/Path Exclusions	1	Mixed_General_Purpose	Boundary	0.479085	-0.53252	8.587250757787608
+30	T1222.002	Linux and Mac File and Directory Permissions Modification	0	Evasion_Persistence	Boundary	-0.727787	-0.53252	9.648445157403692
+31	T1110.001	Password Guessing	2	Discovery_Reconnaissance	Interior	-0.727787	-0.53252	6.184040031482153
+32	T1216.001	PubPrn	1	Mixed_General_Purpose	Interior	-0.575349	-0.53252	9.119784882821964
+33	T1597.002	Purchase Technical Data	1	Mixed_General_Purpose	Boundary	-0.145043	-0.53252	8.045627241910637
+34	T1003	OS Credential Dumping	2	Discovery_Reconnaissance	Boundary	2.690355	1.597518	6.480804324730483
+35	T1129	Shared Modules	2	Discovery_Reconnaissance	Boundary	-0.727787	-0.53252	7.0559089565547595
+36	T1602	Data from Configuration Repository	1	Mixed_General_Purpose	Interior	-0.283	-0.53252	8.110241148506791
+37	T1561.002	Disk Structure Wipe	0	Evasion_Persistence	Boundary	-0.171688	0.335077	7.423703096866443
+38	T1498.001	Direct Network Flood	1	Mixed_General_Purpose	Interior	-0.494268	-0.53252	6.126014226369992
+39	T1492	Stored Data Manipulation	1	Mixed_General_Purpose	Interior	-0.086715	-0.53252	6.534142994423741
+40	T1574.007	Path Interception by PATH Environment Variable	1	Mixed_General_Purpose	Interior	-0.714794	-0.53252	9.297165102229373
+41	T1213.002	Sharepoint	2	Discovery_Reconnaissance	Interior	-0.5937	-0.521908	4.560114440090105
+42	T1006	Direct Volume Access	2	Discovery_Reconnaissance	Boundary	-0.525238	-0.53252	5.926029594552305
+43	T1044	File System Permissions Weakness	1	Mixed_General_Purpose	Interior	-0.727787	0.13327	7.519504913564665
+44	T1588.007	Artificial Intelligence	1	Mixed_General_Purpose	Interior	-0.727787	-0.53252	6.226452688230504
+45	T1666	Modify Cloud Resource Hierarchy	1	Mixed_General_Purpose	Boundary	0.392924	-0.53252	7.138342175840678
+46	T1564.008	Email Hiding Rules	1	Mixed_General_Purpose	Boundary	-0.727787	-0.53252	9.501504614258028
+47	T1491.002	External Defacement	1	Mixed_General_Purpose	Boundary	-0.186016	-0.53252	7.780762191923405
+48	T1027.013	Encrypted/Encoded File	1	Mixed_General_Purpose	Interior	-0.727787	-0.53252	6.801566754649043
+49	T1171	LLMNR/NBT-NS Poisoning and Relay	1	Mixed_General_Purpose	Boundary	-0.727787	-0.53252	7.693053545367446
+50	T1590.005	IP Addresses	1	Mixed_General_Purpose	Boundary	0.256861	-0.53252	6.73437550330001
+51	T1499.001	OS Exhaustion Flood	1	Mixed_General_Purpose	Boundary	-0.727787	-0.53252	7.668452845106907
+52	T1014	Rootkit	2	Discovery_Reconnaissance	Interior	-0.727787	3.296521	6.4068253795446335
+53	T1546.013	PowerShell Profile	1	Mixed_General_Purpose	Boundary	2.731325	-0.53252	7.575317229326602
+54	T1059.007	JavaScript	2	Discovery_Reconnaissance	Boundary	-0.727787	0.030545	6.523923510312184
+55	T1590.002	DNS	1	Mixed_General_Purpose	Interior	-0.727787	-0.53252	5.635872317357754
+56	T1501	Systemd Service	1	Mixed_General_Purpose	Boundary	-0.727787	-0.53252	7.091391314999617
+57	T1485.001	Lifecycle-Triggered Deletion	1	Mixed_General_Purpose	Boundary	1.786771	-0.143411	7.076880011740464
+58	T1514	Elevated Execution with Prompt	1	Mixed_General_Purpose	Boundary	-0.727787	-0.53252	7.807741241520135
+59	T1123	Audio Capture	0	Evasion_Persistence	Boundary	-0.727787	-0.53252	6.450412981734258
+60	T1543	Create or Modify System Process	2	Discovery_Reconnaissance	Boundary	0.318783	1.924648	6.756868094290769
+61	T1133	External Remote Services	0	Evasion_Persistence	Boundary	-0.727787	1.902004	7.376712537940742
+62	T1109	Component Firmware	1	Mixed_General_Purpose	Interior	0.158089	-0.53252	5.455520737539961
+63	T1546.006	LC_LOAD_DYLIB Addition	1	Mixed_General_Purpose	Boundary	0.859472	-0.53252	6.447963176226079
+64	T1539	Steal Web Session Cookie	2	Discovery_Reconnaissance	Boundary	1.336597	-0.53252	7.802892575136798
+65	T1053.007	Container Orchestration Job	1	Mixed_General_Purpose	Boundary	-0.4219	-0.53252	7.452944507879677
+66	T1568.002	Domain Generation Algorithms	2	Discovery_Reconnaissance	Interior	-0.727787	-0.53252	7.691859677871105
+67	T1036.007	Double File Extension	1	Mixed_General_Purpose	Boundary	-0.727787	-0.53252	13.2937367021992
+68	T1548.002	Bypass User Account Control	2	Discovery_Reconnaissance	Interior	1.991646	0.508162	5.99404322441962
+69	T1099	Timestomp	1	Mixed_General_Purpose	Interior	-0.265883	-0.53252	5.4223151830985765
+70	T1496.003	SMS Pumping	1	Mixed_General_Purpose	Boundary	-0.727787	-0.53252	6.61689853167513
+71	T1016.001	Internet Connection Discovery	2	Discovery_Reconnaissance	Boundary	0.102677	0.062651	6.164121614348756
+72	T1548.003	Sudo and Sudo Caching	1	Mixed_General_Purpose	Boundary	-0.727787	-0.206626	12.512513840699327
+73	T1560.003	Archive via Custom Method	2	Discovery_Reconnaissance	Boundary	0.14911	-0.53252	8.201722443020568
+74	T1578	Modify Cloud Compute Infrastructure	1	Mixed_General_Purpose	Boundary	1.099702	-0.53252	8.013809909098262
+75	T1584.008	Network Devices	1	Mixed_General_Purpose	Boundary	1.421191	-0.53252	5.62246865518226
+76	T1583.008	Malvertising	1	Mixed_General_Purpose	Interior	0.843147	-0.53252	6.2351608297877705
+77	T1069	Permission Groups Discovery	2	Discovery_Reconnaissance	Boundary	-0.727787	-0.53252	7.97586103948773
+78	T1114	Email Collection	2	Discovery_Reconnaissance	Interior	-0.727787	-0.53252	5.5952892741247515
+79	T1003.002	Security Account Manager	2	Discovery_Reconnaissance	Interior	0.627618	-0.53252	5.596182811150062
+80	T1596.002	WHOIS	1	Mixed_General_Purpose	Interior	-0.727787	-0.53252	9.13554520367363
+81	T1542.001	System Firmware	0	Evasion_Persistence	Boundary	-0.602388	-0.188652	5.505311020111778
+82	T1594	Search Victim-Owned Websites	2	Discovery_Reconnaissance	Boundary	-0.089949	1.751399	9.21283957280202
+83	T1069.003	Cloud Groups	1	Mixed_General_Purpose	Interior	-0.545152	-0.53252	5.996542057070973
+84	T1574.011	Services Registry Permissions Weakness	1	Mixed_General_Purpose	Boundary	-0.727787	-0.53252	9.58706084582272
+85	T1596.001	DNS/Passive DNS	1	Mixed_General_Purpose	Interior	-0.727787	-0.53252	7.248990275511548
+86	T1499.003	Application Exhaustion Flood	1	Mixed_General_Purpose	Interior	-0.727787	-0.53252	6.508835800305224
+87	T1163	Rc.common	1	Mixed_General_Purpose	Interior	-0.727787	-0.53252	8.01503156347014
+88	T1195.001	Compromise Software Dependencies and Development Tools	1	Mixed_General_Purpose	Boundary	2.555032	-0.173339	7.920074673935
+89	T1588.004	Digital Certificates	2	Discovery_Reconnaissance	Boundary	-0.727787	1.371883	7.962994783102594
+90	T1583.002	DNS Server	1	Mixed_General_Purpose	Interior	-0.727787	-0.53252	6.868766075445876
+91	T1561	Disk Wipe	0	Evasion_Persistence	Interior	0.486678	-0.145546	7.413193288034386
+92	T1071.004	DNS	2	Discovery_Reconnaissance	Boundary	-0.727787	1.328371	9.24596257783418
+93	T1552.005	Cloud Instance Metadata API	0	Evasion_Persistence	Boundary	-0.205274	-0.53252	9.867303597806114
+94	T1555.002	Securityd Memory	1	Mixed_General_Purpose	Boundary	-0.658121	-0.53252	5.9725942600622135
+95	T1615	Group Policy Discovery	2	Discovery_Reconnaissance	Boundary	-0.727787	-0.53252	6.876947198631381
+96	T1542.003	Bootkit	0	Evasion_Persistence	Boundary	-0.727787	1.694119	6.103176348785627
+97	T1025	Data from Removable Media	0	Evasion_Persistence	Interior	-0.626331	-0.53252	9.408427500894357
+98	T1116	Code Signing	1	Mixed_General_Purpose	Boundary	-0.727787	0.00596	6.879096769497584
+99	T1218.013	Mavinject	1	Mixed_General_Purpose	Interior	-0.727787	-0.53252	5.618834261285241
+100	T1522	Cloud Instance Metadata API	0	Evasion_Persistence	Boundary	-0.03046	-0.53252	10.562964737439582
+101	T1093	Process Hollowing	1	Mixed_General_Purpose	Boundary	1.336781	-0.53252	8.932116848086125
+102	T1074.001	Local Data Staging	0	Evasion_Persistence	Interior	1.900466	2.097568	11.035745690758265
+103	T1036.005	Match Legitimate Resource Name or Location	2	Discovery_Reconnaissance	Boundary	0.228184	1.142667	9.721676737142145
+104	T1172	Domain Fronting	1	Mixed_General_Purpose	Interior	-0.727787	-0.53252	6.958886743746602
+105	T1587.003	Digital Certificates	1	Mixed_General_Purpose	Boundary	-0.727787	-0.53252	8.919449833336424
+106	T1565.001	Stored Data Manipulation	1	Mixed_General_Purpose	Interior	-0.25396	-0.53252	5.801800554273289
+107	T1110.002	Password Cracking	2	Discovery_Reconnaissance	Boundary	-0.727787	4.50867	7.186423527595042
+108	T1178	SID-History Injection	1	Mixed_General_Purpose	Interior	-0.3385	-0.53252	7.825580171226436
+109	T1114.001	Local Email Collection	0	Evasion_Persistence	Boundary	-0.32564	-0.53252	9.551892290065018
+110	T1555.001	Keychain	1	Mixed_General_Purpose	Boundary	-0.727787	-0.53252	5.940856263796768
+111	T1547	Boot or Logon Autostart Execution	0	Evasion_Persistence	Boundary	-0.727787	3.85074	7.800208788697248
+112	T1003.004	LSA Secrets	2	Discovery_Reconnaissance	Interior	-0.488269	-0.53252	5.6004450477333085
+113	T1013	Port Monitors	1	Mixed_General_Purpose	Boundary	0.873372	-0.53252	6.305232955470412
+114	T1600	Weaken Encryption	1	Mixed_General_Purpose	Boundary	-0.727787	-0.53252	8.454322632622569
+115	T1606.002	SAML Tokens	1	Mixed_General_Purpose	Boundary	-0.727787	-0.53252	11.121690616459437
+116	T1192	Spearphishing Link	1	Mixed_General_Purpose	Interior	0.733425	-0.53252	6.132927731701444
+117	T1036.008	Masquerade File Type	0	Evasion_Persistence	Interior	-0.551992	-0.050692	6.864287539904139
+118	T1489	Service Stop	2	Discovery_Reconnaissance	Boundary	0.52017	1.677675	7.047868728337082
+119	T1587.001	Malware	2	Discovery_Reconnaissance	Boundary	-0.727787	0.434443	7.841877976596618
+120	T1121	Regsvcs/Regasm	1	Mixed_General_Purpose	Interior	0.102921	-0.53252	5.530693014953219
+121	T1652	Device Driver Discovery	1	Mixed_General_Purpose	Boundary	-0.727787	-0.53252	6.148838253624348
+122	T1206	Sudo Caching	1	Mixed_General_Purpose	Boundary	0.021829	-0.53252	8.57481643851378
+123	T1087.002	Domain Account	2	Discovery_Reconnaissance	Interior	-0.727787	-0.53252	7.1361034041738
+124	T1547.014	Active Setup	1	Mixed_General_Purpose	Interior	-0.727787	-0.53252	6.03891347894734
+125	T1564	Hide Artifacts	2	Discovery_Reconnaissance	Interior	-0.727787	1.91477	6.1184803497817795
+126	T1559.002	Dynamic Data Exchange	0	Evasion_Persistence	Interior	-0.579402	-0.53252	6.17473494565973
+127	T1204.002	Malicious File	2	Discovery_Reconnaissance	Boundary	-0.727787	1.099157	10.329369715161732
+128	T1591.003	Identify Business Tempo	1	Mixed_General_Purpose	Interior	-0.647622	-0.53252	9.112476827505363
+129	T1063	Security Software Discovery	1	Mixed_General_Purpose	Interior	0.623079	-0.53252	5.359862741117126
+130	T1071.005	Publish/Subscribe Protocols	1	Mixed_General_Purpose	Interior	0.539832	-0.53252	7.588984296454878
+131	T1592.001	Hardware	1	Mixed_General_Purpose	Boundary	0.871664	-0.53252	6.319030443328925
+132	T1080	Taint Shared Content	2	Discovery_Reconnaissance	Boundary	-0.727787	1.487394	6.367544185357406
+133	T1484.002	Trust Modification	2	Discovery_Reconnaissance	Interior	0.258896	-0.53252	4.902619255458136
+134	T1213.006	Databases	1	Mixed_General_Purpose	Interior	0.008116	-0.53252	6.435454499762533
+135	T1573.001	Symmetric Cryptography	2	Discovery_Reconnaissance	Boundary	-0.727787	-0.53252	7.453970917736174
+136	T1087.001	Local Account	2	Discovery_Reconnaissance	Boundary	1.381302	1.091213	8.43945090846785
+137	T1167	Securityd Memory	1	Mixed_General_Purpose	Interior	-0.252599	-0.53252	6.4938113131897985
+138	T1586.001	Social Media Accounts	1	Mixed_General_Purpose	Boundary	-0.345824	-0.53252	10.143162169502324
+139	T1176.001	Browser Extensions	1	Mixed_General_Purpose	Boundary	-0.303306	-0.53252	8.601097710615774
+140	T1527	Application Access Token	1	Mixed_General_Purpose	Boundary	-0.727787	-0.53252	8.296899611991805
+141	T1562.009	Safe Mode Boot	2	Discovery_Reconnaissance	Boundary	2.200304	2.973574	8.103755775539975
+142	T1180	Screensaver	1	Mixed_General_Purpose	Boundary	1.629665	2.409829	9.037195130619178
+143	T1542.005	TFTP Boot	0	Evasion_Persistence	Boundary	0.769441	-0.53252	7.597658169139221
+144	T1543.003	Windows Service	2	Discovery_Reconnaissance	Boundary	1.973125	-0.53252	7.682115642679933
+145	T1568.001	Fast Flux DNS	1	Mixed_General_Purpose	Boundary	-0.727787	-0.53252	8.349302506855476
+146	T1497.001	System Checks	2	Discovery_Reconnaissance	Boundary	1.31985	1.063598	6.604363190322402
+147	T1053.003	Cron	0	Evasion_Persistence	Boundary	-0.727787	-0.53252	7.555166582976731
+148	T1069.002	Domain Groups	2	Discovery_Reconnaissance	Interior	-0.727787	-0.53252	6.912394043978042
+149	T1588.006	Vulnerabilities	1	Mixed_General_Purpose	Interior	-0.727787	-0.53252	5.411826990720859
+150	T1566.002	Spearphishing Link	2	Discovery_Reconnaissance	Interior	-0.542295	-0.53252	4.770963452395163
+151	T1165	Startup Items	1	Mixed_General_Purpose	Boundary	0.26974	-0.53252	6.763870955348144
+152	T1070.002	Clear Linux or Mac System Logs	0	Evasion_Persistence	Boundary	-0.206694	0.144229	10.04341856010428
+153	T1499.004	Application or System Exploitation	1	Mixed_General_Purpose	Interior	0.873017	-0.53252	9.16540656219763
+154	T1137	Office Application Startup	1	Mixed_General_Purpose	Boundary	-0.095617	0.433043	8.740227256849925
+155	T1218.004	InstallUtil	1	Mixed_General_Purpose	Interior	-0.727787	-0.53252	7.820555435515041
+156	T1598.003	Spearphishing Link	2	Discovery_Reconnaissance	Interior	-0.727787	0.400051	4.619086040869594
+157	T1021.004	SSH	0	Evasion_Persistence	Boundary	0.388361	-0.366938	6.849459326722877
+158	T1098.003	Additional Cloud Roles	1	Mixed_General_Purpose	Boundary	-0.727787	-0.53252	7.556235770989995
+159	T1547.012	Print Processors	2	Discovery_Reconnaissance	Boundary	-0.727787	2.081271	8.088096350962259
+160	T1089	Disabling Security Tools	1	Mixed_General_Purpose	Boundary	1.283931	0.835184	7.095278712725886
+161	T1487	Disk Structure Wipe	1	Mixed_General_Purpose	Boundary	-0.251393	-0.53252	6.005103724020236
+162	T1566.001	Spearphishing Attachment	2	Discovery_Reconnaissance	Boundary	-0.025342	-0.53252	6.674069029339913
+163	T1214	Credentials in Registry	1	Mixed_General_Purpose	Boundary	-0.507428	1.130888	6.441362810567507
+164	T1027.008	Stripped Payloads	1	Mixed_General_Purpose	Boundary	1.40502	-0.53252	7.5361519625810836
+165	T1559.001	Component Object Model	2	Discovery_Reconnaissance	Boundary	-0.727787	-0.53252	6.050788694642548
+166	T1574.001	DLL	2	Discovery_Reconnaissance	Boundary	1.261227	-0.53252	6.30191286640316
+167	T1119	Automated Collection	0	Evasion_Persistence	Boundary	-0.727787	0.630745	8.398729770333272
+168	T1115	Clipboard Data	1	Mixed_General_Purpose	Boundary	-0.727787	0.836113	7.877884057235028
+169	T1003.007	Proc Filesystem	1	Mixed_General_Purpose	Interior	-0.727787	-0.53252	7.911948327454123
+170	T1583.005	Botnet	2	Discovery_Reconnaissance	Boundary	-0.727787	3.412743	7.901005653808599
+171	T1555.005	Password Managers	2	Discovery_Reconnaissance	Boundary	-0.727787	1.179813	8.24709522151862
+172	T1103	AppInit DLLs	1	Mixed_General_Purpose	Boundary	1.199076	-0.53252	13.024098612596141
+173	T1553.001	Gatekeeper Bypass	1	Mixed_General_Purpose	Boundary	-0.61025	-0.53252	6.338220578635765
+174	T1675	ESXi Administration Command	1	Mixed_General_Purpose	Boundary	-0.044633	2.500435	7.682383636115225
+175	T1608.004	Drive-by Target	1	Mixed_General_Purpose	Interior	0.796078	-0.53252	8.877866367810748
+176	T1007	System Service Discovery	2	Discovery_Reconnaissance	Interior	-0.266675	-0.53252	5.713139187265717
+177	T1040	Network Sniffing	2	Discovery_Reconnaissance	Boundary	-0.727787	0.209703	6.496645278963185
+178	T1017	Application Deployment Software	1	Mixed_General_Purpose	Interior	-0.727787	-0.53252	6.703337930108724
+179	T1553.002	Code Signing	2	Discovery_Reconnaissance	Interior	-0.727787	1.652024	5.735865627434709
+180	T1530	Data from Cloud Storage	0	Evasion_Persistence	Interior	-0.727787	-0.53252	7.876364232277457
+181	T1565.003	Runtime Data Manipulation	1	Mixed_General_Purpose	Interior	1.416207	-0.53252	7.32265677480124
+182	T1552.002	Credentials in Registry	2	Discovery_Reconnaissance	Interior	0.157502	0.876297	5.560796012198812
+183	T1135	Network Share Discovery	2	Discovery_Reconnaissance	Interior	-0.727787	1.094945	6.088718068397456
+184	T1120	Peripheral Device Discovery	2	Discovery_Reconnaissance	Boundary	-0.727787	-0.53252	7.199994253095098
+185	T1036.009	Break Process Trees	1	Mixed_General_Purpose	Boundary	0.430843	-0.293869	9.6111068830635
+186	T1590.004	Network Topology	0	Evasion_Persistence	Boundary	-0.727787	1.547716	7.654499210449643
+187	T1587.002	Code Signing Certificates	1	Mixed_General_Purpose	Boundary	-0.727787	-0.53252	6.437284762443538
+188	T1222.001	Windows File and Directory Permissions Modification	1	Mixed_General_Purpose	Interior	1.281045	-0.53252	6.720585079242261
+189	T1137.006	Add-ins	1	Mixed_General_Purpose	Interior	-0.727787	-0.53252	8.070312480803915
+190	T1505.002	Transport Agent	1	Mixed_General_Purpose	Interior	-0.727787	-0.53252	7.972909748475393
+191	T1082	System Information Discovery	2	Discovery_Reconnaissance	Boundary	1.167816	0.479209	6.02718672847281
+192	T1071	Application Layer Protocol	1	Mixed_General_Purpose	Boundary	-0.727787	-0.53252	7.271003801059721
+193	T1574.014	AppDomainManager	1	Mixed_General_Purpose	Boundary	-0.727787	-0.53252	8.045643657906519
+194	T1074.002	Remote Data Staging	0	Evasion_Persistence	Interior	1.157192	0.853936	9.334623948999669
+195	T1098.006	Additional Container Cluster Roles	1	Mixed_General_Purpose	Interior	-0.727787	-0.53252	6.9743647300779
+196	T1053	Scheduled Task/Job	0	Evasion_Persistence	Boundary	0.37757	-0.53252	6.713877787132857
+197	T1218.007	Msiexec	1	Mixed_General_Purpose	Interior	1.776623	-0.53252	8.137229619161264
+198	T1162	Login Item	1	Mixed_General_Purpose	Boundary	0.017402	-0.53252	7.7229575073545496
+199	T1590.003	Network Trust Dependencies	2	Discovery_Reconnaissance	Boundary	-0.185964	-0.468597	7.549644875524635
+200	T1498.002	Reflection Amplification	1	Mixed_General_Purpose	Interior	0.185326	-0.53252	5.862720050920091
+201	T1556.002	Password Filter DLL	1	Mixed_General_Purpose	Boundary	2.222367	-0.53252	8.67059720269569
+202	T1505.005	Terminal Services DLL	1	Mixed_General_Purpose	Boundary	-0.727787	0.421065	7.260611251117231
+203	T1059.002	AppleScript	2	Discovery_Reconnaissance	Boundary	-0.727787	0.55661	6.96118341896965
+204	T1176	Software Extensions	2	Discovery_Reconnaissance	Boundary	-0.727787	1.75246	8.194717968196745
+205	T1499.002	Service Exhaustion Flood	1	Mixed_General_Purpose	Boundary	-0.727787	-0.53252	6.835871203322606
+206	T1195.003	Compromise Hardware Supply Chain	1	Mixed_General_Purpose	Boundary	2.689351	0.892319	6.286125470232302
+207	T1106	Native API	2	Discovery_Reconnaissance	Boundary	-0.727787	0.539419	5.487351701354336
+208	T1558.005	Ccache Files	0	Evasion_Persistence	Boundary	-0.21073	-0.53252	7.057176922083383
+209	T1070.007	Clear Network Connection History and Configurations	2	Discovery_Reconnaissance	Boundary	0.957567	-0.53252	9.207803649762008
+210	T1558.004	AS-REP Roasting	1	Mixed_General_Purpose	Interior	-0.423498	-0.53252	7.700024781536297
+211	T1058	Service Registry Permissions Weakness	1	Mixed_General_Purpose	Interior	-0.727787	-0.53252	7.199083294864302
+212	T1584.003	Virtual Private Server	1	Mixed_General_Purpose	Interior	-0.727787	-0.53252	6.923379299275177
+213	T1059.010	AutoHotKey & AutoIT	1	Mixed_General_Purpose	Boundary	-0.727787	-0.53252	8.46448136598771
+214	T1600.001	Reduce Key Space	1	Mixed_General_Purpose	Boundary	-0.727787	0.037588	9.251866060975857
+215	T1070.003	Clear Command History	1	Mixed_General_Purpose	Boundary	0.826289	-0.53252	10.778730620860198
+216	T1202	Indirect Command Execution	1	Mixed_General_Purpose	Interior	0.253994	-0.53252	6.667557784443188
+217	T1024	Custom Cryptographic Protocol	2	Discovery_Reconnaissance	Boundary	-0.727787	-0.53252	6.0593024046168855
+218	T1536	Revert Cloud Instance	0	Evasion_Persistence	Boundary	2.787234	-0.164779	9.608589632571054
+219	T1091	Replication Through Removable Media	0	Evasion_Persistence	Interior	-0.727787	-0.53252	9.641625772363641
+220	T1005	Data from Local System	0	Evasion_Persistence	Boundary	0.082788	-0.53252	7.92420479169216
+221	T1140	Deobfuscate/Decode Files or Information	0	Evasion_Persistence	Boundary	-0.727787	2.357027	6.92134191704336
+222	T1137.005	Outlook Rules	1	Mixed_General_Purpose	Interior	-0.727787	-0.53252	6.953324701487714
+223	T1562	Impair Defenses	2	Discovery_Reconnaissance	Boundary	-0.727787	-0.53252	4.705882503768355
+224	T1586.003	Cloud Accounts	2	Discovery_Reconnaissance	Boundary	1.31504	-0.53252	6.715635802932773
+225	T1586.002	Email Accounts	2	Discovery_Reconnaissance	Interior	-0.727787	-0.53252	5.253961950143596
+226	T1098.007	Additional Local or Domain Groups	1	Mixed_General_Purpose	Interior	-0.727787	-0.53252	8.805261501510268
+227	T1608.001	Upload Malware	1	Mixed_General_Purpose	Interior	-0.727787	-0.53252	7.0683376352368175
+228	T1195	Supply Chain Compromise	0	Evasion_Persistence	Boundary	0.997126	-0.53252	5.999367285305775
+229	T1190	Exploit Public-Facing Application	2	Discovery_Reconnaissance	Boundary	0.5053	-0.093486	6.710558231723277
+230	T1558	Steal or Forge Kerberos Tickets	2	Discovery_Reconnaissance	Boundary	-0.727787	-0.53252	7.580235801852983
+231	T1555	Credentials from Password Stores	2	Discovery_Reconnaissance	Interior	-0.727787	2.423571	5.807053212664296
+232	T1567	Exfiltration Over Web Service	0	Evasion_Persistence	Boundary	0.82526	0.634537	8.928179240521056
+233	T1219	Remote Access Tools	0	Evasion_Persistence	Boundary	-0.187026	-0.53252	6.256462028508625
+234	T1583.001	Domains	2	Discovery_Reconnaissance	Interior	-0.727787	-0.53252	5.208935645653416
+235	T1560.002	Archive via Library	1	Mixed_General_Purpose	Boundary	-0.727787	-0.53252	7.755587802810463
+236	T1055.003	Thread Execution Hijacking	1	Mixed_General_Purpose	Boundary	1.682319	-0.53252	8.655545088790765
+237	T1079	Multilayer Encryption	2	Discovery_Reconnaissance	Boundary	-0.434983	-0.53252	9.230683590394523
+238	T1036	Masquerading	2	Discovery_Reconnaissance	Boundary	-0.727787	0.230814	5.2725025341278675
+239	T1546.011	Application Shimming	2	Discovery_Reconnaissance	Interior	0.523067	-0.064193	5.382196742772865
+240	T1552	Unsecured Credentials	2	Discovery_Reconnaissance	Interior	-0.727787	1.723701	5.437867763878933
+241	T1547.010	Port Monitors	1	Mixed_General_Purpose	Boundary	0.939989	-0.53252	6.901927058288039
+242	T1070.008	Clear Mailbox Data	1	Mixed_General_Purpose	Interior	-0.703499	-0.53252	8.049781415969404
+243	T1037.002	Login Hook	1	Mixed_General_Purpose	Boundary	0.861102	1.556654	9.759252188690956
+244	T1659	Content Injection	1	Mixed_General_Purpose	Interior	-0.397377	-0.53252	8.391168589050183
+245	T1055	Process Injection	0	Evasion_Persistence	Boundary	-0.131447	-0.53252	7.2532670868445
+246	T1567.004	Exfiltration Over Webhook	1	Mixed_General_Purpose	Boundary	2.457894	-0.53252	8.475511519545238
+247	T1139	Bash History	1	Mixed_General_Purpose	Boundary	1.261669	2.703054	10.980038817734144
+248	T1205	Traffic Signaling	1	Mixed_General_Purpose	Boundary	-0.727787	-0.53252	8.107817697299978
+249	T1021.008	Direct Cloud VM Connections	1	Mixed_General_Purpose	Interior	0.458249	-0.53252	6.835629954942307
+250	T1503	Credentials from Web Browsers	1	Mixed_General_Purpose	Boundary	-0.266149	-0.53252	6.777414123938921
+251	T1218	System Binary Proxy Execution	1	Mixed_General_Purpose	Boundary	-0.625653	0.25943	7.3602366628294815
+252	T1038	DLL Search Order Hijacking	1	Mixed_General_Purpose	Interior	3.441589	-0.53252	6.3913625192805945
+253	T1050	New Service	1	Mixed_General_Purpose	Interior	-0.530135	-0.53252	6.2422947090965
+254	T1070.006	Timestomp	2	Discovery_Reconnaissance	Boundary	-0.727787	-0.53252	6.3738856056523545
+255	T1557.004	Evil Twin	1	Mixed_General_Purpose	Interior	-0.727787	-0.53252	5.664701401942486
+256	T1620	Reflective Code Loading	2	Discovery_Reconnaissance	Boundary	-0.727787	2.577122	5.9019430739421495
+257	T1016.002	Wi-Fi Discovery	1	Mixed_General_Purpose	Boundary	0.543452	0.262044	6.022373381668972
+258	T1480.002	Mutual Exclusion	1	Mixed_General_Purpose	Interior	-0.727787	-0.53252	6.694600259254355
+259	T1564.011	Ignore Process Interrupts	1	Mixed_General_Purpose	Boundary	-0.727787	-0.53252	8.973399264704065
+260	T1611	Escape to Host	1	Mixed_General_Purpose	Boundary	-0.727787	-0.53252	9.07313531510867
+261	T1518.002	Backup Software Discovery	1	Mixed_General_Purpose	Boundary	0.729076	-0.400526	7.462380108473996
+262	T1547.009	Shortcut Modification	2	Discovery_Reconnaissance	Interior	-0.727787	0.858549	7.696327427892729
+263	T1010	Application Window Discovery	1	Mixed_General_Purpose	Boundary	-0.029392	-0.53252	8.22393373948737
+264	T1569.003	Systemctl	1	Mixed_General_Purpose	Interior	-0.727787	-0.53252	8.197171059161379
+265	T1032	Standard Cryptographic Protocol	1	Mixed_General_Purpose	Interior	-0.727787	-0.53252	6.0654987828028135
+266	T1087.003	Email Account	2	Discovery_Reconnaissance	Interior	-0.727787	-0.53252	5.522009885479623
+267	T1497.003	Time Based Checks	1	Mixed_General_Purpose	Boundary	-0.268829	-0.53252	8.53565683026584
+268	T1182	AppCert DLLs	1	Mixed_General_Purpose	Boundary	1.516878	-0.53252	9.447733183376677
+269	T1218.003	CMSTP	2	Discovery_Reconnaissance	Boundary	-0.727787	-0.53252	7.143828571773051
+270	T1563.001	SSH Hijacking	2	Discovery_Reconnaissance	Boundary	0.870646	0.208506	7.756963095315634
+271	T1562.002	Disable Windows Event Logging	1	Mixed_General_Purpose	Boundary	2.008436	-0.53252	7.942280907942701
+272	T1029	Scheduled Transfer	0	Evasion_Persistence	Interior	-0.727787	-0.53252	8.117314447882192
+273	T1021.002	SMB/Windows Admin Shares	2	Discovery_Reconnaissance	Boundary	0.925463	-0.53252	7.67297130742906
+274	T1525	Implant Internal Image	1	Mixed_General_Purpose	Boundary	-0.727787	-0.53252	8.580085313744553
+275	T1572	Protocol Tunneling	2	Discovery_Reconnaissance	Boundary	-0.727787	-0.53252	5.271586813352058
+276	T1218.002	Control Panel	1	Mixed_General_Purpose	Interior	2.046272	-0.53252	6.162386239738869
+277	T1599.001	Network Address Translation Traversal	1	Mixed_General_Purpose	Boundary	-0.727787	-0.53252	6.906537084168729
+278	T1608.002	Upload Tool	1	Mixed_General_Purpose	Interior	-0.254665	-0.53252	7.99824287923601
+279	T1547.005	Security Support Provider	1	Mixed_General_Purpose	Interior	-0.727787	-0.53252	6.450003724710325
+280	T1036.011	Overwrite Process Arguments	1	Mixed_General_Purpose	Interior	-0.38857	-0.53252	8.622193094868985
+281	T1004	Winlogon Helper DLL	1	Mixed_General_Purpose	Boundary	3.658139	-0.53252	10.596126751191411
+282	T1009	Binary Padding	1	Mixed_General_Purpose	Interior	-0.727787	-0.53252	6.207104267997685
+283	T1550	Use Alternate Authentication Material	2	Discovery_Reconnaissance	Boundary	-0.727787	-0.53252	5.610477023430578
+284	T1076	Remote Desktop Protocol	1	Mixed_General_Purpose	Boundary	-0.287358	-0.53252	8.959784981870827
+285	T1597.001	Threat Intel Vendors	1	Mixed_General_Purpose	Boundary	2.425039	1.55739	7.739239099701333
+286	T1011	Exfiltration Over Other Network Medium	1	Mixed_General_Purpose	Interior	0.426211	-0.53252	6.051544239776077
+287	T1602.002	Network Device Configuration Dump	1	Mixed_General_Purpose	Boundary	1.152968	-0.53252	9.027567489700274
+288	T1589	Gather Victim Identity Information	2	Discovery_Reconnaissance	Boundary	-0.718025	-0.53252	8.363687898193094
+289	T1131	Authentication Package	1	Mixed_General_Purpose	Interior	-0.727787	0.692502	6.409053869534053
+290	T1181	Extra Window Memory Injection	1	Mixed_General_Purpose	Interior	1.03635	-0.53252	8.56056029010252
+291	T1562.004	Disable or Modify System Firewall	2	Discovery_Reconnaissance	Boundary	0.752317	-0.53252	8.568703587826553
+292	T1560	Archive Collected Data	0	Evasion_Persistence	Interior	-0.727787	-0.53252	5.976957062332687
+293	T1152	Launchctl	1	Mixed_General_Purpose	Interior	-0.727787	-0.53252	8.752841596357225
+294	T1553.003	SIP and Trust Provider Hijacking	1	Mixed_General_Purpose	Boundary	-0.690547	0.266706	7.745374492891101
+295	T1483	Domain Generation Algorithms	1	Mixed_General_Purpose	Boundary	-0.727787	-0.53252	9.668523515631223
+296	T1185	Browser Session Hijacking	2	Discovery_Reconnaissance	Boundary	0.428212	0.157295	10.015095151169676
+297	T1021	Remote Services	0	Evasion_Persistence	Interior	-0.403268	-0.17311	7.27285868991765
+298	T1071.003	Mail Protocols	2	Discovery_Reconnaissance	Boundary	-0.727787	-0.53252	6.898859791926331
+299	T1556.007	Hybrid Identity	1	Mixed_General_Purpose	Interior	-0.727787	-0.53252	5.449353033136153
+300	T1595.002	Vulnerability Scanning	2	Discovery_Reconnaissance	Interior	-0.101965	2.488452	6.972848158947554
+301	T1059.009	Cloud API	1	Mixed_General_Purpose	Boundary	0.664978	-0.53252	7.609238855218871
+302	T1596	Search Open Technical Databases	1	Mixed_General_Purpose	Interior	-0.727787	-0.53252	5.752697701980392
+303	T1218.015	Electron Applications	1	Mixed_General_Purpose	Boundary	-0.727787	-0.53252	8.249630437533067
+304	T1562.012	Disable or Modify Linux Audit System	1	Mixed_General_Purpose	Boundary	1.285696	-0.53252	9.132888813137813
+305	T1207	Rogue Domain Controller	1	Mixed_General_Purpose	Boundary	0.330901	1.264798	7.13884631675831
+306	T1553.006	Code Signing Policy Modification	2	Discovery_Reconnaissance	Interior	-0.727787	0.190217	5.775813884591794
+307	T1610	Deploy Container	0	Evasion_Persistence	Boundary	-0.727787	0.576227	5.822501253392898
+308	T1107	File Deletion	1	Mixed_General_Purpose	Boundary	0.413963	-0.53252	9.578618266007195
+309	T1145	Private Keys	1	Mixed_General_Purpose	Boundary	-0.727787	-0.53252	7.878938692025105
+310	T1112	Modify Registry	2	Discovery_Reconnaissance	Boundary	0.143122	0.155588	7.615763701606682
+311	T1543.004	Launch Daemon	0	Evasion_Persistence	Boundary	-0.727787	2.196109	6.956438339354575
+312	T1580	Cloud Infrastructure Discovery	2	Discovery_Reconnaissance	Boundary	-0.727787	0.669175	7.108349828207195
+313	T1555.003	Credentials from Web Browsers	2	Discovery_Reconnaissance	Interior	-0.631276	-0.53252	6.1605605082416615
+314	T1574.008	Path Interception by Search Order Hijacking	1	Mixed_General_Purpose	Interior	-0.647875	-0.53252	6.0097966739949795
+315	T1491	Defacement	1	Mixed_General_Purpose	Interior	-0.683072	-0.53252	6.917785226676382
+316	T1535	Unused/Unsupported Cloud Regions	2	Discovery_Reconnaissance	Boundary	1.063959	-0.53252	6.86688358590318
+317	T1557.003	DHCP Spoofing	1	Mixed_General_Purpose	Boundary	-0.727787	-0.53252	8.501212757406662
+318	T1155	AppleScript	1	Mixed_General_Purpose	Interior	-0.036524	-0.53252	8.014594466132518
+319	T1563	Remote Service Session Hijacking	2	Discovery_Reconnaissance	Boundary	-0.717229	0.152459	7.926482016475045
+320	T1564.013	Bind Mounts	1	Mixed_General_Purpose	Boundary	0.156963	-0.53252	11.460324205436786
+321	T1027.001	Binary Padding	0	Evasion_Persistence	Boundary	-0.727787	-0.53252	6.648458596297074
+322	T1505.003	Web Shell	0	Evasion_Persistence	Boundary	-0.727787	-0.53252	6.308801562705204
+323	T1484.001	Group Policy Modification	2	Discovery_Reconnaissance	Boundary	-0.727787	-0.294332	5.879380299570173
+324	T1217	Browser Information Discovery	2	Discovery_Reconnaissance	Boundary	-0.727787	-0.53252	7.169566821259158
+325	T1552.004	Private Keys	0	Evasion_Persistence	Boundary	-0.727787	-0.53252	7.82512013969533
+326	T1583.004	Server	1	Mixed_General_Purpose	Interior	-0.550885	-0.53252	5.098511414503433
+327	T1021.006	Windows Remote Management	1	Mixed_General_Purpose	Boundary	1.565976	-0.53252	6.644259772520602
+328	T1011.001	Exfiltration Over Bluetooth	1	Mixed_General_Purpose	Boundary	-0.727787	-0.53252	5.422641853553658
+329	T1078.001	Default Accounts	2	Discovery_Reconnaissance	Boundary	1.376806	0.431055	7.747093434022979
+330	T1547.003	Time Providers	1	Mixed_General_Purpose	Interior	-0.727787	-0.53252	5.190389914277191
+331	T1183	Image File Execution Options Injection	1	Mixed_General_Purpose	Boundary	-0.516371	2.670111	11.248882089851948
+332	T1085	Rundll32	1	Mixed_General_Purpose	Interior	2.325595	-0.53252	6.108156366369134
+333	T1031	Modify Existing Service	1	Mixed_General_Purpose	Interior	0.087872	-0.53252	8.291672710339393
+334	T1546.005	Trap	1	Mixed_General_Purpose	Boundary	-0.694301	-0.53252	6.13650982397559
+335	T1574.006	Dynamic Linker Hijacking	1	Mixed_General_Purpose	Boundary	0.32153	-0.53252	6.8958890664905494
+336	T1136.001	Local Account	2	Discovery_Reconnaissance	Boundary	0.353065	1.517972	7.426060762534655
+337	T1681	Search Threat Vendor Data	1	Mixed_General_Purpose	Interior	0.609474	-0.53252	6.476922371702611
+338	T1674	Input Injection	1	Mixed_General_Purpose	Interior	-0.43466	1.387095	7.245181896254086
+339	T1092	Communication Through Removable Media	0	Evasion_Persistence	Interior	-0.727787	-0.53252	8.229481892129314
+340	T1070.001	Clear Windows Event Logs	2	Discovery_Reconnaissance	Boundary	1.597486	-0.53252	8.643569220831921
+341	T1585.002	Email Accounts	2	Discovery_Reconnaissance	Interior	-0.727787	-0.53252	5.094134641825225
+342	T1557.001	LLMNR/NBT-NS Poisoning and SMB Relay	0	Evasion_Persistence	Boundary	2.240075	-0.53252	7.815756345226012
+343	T1222	File and Directory Permissions Modification	1	Mixed_General_Purpose	Interior	-0.450395	-0.53252	6.782464833530082
+344	T1003.001	LSASS Memory	2	Discovery_Reconnaissance	Boundary	3.522583	-0.53252	7.0887892067713665
+345	T1053.001	At (Linux)	1	Mixed_General_Purpose	Interior	-0.727787	-0.53252	5.581467573109885
+346	T1176.002	IDE Extensions	1	Mixed_General_Purpose	Boundary	0.747921	-0.53252	7.374197913386905
+347	T1179	Hooking	1	Mixed_General_Purpose	Interior	-0.396619	-0.53252	8.971893398955864
+348	T1595	Active Scanning	2	Discovery_Reconnaissance	Boundary	-0.727787	0.558722	6.229062397728281
+349	T1027.016	Junk Code Insertion	1	Mixed_General_Purpose	Interior	-0.206492	-0.53252	8.05561861545519
+350	T1547.011	Plist Modification	1	Mixed_General_Purpose	Interior	-0.370526	-0.53252	5.296869761902342
+351	T1548	Abuse Elevation Control Mechanism	0	Evasion_Persistence	Boundary	0.688754	-0.53252	6.2321782357582105
+352	T1134.002	Create Process with Token	2	Discovery_Reconnaissance	Boundary	-0.727787	-0.53252	7.958299794401862
+353	T1548.001	Setuid and Setgid	0	Evasion_Persistence	Boundary	-0.727787	-0.53252	9.032697113713223
+354	T1547.004	Winlogon Helper DLL	1	Mixed_General_Purpose	Boundary	3.081383	-0.53252	10.25039037585397
+355	T1019	System Firmware	1	Mixed_General_Purpose	Interior	0.328139	-0.242843	5.052587792990288
+356	T1021.003	Distributed Component Object Model	1	Mixed_General_Purpose	Interior	-0.727787	-0.53252	7.391068791503075
+357	T1042	Change Default File Association	1	Mixed_General_Purpose	Boundary	-0.131789	-0.53252	7.859979195167032
+358	T1117	Regsvr32	1	Mixed_General_Purpose	Interior	0.14347	-0.53252	6.890146455428531
+359	T1110.003	Password Spraying	2	Discovery_Reconnaissance	Interior	-0.727787	0.282408	5.447099401816287
+360	T1090.002	External Proxy	2	Discovery_Reconnaissance	Boundary	-0.727787	0.353077	5.6555865860451044
+361	T1056.003	Web Portal Capture	1	Mixed_General_Purpose	Interior	-0.727787	-0.53252	7.014624793168744
+362	T1589.002	Email Addresses	2	Discovery_Reconnaissance	Interior	-0.727787	-0.124803	4.659601216342147
+363	T1164	Re-opened Applications	1	Mixed_General_Purpose	Boundary	-0.727787	-0.307219	8.617471881353124
+364	T1054	Indicator Blocking	1	Mixed_General_Purpose	Interior	-0.727787	-0.53252	6.334366384662077
+365	T1598.004	Spearphishing Voice	1	Mixed_General_Purpose	Interior	-0.727787	0.137507	5.393732582973256
+366	T1193	Spearphishing Attachment	1	Mixed_General_Purpose	Interior	1.573415	-0.53252	6.580466400657755
+367	T1003.005	Cached Domain Credentials	2	Discovery_Reconnaissance	Interior	-0.727787	-0.53252	6.169775426956398
+368	T1098.004	SSH Authorized Keys	1	Mixed_General_Purpose	Boundary	-0.227493	0.90923	8.621992686479915
+369	T1673	Virtual Machine Discovery	1	Mixed_General_Purpose	Boundary	-0.144149	-0.53252	8.83296719227124
+370	T1215	Kernel Modules and Extensions	1	Mixed_General_Purpose	Boundary	-0.152748	-0.53252	6.070332222522589
+371	T1101	Security Support Provider	1	Mixed_General_Purpose	Interior	-0.600126	-0.53252	6.062068459460778
+372	T1590.006	Network Security Appliances	2	Discovery_Reconnaissance	Interior	0.564077	-0.53252	5.822262413917635
+373	T1546.012	Image File Execution Options Injection	1	Mixed_General_Purpose	Boundary	0.28372	1.673779	13.172856529142921
+374	T1218.008	Odbcconf	1	Mixed_General_Purpose	Interior	0.809485	-0.53252	7.4697842944456285
+375	T1593.002	Search Engines	1	Mixed_General_Purpose	Boundary	-0.666768	-0.53252	7.273749451072637
+376	T1177	LSASS Driver	1	Mixed_General_Purpose	Interior	2.14552	-0.53252	6.394954286169871
+377	T1591.002	Business Relationships	2	Discovery_Reconnaissance	Boundary	-0.535656	1.190077	8.719165724768215
+378	T1548.005	Temporary Elevated Cloud Access	1	Mixed_General_Purpose	Boundary	0.397518	-0.53252	7.503660311945531
+379	T1125	Video Capture	1	Mixed_General_Purpose	Boundary	-0.727787	-0.53252	10.828717294658073
+380	T1144	Gatekeeper Bypass	1	Mixed_General_Purpose	Boundary	1.294438	-0.53252	6.667791293174087
+381	T1045	Software Packing	1	Mixed_General_Purpose	Interior	-0.727787	-0.047585	5.4693970242847465
+382	T1055.013	Process Doppelgänging	1	Mixed_General_Purpose	Interior	1.905584	-0.53252	5.627166393036353
+383	T1016	System Network Configuration Discovery	2	Discovery_Reconnaissance	Boundary	1.207157	1.20897	7.81038060432606
+384	T1578.003	Delete Cloud Instance	2	Discovery_Reconnaissance	Boundary	2.080151	-0.162936	8.312011631474725
+385	T1593.003	Code Repositories	1	Mixed_General_Purpose	Boundary	-0.551384	1.355306	5.475476546126396
+386	T1574.005	Executable Installer File Permissions Weakness	1	Mixed_General_Purpose	Interior	-0.701565	-0.53252	9.370462477797174
+387	T1546.008	Accessibility Features	2	Discovery_Reconnaissance	Interior	-0.727787	2.120551	5.401054214722685
+388	T1496.002	Bandwidth Hijacking	1	Mixed_General_Purpose	Interior	1.37886	-0.53252	5.2236016242862995
+389	T1504	PowerShell Profile	1	Mixed_General_Purpose	Boundary	2.149166	-0.475817	7.472946686311099
+390	T1198	SIP and Trust Provider Hijacking	1	Mixed_General_Purpose	Boundary	0.824097	0.250444	8.567129169875527
+391	T1087	Account Discovery	2	Discovery_Reconnaissance	Interior	0.604916	0.427182	7.451595065339709
+392	T1090	Proxy	2	Discovery_Reconnaissance	Boundary	-0.727787	-0.106666	6.057234856358852
+393	T1059	Command and Scripting Interpreter	0	Evasion_Persistence	Boundary	-0.727787	1.120852	7.345672103912103
+394	T1204.005	Malicious Library	1	Mixed_General_Purpose	Boundary	0.396786	-0.53252	8.248279717808149
+395	T1562.006	Indicator Blocking	2	Discovery_Reconnaissance	Boundary	-0.478406	-0.53252	6.73644691417854
+396	T1136.002	Domain Account	2	Discovery_Reconnaissance	Interior	-0.727787	-0.53252	6.735530760942859
+397	T1564.014	Extended Attributes	1	Mixed_General_Purpose	Interior	-0.727787	-0.53252	6.126946058134117
+398	T1589.003	Employee Names	2	Discovery_Reconnaissance	Interior	-0.724563	3.577744	8.162569594698295
+399	T1677	Poisoned Pipeline Execution	1	Mixed_General_Purpose	Boundary	0.6423	-0.53252	8.413622723226615
+400	T1482	Domain Trust Discovery	2	Discovery_Reconnaissance	Interior	-0.727787	0.454542	7.0361760834005995
+401	T1558.001	Golden Ticket	0	Evasion_Persistence	Boundary	-0.727787	-0.53252	7.89973322618525
+402	T1020	Automated Exfiltration	2	Discovery_Reconnaissance	Boundary	-0.727787	0.481951	5.797341776582797
+403	T1592.004	Client Configurations	1	Mixed_General_Purpose	Interior	-0.659049	-0.53252	6.764937555706655
+404	T1562.007	Disable or Modify Cloud Firewall	1	Mixed_General_Purpose	Boundary	1.148859	-0.53252	5.836261403723638
+405	T1219.001	IDE Tunneling	1	Mixed_General_Purpose	Boundary	1.866225	-0.53252	8.172378857117623
+406	T1036.002	Right-to-Left Override	1	Mixed_General_Purpose	Boundary	0.550844	-0.53252	10.00677779128024
+407	T1588.001	Malware	2	Discovery_Reconnaissance	Boundary	-0.727787	0.68893	7.390937378358998
+408	T1027.017	SVG Smuggling	1	Mixed_General_Purpose	Interior	-0.022596	1.137046	6.960585239187596
+409	T1542.002	Component Firmware	1	Mixed_General_Purpose	Interior	-0.212197	-0.53252	5.349599211361192
+410	T1070	Indicator Removal	0	Evasion_Persistence	Boundary	-0.727787	-0.53252	8.803228082049948
+411	T1048.001	Exfiltration Over Symmetric Encrypted Non-C2 Protocol	1	Mixed_General_Purpose	Boundary	1.116956	-0.53252	7.370463239986356
+412	T1137.001	Office Template Macros	2	Discovery_Reconnaissance	Interior	-0.727787	2.005431	6.8097145856554135
+413	T1583.003	Virtual Private Server	0	Evasion_Persistence	Boundary	-0.727787	-0.53252	9.648428452522799
+414	T1213.001	Confluence	1	Mixed_General_Purpose	Interior	-0.396612	-0.395663	5.385188614603388
+415	T1550.003	Pass the Ticket	2	Discovery_Reconnaissance	Boundary	-0.727787	-0.53252	7.4030082054793205
+416	T1609	Container Administration Command	1	Mixed_General_Purpose	Interior	-0.727787	-0.53252	7.618266788201545
+417	T1083	File and Directory Discovery	0	Evasion_Persistence	Boundary	-0.727787	3.110113	7.381801715237012
+418	T1568	Dynamic Resolution	2	Discovery_Reconnaissance	Boundary	-0.727787	1.904717	6.7244830309489885
+419	T1036.004	Masquerade Task or Service	2	Discovery_Reconnaissance	Boundary	1.642648	2.696633	7.133622815170076
+420	T1055.004	Asynchronous Procedure Call	0	Evasion_Persistence	Boundary	1.240904	0.388195	8.237659247655369
+421	T1020.001	Traffic Duplication	0	Evasion_Persistence	Boundary	-0.727787	-0.53252	8.926083639640801
+422	T1138	Application Shimming	1	Mixed_General_Purpose	Interior	-0.727787	-0.53252	9.179454076991963
+423	T1647	Plist File Modification	1	Mixed_General_Purpose	Boundary	0.575718	0.19663	6.525780708722122
+424	T1127.003	JamPlus	1	Mixed_General_Purpose	Interior	-0.727787	-0.53252	8.52113005002943
+425	T1546.009	AppCert DLLs	1	Mixed_General_Purpose	Boundary	1.278466	-0.53252	13.569852769212414
+426	T1191	CMSTP	1	Mixed_General_Purpose	Interior	0.133358	-0.53252	6.162607104369236
+427	T1188	Multi-hop Proxy	2	Discovery_Reconnaissance	Boundary	-0.727787	2.030906	7.056412836906804
+428	T1114.003	Email Forwarding Rule	2	Discovery_Reconnaissance	Boundary	-0.727787	-0.53252	6.1462309838807165
+429	T1074	Data Staged	0	Evasion_Persistence	Boundary	-0.404989	-0.53252	5.2793659928504795
+430	T1649	Steal or Forge Authentication Certificates	2	Discovery_Reconnaissance	Boundary	0.502111	0.771147	7.660055399142738
+431	T1098.005	Device Registration	2	Discovery_Reconnaissance	Boundary	0.562168	0.301632	5.971933953361939
+432	T1049	System Network Connections Discovery	2	Discovery_Reconnaissance	Boundary	3.607359	1.020032	9.449656913364441
+433	T1584	Compromise Infrastructure	2	Discovery_Reconnaissance	Boundary	-0.727787	0.897004	4.757198557966216
+434	T1553.005	Mark-of-the-Web Bypass	1	Mixed_General_Purpose	Boundary	1.09143	-0.53252	7.914146281504662
+435	T1600.002	Disable Crypto Hardware	1	Mixed_General_Purpose	Boundary	-0.425633	-0.53252	8.602560779286266
+436	T1542	Pre-OS Boot	1	Mixed_General_Purpose	Boundary	2.274635	0.377487	7.740330367560585
+437	T1612	Build Image on Host	1	Mixed_General_Purpose	Boundary	-0.727787	-0.038579	8.346347863401729
+438	T1055.002	Portable Executable Injection	2	Discovery_Reconnaissance	Boundary	0.292794	-0.53252	8.03621974717194
+439	T1218.012	Verclsid	1	Mixed_General_Purpose	Interior	-0.727787	-0.53252	7.461444229541737
+440	T1586	Compromise Accounts	2	Discovery_Reconnaissance	Interior	0.342273	-0.53252	5.847178025399419
+441	T1569.001	Launchctl	1	Mixed_General_Purpose	Interior	-0.727787	-0.53252	6.371316958127874
+442	T1584.005	Botnet	2	Discovery_Reconnaissance	Boundary	-0.727787	3.409039	7.912429782864233
+443	T1059.008	Network Device CLI	0	Evasion_Persistence	Boundary	1.411587	-0.53252	6.516561548409153
+444	T1552.003	Shell History	2	Discovery_Reconnaissance	Boundary	-0.727787	1.514016	5.969863307294775
+445	T1562.010	Downgrade Attack	1	Mixed_General_Purpose	Interior	0.719331	-0.53252	5.4446648726429885
+446	T1559.003	XPC Services	1	Mixed_General_Purpose	Boundary	1.561103	-0.53252	7.790510578095844
+447	T1497	Virtualization/Sandbox Evasion	1	Mixed_General_Purpose	Boundary	-0.727787	-0.295403	8.601333214204287
+448	T1102	Web Service	1	Mixed_General_Purpose	Boundary	0.247012	-0.53252	8.413317196293141
+449	T1552.001	Credentials In Files	0	Evasion_Persistence	Boundary	-0.727787	-0.196566	7.614797580385991
+450	T1568.003	DNS Calculation	1	Mixed_General_Purpose	Interior	-0.502845	-0.53252	7.681253182018463
+451	T1218.005	Mshta	2	Discovery_Reconnaissance	Boundary	-0.727787	3.111803	5.901342616755045
+452	T1547.015	Login Items	1	Mixed_General_Purpose	Boundary	-0.292789	-0.53252	7.328219355663131
+453	T1608	Stage Capabilities	0	Evasion_Persistence	Boundary	-0.634903	1.010608	5.8496629882467
+454	T1608.005	Link Target	1	Mixed_General_Purpose	Interior	-0.727787	-0.53252	5.480538236889192
+455	T1104	Multi-Stage Channels	2	Discovery_Reconnaissance	Boundary	-0.727787	0.255174	6.819919051864307
+456	T1657	Financial Theft	2	Discovery_Reconnaissance	Boundary	1.671484	-0.53252	7.600852402849202
+457	T1480	Execution Guardrails	2	Discovery_Reconnaissance	Boundary	-0.727787	2.703768	6.615575665083859
+458	T1619	Cloud Storage Object Discovery	1	Mixed_General_Purpose	Boundary	1.283138	-0.53252	8.486905660277086
+459	T1606.001	Web Cookies	1	Mixed_General_Purpose	Boundary	1.366292	-0.53252	9.715820763624896
+460	T1654	Log Enumeration	2	Discovery_Reconnaissance	Boundary	-0.727787	3.914945	9.383305198462187
+461	T1134.001	Token Impersonation/Theft	2	Discovery_Reconnaissance	Interior	-0.727787	-0.53252	7.375260738581081
+462	T1567.001	Exfiltration to Code Repository	1	Mixed_General_Purpose	Boundary	0.469385	-0.116794	6.999869653679971
+463	T1021.007	Cloud Services	0	Evasion_Persistence	Boundary	-0.52837	0.301073	6.7554452742222795
+464	T1205.001	Port Knocking	1	Mixed_General_Purpose	Interior	-0.727787	-0.53252	6.191606435080461
+465	T1027.012	LNK Icon Smuggling	2	Discovery_Reconnaissance	Boundary	0.779111	-0.53252	8.660425918880781
+466	T1583.006	Web Services	2	Discovery_Reconnaissance	Boundary	-0.663374	-0.53252	8.823530336548501
+467	T1528	Steal Application Access Token	2	Discovery_Reconnaissance	Interior	-0.727787	-0.53252	5.553439211301391
+468	T1598.002	Spearphishing Attachment	2	Discovery_Reconnaissance	Boundary	0.079634	0.609667	5.974238269397758
+469	T1098.001	Additional Cloud Credentials	1	Mixed_General_Purpose	Boundary	2.059544	-0.060699	6.2724777994855705
+470	T1204	User Execution	1	Mixed_General_Purpose	Boundary	0.711636	0.634405	5.667419174008765
+471	T1491.001	Internal Defacement	2	Discovery_Reconnaissance	Boundary	-0.727787	-0.53252	9.336637381758171
+472	T1564.002	Hidden Users	2	Discovery_Reconnaissance	Boundary	-0.727787	-0.53252	8.05231318072417
+473	T1134.003	Make and Impersonate Token	2	Discovery_Reconnaissance	Boundary	-0.727787	-0.53252	7.699651017006798
+474	T1552.006	Group Policy Preferences	2	Discovery_Reconnaissance	Boundary	-0.727787	0.140123	6.012157704308925
+475	T1196	Control Panel Items	1	Mixed_General_Purpose	Boundary	3.09383	-0.53252	7.522787494372015
+476	T1048.002	Exfiltration Over Asymmetric Encrypted Non-C2 Protocol	1	Mixed_General_Purpose	Interior	0.866924	-0.53252	6.749450855467606
+477	T1087.004	Cloud Account	1	Mixed_General_Purpose	Boundary	1.974796	-0.53252	5.991996209604298
+478	T1057	Process Discovery	2	Discovery_Reconnaissance	Interior	-0.727787	2.007092	6.5556616441937745
+479	T1562.003	Impair Command History Logging	2	Discovery_Reconnaissance	Boundary	0.592071	0.717897	6.418093988759129
+480	T1556.008	Network Provider DLL	1	Mixed_General_Purpose	Boundary	2.367727	-0.53252	7.529262640991784
+481	T1546.003	Windows Management Instrumentation Event Subscription	2	Discovery_Reconnaissance	Boundary	1.409237	-0.53252	6.9424154384368615
+482	T1596.004	CDNs	1	Mixed_General_Purpose	Boundary	-0.727787	-0.53252	5.901339793459239
+483	T1497.002	User Activity Based Checks	1	Mixed_General_Purpose	Interior	-0.727787	-0.53252	6.9541043094613935
+484	T1141	Input Prompt	1	Mixed_General_Purpose	Interior	-0.727787	-0.53252	8.134590579220616
+485	T1496.004	Cloud Service Hijacking	1	Mixed_General_Purpose	Boundary	0.759045	-0.53252	5.701615580483021
+486	T1585.003	Cloud Accounts	2	Discovery_Reconnaissance	Boundary	1.186594	-0.53252	6.438238960874419
+487	T1072	Software Deployment Tools	0	Evasion_Persistence	Boundary	-0.727787	3.761512	7.222912919436831
+488	T1041	Exfiltration Over C2 Channel	2	Discovery_Reconnaissance	Boundary	-0.662798	0.754796	6.718318250345796
+489	T1134.004	Parent PID Spoofing	1	Mixed_General_Purpose	Boundary	-0.727787	-0.53252	6.588778635869682
+490	T1591	Gather Victim Org Information	2	Discovery_Reconnaissance	Boundary	-0.727787	-0.53252	10.372154597898975
+491	T1060	Registry Run Keys / Startup Folder	0	Evasion_Persistence	Boundary	0.946927	-0.527072	7.989999734509317
+492	T1606	Forge Web Credentials	2	Discovery_Reconnaissance	Boundary	0.358477	2.049127	9.76589009063708
+493	T1621	Multi-Factor Authentication Request Generation	2	Discovery_Reconnaissance	Interior	-0.727787	-0.53252	6.151887497885594
+494	T1554	Compromise Host Software Binary	1	Mixed_General_Purpose	Boundary	-0.586643	-0.53252	7.160675186905852
+495	T1552.008	Chat Messages	1	Mixed_General_Purpose	Boundary	-0.727787	-0.53252	8.31544828080753
+496	T1059.001	PowerShell	2	Discovery_Reconnaissance	Boundary	-0.688697	0.630244	6.367903469177773
+497	T1023	Shortcut Modification	1	Mixed_General_Purpose	Boundary	0.944045	-0.266691	10.054787266653333
+498	T1546.001	Change Default File Association	0	Evasion_Persistence	Boundary	-0.727787	0.227154	8.042146857120532
+499	T1055.014	VDSO Hijacking	1	Mixed_General_Purpose	Boundary	0.248107	-0.53252	7.413075122005196
+500	T1071.002	File Transfer Protocols	0	Evasion_Persistence	Interior	-0.727787	-0.53252	12.650115180150907
+501	T1679	Selective Exclusion	1	Mixed_General_Purpose	Boundary	-0.60845	-0.100069	6.345046561106386
+502	T1122	Component Object Model Hijacking	1	Mixed_General_Purpose	Boundary	0.243252	-0.53252	7.387311604893375
+503	T1015	Accessibility Features	1	Mixed_General_Purpose	Boundary	-0.255384	-0.53252	5.962333666014953
+504	T1212	Exploitation for Credential Access	2	Discovery_Reconnaissance	Boundary	0.864141	-0.413215	6.935192565061899
+505	T1546.014	Emond	1	Mixed_General_Purpose	Interior	0.03022	-0.53252	7.450283263421677
+506	T1102.003	One-Way Communication	1	Mixed_General_Purpose	Interior	-0.247299	-0.53252	8.77011864387591
+507	T1590	Gather Victim Network Information	2	Discovery_Reconnaissance	Boundary	-0.540906	-0.531635	9.005302287720275
+508	T1210	Exploitation of Remote Services	0	Evasion_Persistence	Boundary	0.307512	-0.53252	7.626409814659845
+509	T1502	Parent PID Spoofing	2	Discovery_Reconnaissance	Boundary	-0.727787	-0.53252	6.860566556866096
+510	T1142	Keychain	1	Mixed_General_Purpose	Boundary	-0.727787	-0.498911	5.536620274274786
+511	T1534	Internal Spearphishing	0	Evasion_Persistence	Boundary	-0.727787	0.677691	5.011897449611494
+512	T1169	Sudo	1	Mixed_General_Purpose	Interior	-0.727787	0.353947	7.6267726190531
+513	T1574.010	Services File Permissions Weakness	1	Mixed_General_Purpose	Boundary	0.119593	-0.53252	9.329435169909242
+514	T1547.001	Registry Run Keys / Startup Folder	0	Evasion_Persistence	Boundary	0.06513	2.15284	10.876312103427704
+515	T1199	Trusted Relationship	2	Discovery_Reconnaissance	Boundary	-0.727787	0.538504	5.344176361720375
+516	T1136.003	Cloud Account	1	Mixed_General_Purpose	Boundary	2.003474	-0.53252	6.389038603165698
+517	T1069.001	Local Groups	2	Discovery_Reconnaissance	Boundary	-0.727787	-0.53252	6.61698544640099
+518	T1593	Search Open Websites/Domains	2	Discovery_Reconnaissance	Boundary	-0.727787	2.194429	7.685700262215456
+519	T1562.013	Disable or Modify Network Device Firewall	1	Mixed_General_Purpose	Boundary	0.531123	-0.53252	9.02853061727307
+520	T1098	Account Manipulation	2	Discovery_Reconnaissance	Boundary	0.349419	-0.53252	6.2220626796898735
+521	T1170	Mshta	1	Mixed_General_Purpose	Interior	0.036632	-0.53252	6.265808925063236
+522	T1048	Exfiltration Over Alternative Protocol	0	Evasion_Persistence	Interior	0.262317	-0.53252	6.086468128666501
+523	T1547.006	Kernel Modules and Extensions	2	Discovery_Reconnaissance	Boundary	-0.727787	-0.03229	5.593679994568669
+524	T1678	Delay Execution	1	Mixed_General_Purpose	Boundary	-0.727787	2.552417	9.902553017111524
+525	T1056.002	GUI Input Capture	1	Mixed_General_Purpose	Interior	-0.727787	-0.53252	6.294767479906461
+526	T1097	Pass the Ticket	1	Mixed_General_Purpose	Interior	-0.727787	-0.53252	7.914998977954517
+527	T1588.002	Tool	2	Discovery_Reconnaissance	Interior	-0.727787	3.549722	5.91002571255811
+528	T1052.001	Exfiltration over USB	0	Evasion_Persistence	Boundary	-0.727787	-0.279354	7.0326871020270385
+529	T1574.013	KernelCallbackTable	1	Mixed_General_Purpose	Boundary	0.392122	-0.53252	7.985123389861473
+530	T1597	Search Closed Sources	1	Mixed_General_Purpose	Boundary	0.4283	-0.53252	7.0286215479142795
+531	T1053.006	Systemd Timers	1	Mixed_General_Purpose	Boundary	0.015124	-0.53252	7.7429339239934185
+532	T1566	Phishing	2	Discovery_Reconnaissance	Interior	0.731461	-0.53252	6.251796034891796
+533	T1542.004	ROMMONkit	2	Discovery_Reconnaissance	Boundary	-0.727787	-0.004754	5.658603508447985
+534	T1218.001	Compiled HTML File	2	Discovery_Reconnaissance	Boundary	-0.727787	2.544207	7.688496541992226
+535	T1496.001	Compute Hijacking	1	Mixed_General_Purpose	Interior	-0.727787	-0.53252	6.415346763645886
+536	T1070.005	Network Share Connection Removal	1	Mixed_General_Purpose	Boundary	0.30863	-0.53252	8.096379930163115
+537	T1090.003	Multi-hop Proxy	2	Discovery_Reconnaissance	Interior	-0.727787	2.275807	6.356928815295211
+538	T1110	Brute Force	2	Discovery_Reconnaissance	Boundary	-0.727787	3.413485	9.076120902765023
+539	T1059.004	Unix Shell	0	Evasion_Persistence	Interior	-0.233317	-0.466306	5.5556306097897385
+540	T1137.003	Outlook Forms	1	Mixed_General_Purpose	Boundary	0.776143	-0.53252	8.577482947268486
+541	T1219.003	Remote Access Hardware	1	Mixed_General_Purpose	Boundary	1.355633	-0.53252	7.1626639050172365
+542	T1157	Dylib Hijacking	1	Mixed_General_Purpose	Interior	-0.727787	-0.53252	6.137512760918756
+543	T1562.001	Disable or Modify Tools	2	Discovery_Reconnaissance	Interior	0.362411	0.50232	5.698198692230141
+544	T1565	Data Manipulation	1	Mixed_General_Purpose	Interior	-0.457311	-0.53252	6.770680313467596
+545	T1559	Inter-Process Communication	0	Evasion_Persistence	Boundary	-0.727787	-0.53252	8.497195452993607
+546	T1001	Data Obfuscation	2	Discovery_Reconnaissance	Boundary	0.443421	-0.53252	5.677867680104297
+547	T1039	Data from Network Shared Drive	0	Evasion_Persistence	Interior	1.750169	0.112456	6.538986945998606
+548	T1584.006	Web Services	1	Mixed_General_Purpose	Interior	0.626083	-0.53252	6.078997859864034
+549	T1601	Modify System Image	1	Mixed_General_Purpose	Interior	-0.126237	-0.53252	9.041603788267507
+550	T1574	Hijack Execution Flow	2	Discovery_Reconnaissance	Boundary	0.855104	2.846578	6.713453802969681
+551	T1036.012	Browser Fingerprint	1	Mixed_General_Purpose	Interior	1.232553	-0.53252	8.8048015166735
+552	T1059.011	Lua	1	Mixed_General_Purpose	Interior	0.157088	-0.53252	7.733477672393318
+553	T1027.005	Indicator Removal from Tools	2	Discovery_Reconnaissance	Boundary	-0.082183	-0.53252	8.72380150420692
+554	T1204.003	Malicious Image	1	Mixed_General_Purpose	Boundary	-0.727787	-0.53252	9.57965018248209
+555	T1543.005	Container Service	1	Mixed_General_Purpose	Boundary	-0.727787	-0.53252	9.003589234206796
+556	T1078	Valid Accounts	2	Discovery_Reconnaissance	Boundary	-0.125419	0.473844	6.265403856112865
+557	T1571	Non-Standard Port	0	Evasion_Persistence	Boundary	-0.114251	-0.53252	7.2224971672660985
+558	T1585.001	Social Media Accounts	2	Discovery_Reconnaissance	Interior	-0.727787	-0.53252	6.8681326972384324
+559	T1073	DLL Side-Loading	1	Mixed_General_Purpose	Interior	3.536503	-0.53252	7.20332129975229
+560	T1055.012	Process Hollowing	2	Discovery_Reconnaissance	Boundary	-0.385939	2.78788	8.505586148570393
+561	T1068	Exploitation for Privilege Escalation	1	Mixed_General_Purpose	Boundary	-0.186883	0.099347	6.352774966879586
+562	T1564.009	Resource Forking	1	Mixed_General_Purpose	Boundary	-0.716543	-0.53252	5.899724623918332
+563	T1531	Account Access Removal	2	Discovery_Reconnaissance	Boundary	1.890837	-0.53252	6.000932343452829
+564	T1110.004	Credential Stuffing	1	Mixed_General_Purpose	Interior	-0.727787	-0.53252	7.458923791659338
+565	T1208	Kerberoasting	1	Mixed_General_Purpose	Interior	-0.727787	0.179789	6.422316708621798
+566	T1027	Obfuscated Files or Information	0	Evasion_Persistence	Boundary	-0.247322	1.766407	10.275623251355627
+567	T1556.006	Multi-Factor Authentication	2	Discovery_Reconnaissance	Interior	-0.727787	-0.53252	5.251013597726176
+568	T1114.002	Remote Email Collection	0	Evasion_Persistence	Boundary	-0.727787	-0.53252	7.260881906111021
+569	T1505.004	IIS Components	1	Mixed_General_Purpose	Boundary	0.909561	-0.53252	7.821007774256538
+570	T1036.001	Invalid Code Signature	1	Mixed_General_Purpose	Interior	-0.727787	-0.53252	5.8917937216565
+571	T1564.006	Run Virtual Instance	1	Mixed_General_Purpose	Boundary	-0.727787	-0.53252	11.002178835261981
+572	T1154	Trap	1	Mixed_General_Purpose	Boundary	-0.703505	-0.53252	8.497939418264771
+573	T1027.014	Polymorphic Code	1	Mixed_General_Purpose	Interior	-0.585052	-0.53252	5.496898430034412
+574	T1201	Password Policy Discovery	2	Discovery_Reconnaissance	Boundary	-0.390068	0.576566	6.1405364067605035
+575	T1546	Event Triggered Execution	1	Mixed_General_Purpose	Boundary	2.135951	-0.53252	7.409882825189787
+576	T1546.004	Unix Shell Configuration Modification	1	Mixed_General_Purpose	Interior	1.227598	0.504848	7.394362069524823
+577	T1187	Forced Authentication	2	Discovery_Reconnaissance	Boundary	-0.727787	0.717439	6.3872399156587285
+578	T1134.005	SID-History Injection	1	Mixed_General_Purpose	Interior	-0.110242	-0.53252	7.526328602301012
+579	T1599	Network Boundary Bridging	0	Evasion_Persistence	Boundary	-0.727787	1.131386	7.400270330940714
+580	T1486	Data Encrypted for Impact	2	Discovery_Reconnaissance	Boundary	-0.727787	-0.53252	5.626252968435877
+581	T1488	Disk Content Wipe	1	Mixed_General_Purpose	Boundary	1.151554	-0.53252	6.695030858349516
+582	T1553	Subvert Trust Controls	2	Discovery_Reconnaissance	Boundary	0.956277	3.448082	8.113126826597629
+583	T1548.004	Elevated Execution with Prompt	1	Mixed_General_Purpose	Boundary	-0.615757	-0.53252	8.945049865162112
+584	T1592.003	Firmware	2	Discovery_Reconnaissance	Boundary	-0.201406	-0.53252	5.846208135185878
+585	T1573	Encrypted Channel	2	Discovery_Reconnaissance	Boundary	-0.727787	-0.53252	6.498797472588339
+586	T1174	Password Filter DLL	1	Mixed_General_Purpose	Boundary	1.663707	-0.53252	8.969495550492224
+587	T1547.002	Authentication Package	1	Mixed_General_Purpose	Interior	-0.727787	0.93347	5.654408488136361
+588	T1218.010	Regsvr32	1	Mixed_General_Purpose	Interior	0.676301	-0.53252	6.422252084023723
+589	T1002	Data Compressed	1	Mixed_General_Purpose	Interior	-0.727787	-0.53252	5.273005631728585
+590	T1567.003	Exfiltration to Text Storage Sites	1	Mixed_General_Purpose	Boundary	-0.727787	-0.53252	7.7289199168960145
+591	T1081	Credentials in Files	1	Mixed_General_Purpose	Boundary	-0.727787	3.141759	8.842395407681087
+592	T1592.002	Software	2	Discovery_Reconnaissance	Interior	-0.727787	2.630498	5.1319452763515825
+593	T1128	Netsh Helper DLL	1	Mixed_General_Purpose	Boundary	5.953914	-0.53252	11.053170166348025
+594	T1056	Input Capture	2	Discovery_Reconnaissance	Boundary	-0.727787	-0.440713	5.845441598428836
+595	T1566.004	Spearphishing Voice	2	Discovery_Reconnaissance	Interior	-0.303063	3.535264	6.304346386011845
+596	T1587.004	Exploits	2	Discovery_Reconnaissance	Interior	1.080767	-0.150086	4.509399896341493
+597	T1593.001	Social Media	1	Mixed_General_Purpose	Boundary	-0.727787	-0.53252	8.276552848603764
+598	T1213.004	Customer Relationship Management Software	1	Mixed_General_Purpose	Interior	0.955793	-0.53252	6.87401220956132
+599	T1546.015	Component Object Model Hijacking	2	Discovery_Reconnaissance	Interior	0.871181	-0.53252	5.702632729618989
+600	T1589.001	Credentials	2	Discovery_Reconnaissance	Interior	-0.727787	1.667622	5.403549014109879
+601	T1195.002	Compromise Software Supply Chain	2	Discovery_Reconnaissance	Boundary	2.207679	1.313743	6.3845040112812015
+602	T1036.003	Rename Legitimate Utilities	1	Mixed_General_Purpose	Boundary	0.475431	-0.265653	10.259391205221354
+603	T1102.002	Bidirectional Communication	0	Evasion_Persistence	Boundary	-0.727787	-0.53252	8.13690565409756
+604	T1203	Exploitation for Client Execution	1	Mixed_General_Purpose	Boundary	2.81754	-0.097457	7.854312695449455
+605	T1595.003	Wordlist Scanning	1	Mixed_General_Purpose	Boundary	0.389457	1.134487	7.56234788789768
+606	T1667	Email Bombing	1	Mixed_General_Purpose	Boundary	-0.727787	-0.53252	9.683758568091196
+607	T1562.011	Spoof Security Alerting	1	Mixed_General_Purpose	Boundary	-0.727787	-0.53252	7.026345805248636
+608	T1137.004	Outlook Home Page	2	Discovery_Reconnaissance	Boundary	-0.356719	-0.53252	7.387624336094605
+609	T1573.002	Asymmetric Cryptography	2	Discovery_Reconnaissance	Boundary	-0.727787	-0.53252	7.292311506724081
+610	T1567.002	Exfiltration to Cloud Storage	0	Evasion_Persistence	Interior	-0.333571	-0.53252	8.030382277458285
+611	T1570	Lateral Tool Transfer	0	Evasion_Persistence	Boundary	-0.727787	0.701667	7.235422697296355
+612	T1574.009	Path Interception by Unquoted Path	1	Mixed_General_Purpose	Interior	0.288003	-0.53252	6.689675538258913
+613	T1608.003	Install Digital Certificate	1	Mixed_General_Purpose	Boundary	-0.727787	-0.53252	7.536566364000205
+614	T1168	Local Job Scheduling	1	Mixed_General_Purpose	Boundary	1.255972	-0.53252	8.328925052766042
+615	T1166	Setuid and Setgid	1	Mixed_General_Purpose	Boundary	-0.727787	-0.53252	7.421384531497454
+616	T1037.005	Startup Items	1	Mixed_General_Purpose	Boundary	0.829689	-0.53252	7.244542807041896
+617	T1100	Web Shell	1	Mixed_General_Purpose	Interior	0.740887	-0.53252	6.229272350250924
+618	T1186	Process Doppelgänging	1	Mixed_General_Purpose	Interior	2.264385	-0.146821	6.3708733372601
+619	T1184	SSH Hijacking	1	Mixed_General_Purpose	Boundary	0.740155	1.179083	10.315654453253034
+620	T1614.001	System Language Discovery	2	Discovery_Reconnaissance	Interior	-0.727787	3.312418	8.095257711029015
+621	T1095	Non-Application Layer Protocol	1	Mixed_General_Purpose	Boundary	-0.159495	-0.53252	7.161496524057964
+622	T1075	Pass the Hash	1	Mixed_General_Purpose	Boundary	-0.727787	-0.53252	7.218974871908736
+623	T1059.013	Container CLI/API	1	Mixed_General_Purpose	Boundary	0.013177	-0.53252	8.917514418130486
+624	T1027.003	Steganography	2	Discovery_Reconnaissance	Boundary	-0.727787	-0.53252	6.436625467835751
+625	T1584.002	DNS Server	1	Mixed_General_Purpose	Interior	-0.727787	-0.53252	6.777507284709176
+626	T1671	Cloud Application Integration	1	Mixed_General_Purpose	Interior	-0.72664	-0.53252	7.125097354492746
+627	T1001.003	Protocol or Service Impersonation	2	Discovery_Reconnaissance	Boundary	0.951264	-0.370395	5.550329091177226
+628	T1012	Query Registry	2	Discovery_Reconnaissance	Boundary	2.283444	-0.405711	7.347582862181809
+629	T1030	Data Transfer Size Limits	0	Evasion_Persistence	Interior	-0.727787	-0.225608	10.84571894434631
+630	T1028	Windows Remote Management	1	Mixed_General_Purpose	Boundary	1.72648	-0.53252	6.949379823812298
+631	T1550.004	Web Session Cookie	0	Evasion_Persistence	Boundary	0.246886	-0.53252	7.389314287401203
+632	T1078.002	Domain Accounts	2	Discovery_Reconnaissance	Interior	-0.727787	-0.53252	7.281173327361205
+633	T1218.009	Regsvcs/Regasm	1	Mixed_General_Purpose	Interior	-0.003922	-0.53252	6.146651871009102
+634	T1546.018	Python Startup Hooks	1	Mixed_General_Purpose	Boundary	0.177933	-0.53252	8.773487623841456
+635	T1506	Web Session Cookie	1	Mixed_General_Purpose	Boundary	1.593993	-0.53252	7.936285078624849
+636	T1553.004	Install Root Certificate	1	Mixed_General_Purpose	Boundary	-0.727787	1.37	7.458759136260969
+637	T1037.003	Network Logon Script	1	Mixed_General_Purpose	Boundary	-0.727787	2.251693	8.033775507527581
+638	T1499	Endpoint Denial of Service	0	Evasion_Persistence	Boundary	0.480857	-0.002803	6.671824982023389
+639	T1027.004	Compile After Delivery	2	Discovery_Reconnaissance	Boundary	3.453404	1.063266	8.936769450586416
+640	T1065	Uncommonly Used Port	1	Mixed_General_Purpose	Interior	-0.727787	-0.53252	5.1655457271445355
+641	T1614	System Location Discovery	2	Discovery_Reconnaissance	Boundary	-0.727787	1.071241	7.03067213499707
+642	T1564.007	VBA Stomping	1	Mixed_General_Purpose	Boundary	-0.727787	-0.53252	9.271640689614873
+643	T1197	BITS Jobs	0	Evasion_Persistence	Boundary	-0.428454	-0.53252	5.537155786080918
+644	T1127.001	MSBuild	1	Mixed_General_Purpose	Interior	1.247202	-0.53252	5.605205894471552
+645	T1656	Impersonation	2	Discovery_Reconnaissance	Interior	-0.727787	-0.53252	7.426126099651614
+646	T1578.005	Modify Cloud Compute Configurations	1	Mixed_General_Purpose	Boundary	1.629562	-0.53252	8.572787862207717
+647	T1088	Bypass User Account Control	1	Mixed_General_Purpose	Boundary	1.997582	-0.53252	6.952687512635088
+648	T1494	Runtime Data Manipulation	1	Mixed_General_Purpose	Interior	1.991029	-0.53252	7.655116986444611
+649	T1090.004	Domain Fronting	2	Discovery_Reconnaissance	Interior	-0.727787	-0.53252	7.634025493335348
+650	T1557.002	ARP Cache Poisoning	1	Mixed_General_Purpose	Boundary	0.231475	-0.53252	7.86642299606327
+651	T1562.008	Disable or Modify Cloud Logs	1	Mixed_General_Purpose	Boundary	0.489435	-0.53252	7.26313175394409
+652	T1518.001	Security Software Discovery	2	Discovery_Reconnaissance	Interior	-0.116691	-0.53252	5.564420972571721
+653	T1564.003	Hidden Window	2	Discovery_Reconnaissance	Boundary	0.454396	-0.53252	7.6288553312022325
+654	T1493	Transmitted Data Manipulation	1	Mixed_General_Purpose	Interior	-0.727787	-0.53252	6.044014129664702
+655	T1127.002	ClickOnce	1	Mixed_General_Purpose	Boundary	1.880972	-0.53252	10.76231672308252
+656	T1059.006	Python	2	Discovery_Reconnaissance	Interior	-0.727787	-0.53252	6.184470503970862
+657	T1070.010	Relocate Malware	1	Mixed_General_Purpose	Interior	-0.727787	-0.53252	6.900779100663503
+658	T1591.004	Identify Roles	1	Mixed_General_Purpose	Interior	-0.727787	-0.53252	8.688664587411234
+659	T1132	Data Encoding	2	Discovery_Reconnaissance	Boundary	-0.727787	0.044091	5.465505836660096
+660	T1546.010	AppInit DLLs	1	Mixed_General_Purpose	Boundary	0.643625	-0.53252	12.500271566872353
+661	T1598	Phishing for Information	2	Discovery_Reconnaissance	Interior	1.939878	-0.53252	8.818869467991153
+662	T1496	Resource Hijacking	2	Discovery_Reconnaissance	Interior	0.208702	-0.53252	5.209684739682815
+663	T1585	Establish Accounts	2	Discovery_Reconnaissance	Interior	-0.727787	2.439522	7.0690613940492435
+664	T1588	Obtain Capabilities	2	Discovery_Reconnaissance	Interior	-0.727787	1.570917	5.419541217581899
+665	T1546.002	Screensaver	1	Mixed_General_Purpose	Boundary	1.005065	0.699047	7.019108601921972
+666	T1147	Hidden Users	2	Discovery_Reconnaissance	Boundary	-0.727787	-0.53252	7.182033949113334
+667	T1556.009	Conditional Access Policies	1	Mixed_General_Purpose	Boundary	-0.631678	-0.53252	8.137628502640629
+668	T1578.002	Create Cloud Instance	2	Discovery_Reconnaissance	Boundary	-0.727787	-0.53252	9.478459277828138
+669	T1500	Compile After Delivery	1	Mixed_General_Purpose	Boundary	-0.047008	-0.173039	7.417253090368138
+670	T1555.006	Cloud Secrets Management Stores	2	Discovery_Reconnaissance	Boundary	-0.566124	-0.459514	7.7941117113161384
+671	T1213.003	Code Repositories	2	Discovery_Reconnaissance	Interior	-0.727787	2.377515	6.974338722611752
+672	T1565.002	Transmitted Data Manipulation	1	Mixed_General_Purpose	Interior	-0.727787	-0.53252	6.766278428241716
+673	T1003.008	/etc/passwd and /etc/shadow	2	Discovery_Reconnaissance	Boundary	-0.727787	2.208182	8.118460186067322
+674	T1543.001	Launch Agent	1	Mixed_General_Purpose	Interior	-0.727787	-0.53252	7.861594802109149
+675	T1569	System Services	2	Discovery_Reconnaissance	Boundary	-0.451732	-0.53252	5.432434707048944
+676	T1059.003	Windows Command Shell	0	Evasion_Persistence	Boundary	1.698201	-0.53252	6.226148744577673
+677	T1055.009	Proc Memory	1	Mixed_General_Purpose	Interior	0.495551	-0.53252	5.827987319583501
+678	T1223	Compiled HTML File	1	Mixed_General_Purpose	Boundary	-0.41023	0.377152	6.775183795199463
+679	T1650	Acquire Access	2	Discovery_Reconnaissance	Boundary	-0.727787	-0.53252	5.140842148468461
+680	T1601.001	Patch System Image	2	Discovery_Reconnaissance	Boundary	-0.727787	2.206848	6.371689490903167
+681	T1558.002	Silver Ticket	1	Mixed_General_Purpose	Interior	-0.727787	-0.53252	7.886772681523834
+682	T1213	Data from Information Repositories	2	Discovery_Reconnaissance	Boundary	-0.727787	2.845857	10.267847057623737
+683	T1070.009	Clear Persistence	0	Evasion_Persistence	Boundary	-0.727787	0.79891	12.769447315229474
+684	T1059.012	Hypervisor CLI	1	Mixed_General_Purpose	Boundary	1.922792	-0.53252	9.384633142595074
+685	T1146	Clear Command History	1	Mixed_General_Purpose	Boundary	0.474796	0.216416	10.996125082248264
+686	T1555.004	Windows Credential Manager	1	Mixed_General_Purpose	Boundary	-0.727787	0.158868	6.690561479887046
+687	T1036.010	Masquerade Account Name	1	Mixed_General_Purpose	Boundary	0.847406	-0.53252	7.8520520148179305
+688	T1519	Emond	1	Mixed_General_Purpose	Boundary	-0.114327	-0.53252	7.769293604368756
+689	T1194	Spearphishing via Service	1	Mixed_General_Purpose	Interior	0.034604	-0.53252	8.291589002618881
+690	T1200	Hardware Additions	1	Mixed_General_Purpose	Boundary	1.291384	-0.53252	8.539044588613095
+691	T1219.002	Remote Desktop Software	1	Mixed_General_Purpose	Boundary	0.731843	-0.53252	8.46995723971704
+692	T1505	Server Software Component	0	Evasion_Persistence	Interior	-0.727787	-0.53252	6.245135771660009
+693	T1485	Data Destruction	0	Evasion_Persistence	Interior	0.415532	0.738824	6.539478030464062
+694	T1132.002	Non-Standard Encoding	2	Discovery_Reconnaissance	Interior	-0.727787	-0.53252	5.819416235132449
+695	T1556.001	Domain Controller Authentication	2	Discovery_Reconnaissance	Interior	-0.727787	-0.53252	5.5300647845927315
+696	T1537	Transfer Data to Cloud Account	0	Evasion_Persistence	Boundary	-0.727787	-0.53252	8.840193940706177
+697	T1027.006	HTML Smuggling	1	Mixed_General_Purpose	Boundary	0.636833	-0.53252	10.06962017420995
+698	T1556.005	Reversible Encryption	1	Mixed_General_Purpose	Boundary	-0.316923	-0.53252	7.644928096992002
+699	T1027.010	Command Obfuscation	2	Discovery_Reconnaissance	Boundary	1.090269	-0.213427	7.21250454385047
+700	T1130	Install Root Certificate	1	Mixed_General_Purpose	Interior	-0.727787	0.185561	6.874875787271572
+701	T1022	Data Encrypted	1	Mixed_General_Purpose	Boundary	0.021255	-0.53252	6.961384774456463
+702	T1070.004	File Deletion	0	Evasion_Persistence	Boundary	-0.727787	-0.53252	11.81285124508987
+703	T1189	Drive-by Compromise	0	Evasion_Persistence	Interior	1.252767	-0.53252	5.423333110153429
+704	T1498	Network Denial of Service	0	Evasion_Persistence	Boundary	-0.727787	-0.53252	7.730650355764974
+705	T1651	Cloud Administration Command	1	Mixed_General_Purpose	Boundary	-0.276243	-0.315205	8.204496668218518
+706	T1546.016	Installer Packages	2	Discovery_Reconnaissance	Boundary	-0.340276	-0.358375	9.042364072835758
+707	T1595.001	Scanning IP Blocks	0	Evasion_Persistence	Boundary	-0.159414	-0.53252	9.002408249069632
+708	T1158	Hidden Files and Directories	1	Mixed_General_Purpose	Boundary	-0.727787	-0.53252	5.94633927416585
+709	T1221	Template Injection	2	Discovery_Reconnaissance	Boundary	0.096863	1.828996	7.958011159020857
+710	T1037.004	RC Scripts	0	Evasion_Persistence	Boundary	-0.727787	1.669138	7.959553358190933
+711	T1134	Access Token Manipulation	2	Discovery_Reconnaissance	Boundary	-0.727787	-0.53252	6.452486948924953
+712	T1209	Time Providers	1	Mixed_General_Purpose	Interior	0.140326	-0.53252	6.108032824832613
+713	T1111	Multi-Factor Authentication Interception	1	Mixed_General_Purpose	Boundary	-0.727787	0.283997	6.79099728973008
+714	T1159	Launch Agent	1	Mixed_General_Purpose	Interior	-0.727787	-0.53252	8.678739004961622
+715	T1027.002	Software Packing	0	Evasion_Persistence	Boundary	-0.727787	4.002015	8.154139666867817
+716	T1584.007	Serverless	1	Mixed_General_Purpose	Boundary	-0.727787	-0.53252	6.721017631638342
+717	T1071.001	Web Protocols	0	Evasion_Persistence	Boundary	-0.727787	-0.53252	8.340482557605348
+718	T1059.005	Visual Basic	2	Discovery_Reconnaissance	Boundary	-0.329819	0.454395	6.687071762073169
+719	T1564.005	Hidden File System	1	Mixed_General_Purpose	Boundary	-0.727787	-0.53252	6.140192680237285
+720	T1543.002	Systemd Service	1	Mixed_General_Purpose	Interior	-0.707077	-0.53252	7.001968298770933
+721	T1668	Exclusive Control	1	Mixed_General_Purpose	Interior	-0.006404	-0.53252	7.745421578169934
+722	T1563.002	RDP Hijacking	2	Discovery_Reconnaissance	Boundary	-0.727787	-0.53252	5.6740567513655815
+723	T1136	Create Account	2	Discovery_Reconnaissance	Interior	-0.727787	1.316292	6.319567634797516
+724	T1547.013	XDG Autostart Entries	2	Discovery_Reconnaissance	Boundary	-0.727787	1.086231	10.005611447739474
+725	T1584.004	Server	0	Evasion_Persistence	Interior	0.589195	-0.53252	6.146082887116285
+726	T1672	Email Spoofing	1	Mixed_General_Purpose	Interior	-0.727787	-0.53252	6.707378302787098
+727	T1526	Cloud Service Discovery	1	Mixed_General_Purpose	Boundary	0.453666	-0.53252	7.243187958003356
+728	T1204.004	Malicious Copy and Paste	1	Mixed_General_Purpose	Interior	2.923533	-0.53252	8.379927406570603
+729	T1151	Space after Filename	1	Mixed_General_Purpose	Boundary	-0.727787	-0.53252	12.150490696044967
+730	T1018	Remote System Discovery	2	Discovery_Reconnaissance	Boundary	-0.642446	-0.53252	5.913570930381994
+731	T1046	Network Service Discovery	2	Discovery_Reconnaissance	Interior	0.335693	0.577918	7.219667491701439
+732	T1590.001	Domain Properties	1	Mixed_General_Purpose	Boundary	-0.727787	-0.53252	7.989908243422366
+733	T1518	Software Discovery	2	Discovery_Reconnaissance	Interior	-0.727787	3.945116	6.247215019113002
+734	T1538	Cloud Service Dashboard	2	Discovery_Reconnaissance	Boundary	-0.727787	-0.53252	9.062258014351935
+735	T1055.005	Thread Local Storage	1	Mixed_General_Purpose	Boundary	0.399144	-0.53252	7.62915877014894
+736	T1622	Debugger Evasion	2	Discovery_Reconnaissance	Boundary	0.997134	5.466823	11.135045352988119
+737	T1036.006	Space after Filename	1	Mixed_General_Purpose	Boundary	0.057879	-0.372087	10.1907051739106
+738	T1547.007	Re-opened Applications	1	Mixed_General_Purpose	Interior	-0.727787	-0.53252	5.777338930096042
+739	T1608.006	SEO Poisoning	1	Mixed_General_Purpose	Boundary	-0.221843	-0.53252	10.96467665067101
+740	T1550.002	Pass the Hash	2	Discovery_Reconnaissance	Interior	-0.727787	-0.53252	5.61256052432878
+741	T1052	Exfiltration Over Physical Medium	1	Mixed_General_Purpose	Interior	-0.727787	-0.53252	5.6864391251344015
+742	T1574.002	DLL Side-Loading	2	Discovery_Reconnaissance	Boundary	2.349489	-0.53252	8.36162739346546
+743	T1105	Ingress Tool Transfer	0	Evasion_Persistence	Interior	-0.727787	-0.53252	7.1339090991339
+744	T1216.002	SyncAppvPublishingServer	1	Mixed_General_Purpose	Interior	-0.727787	-0.53252	7.464320099148219
+745	T1098.002	Additional Email Delegate Permissions	2	Discovery_Reconnaissance	Boundary	-0.727787	-0.53252	8.757985768847934
+746	T1588.003	Code Signing Certificates	2	Discovery_Reconnaissance	Boundary	-0.727787	1.19361	6.2214257052964035
+747	T1126	Network Share Connection Removal	1	Mixed_General_Purpose	Boundary	0.012763	-0.53252	6.673445645550452
+748	T1648	Serverless Execution	0	Evasion_Persistence	Boundary	0.376482	1.996067	8.097752728262279
+749	T1548.006	TCC Manipulation	1	Mixed_General_Purpose	Interior	2.433928	-0.53252	8.820683843529487
+750	T1084	Windows Management Instrumentation Event Subscription	1	Mixed_General_Purpose	Boundary	2.065261	-0.53252	6.545548965154017
+751	T1160	Launch Daemon	1	Mixed_General_Purpose	Boundary	-0.727787	-0.53252	7.634367641332667
+752	T1055.008	Ptrace System Calls	1	Mixed_General_Purpose	Boundary	0.027785	1.926032	9.186351510178433
+753	T1653	Power Settings	1	Mixed_General_Purpose	Boundary	2.165031	-0.53252	8.308645475176114
+754	T1027.007	Dynamic API Resolution	1	Mixed_General_Purpose	Boundary	0.833333	-0.53252	8.366783714235659
+755	T1021.001	Remote Desktop Protocol	1	Mixed_General_Purpose	Boundary	0.417189	-0.017864	8.736409080426697
+756	T1037.001	Logon Script (Windows)	2	Discovery_Reconnaissance	Boundary	0.91068	1.948515	7.839662122754629
+757	T1055.015	ListPlanting	1	Mixed_General_Purpose	Interior	0.331605	-0.53252	7.416081105522612
+758	T1665	Hide Infrastructure	1	Mixed_General_Purpose	Boundary	-0.727787	-0.53252	8.350604627689947
+759	T1484	Domain or Tenant Policy Modification	2	Discovery_Reconnaissance	Boundary	-0.727787	0.313926	11.606963962711756
+760	T1220	XSL Script Processing	1	Mixed_General_Purpose	Boundary	-0.727787	0.265723	9.060718112743402
+761	T1596.005	Scan Databases	0	Evasion_Persistence	Boundary	-0.727787	3.25911	8.5918897598971
+762	T1564.001	Hidden Files and Directories	0	Evasion_Persistence	Interior	-0.727787	-0.53252	6.669466783149889
+763	T1578.001	Create Snapshot	1	Mixed_General_Purpose	Boundary	-0.727787	-0.53252	9.69498039260671
+764	T1591.001	Determine Physical Locations	2	Discovery_Reconnaissance	Boundary	-0.727787	-0.53252	6.377394247971216
+765	T1137.002	Office Test	2	Discovery_Reconnaissance	Boundary	-0.727787	0.839086	6.725582155184356
+766	T1587	Develop Capabilities	2	Discovery_Reconnaissance	Interior	-0.727787	2.018999	4.645857236342736
+767	T1173	Dynamic Data Exchange	1	Mixed_General_Purpose	Boundary	-0.239904	-0.53252	7.870204290021135
+768	T1003.003	NTDS	0	Evasion_Persistence	Boundary	-0.452277	-0.53252	6.343146779822858
+769	T1602.001	SNMP (MIB Dump)	1	Mixed_General_Purpose	Boundary	-0.727787	-0.53252	11.241145996631483
+770	T1001.002	Steganography	1	Mixed_General_Purpose	Interior	-0.727787	-0.53252	6.095542038845746
+771	T1204.001	Malicious Link	2	Discovery_Reconnaissance	Boundary	1.258159	0.082951	9.96041833687064
+772	T1550.001	Application Access Token	2	Discovery_Reconnaissance	Boundary	-0.727787	-0.53252	6.250600852434611
+773	T1547.008	LSASS Driver	1	Mixed_General_Purpose	Boundary	1.388903	-0.53252	6.681015677605397
+774	T1569.002	Service Execution	2	Discovery_Reconnaissance	Boundary	0.490333	1.389385	6.169488520636942
+775	T1078.004	Cloud Accounts	2	Discovery_Reconnaissance	Boundary	-0.079451	-0.53252	6.756702701891158
+776	T1480.001	Environmental Keying	0	Evasion_Persistence	Boundary	-0.727787	2.099144	9.176842962597602
+777	T1008	Fallback Channels	2	Discovery_Reconnaissance	Boundary	-0.727787	-0.53252	8.329980343400226
+778	T1680	Local Storage Discovery	1	Mixed_General_Purpose	Boundary	-0.402621	-0.53252	7.166061262601488
+779	T1564.004	NTFS File Attributes	1	Mixed_General_Purpose	Boundary	0.709226	-0.53252	6.9164480672096245
+780	T1558.003	Kerberoasting	2	Discovery_Reconnaissance	Interior	-0.727787	1.145223	6.81982412771493
+781	T1096	NTFS File Attributes	1	Mixed_General_Purpose	Interior	1.6381	-0.53252	6.492650710034102
+782	T1003.006	DCSync	2	Discovery_Reconnaissance	Interior	-0.727787	-0.53252	4.161655253601551
+783	T1124	System Time Discovery	2	Discovery_Reconnaissance	Boundary	-0.525375	-0.260271	7.239958509883846
+784	T1053.002	At	1	Mixed_General_Purpose	Interior	-0.727787	-0.53252	4.51286434592241
+785	T1035	Service Execution	1	Mixed_General_Purpose	Interior	0.935302	-0.53252	8.620154407460664
+786	T1055.001	Dynamic-link Library Injection	2	Discovery_Reconnaissance	Boundary	0.629281	-0.53252	7.5030472714185334
+787	T1086	PowerShell	1	Mixed_General_Purpose	Boundary	1.922914	2.647931	7.771075483025637
+788	T1588.005	Exploits	2	Discovery_Reconnaissance	Interior	0.988283	-0.199043	4.376130966321651
+789	T1556	Modify Authentication Process	2	Discovery_Reconnaissance	Interior	-0.727787	-0.411947	5.007846122355064
+790	T1546.017	Udev Rules	1	Mixed_General_Purpose	Boundary	-0.727787	-0.53252	6.867154728302019
+791	T1056.004	Credential API Hooking	2	Discovery_Reconnaissance	Interior	-0.61664	0.861053	7.2764000790345404
+792	T1495	Firmware Corruption	1	Mixed_General_Purpose	Boundary	-0.267615	1.142528	7.470617195388867
+793	T1490	Inhibit System Recovery	0	Evasion_Persistence	Boundary	-0.727787	-0.53252	6.802994906704216
+794	T1546.007	Netsh Helper DLL	1	Mixed_General_Purpose	Boundary	5.624171	-0.53252	11.459608327539856
+795	T1566.003	Spearphishing via Service	2	Discovery_Reconnaissance	Boundary	0.673351	-0.250257	5.552368853061705
+796	T1090.001	Internal Proxy	2	Discovery_Reconnaissance	Interior	-0.727787	0.217522	5.537272897634373
+797	T1216	System Script Proxy Execution	1	Mixed_General_Purpose	Interior	-0.087821	0.889751	10.509601660317877
+798	T1094	Custom Command and Control Protocol	0	Evasion_Persistence	Boundary	1.037647	-0.53252	6.656976272911878
+799	T1102.001	Dead Drop Resolver	0	Evasion_Persistence	Boundary	-0.727787	1.814239	6.972613831679619
+800	T1118	InstallUtil	1	Mixed_General_Purpose	Interior	-0.727787	-0.53252	7.842757306702983
+801	T1001.001	Junk Data	2	Discovery_Reconnaissance	Boundary	1.568089	-0.53252	5.304365057855632
+802	T1598.001	Spearphishing Service	1	Mixed_General_Purpose	Interior	-0.654048	-0.53252	6.652887368867179
+803	T1505.006	vSphere Installation Bundles	0	Evasion_Persistence	Boundary	0.912639	2.263019	8.55086062829779
+804	T1552.007	Container API	1	Mixed_General_Purpose	Interior	-0.727787	-0.53252	7.1232571769926825
+805	T1584.001	Domains	2	Discovery_Reconnaissance	Interior	-0.727787	-0.53252	5.2350673913428105
+806	T1505.001	SQL Stored Procedures	2	Discovery_Reconnaissance	Boundary	0.73398	0.304771	11.565639483667919
+807	T1556.004	Network Device Authentication	2	Discovery_Reconnaissance	Boundary	-0.727787	-0.53252	6.009218930321522
+808	T1561.001	Disk Content Wipe	1	Mixed_General_Purpose	Boundary	2.573653	-0.53252	7.488656105247187
+809	T1213.005	Messaging Applications	1	Mixed_General_Purpose	Interior	-0.727787	-0.53252	8.003668246069482
+810	T1048.003	Exfiltration Over Unencrypted Non-C2 Protocol	2	Discovery_Reconnaissance	Boundary	1.639211	-0.53252	6.596552067948554
+811	T1027.015	Compression	1	Mixed_General_Purpose	Boundary	-0.727787	-0.53252	7.387368796859212
+812	T1574.004	Dylib Hijacking	1	Mixed_General_Purpose	Interior	-0.727787	-0.53252	5.355663036716408
+813	T1601.002	Downgrade System Image	0	Evasion_Persistence	Boundary	-0.14182	0.827491	6.7812879737187615
+814	T1078.003	Local Accounts	2	Discovery_Reconnaissance	Boundary	1.312192	1.979478	8.09167116424374
+815	T1669	Wi-Fi Networks	1	Mixed_General_Purpose	Boundary	-0.092835	1.955986	7.717124136372742
+816	T1211	Exploitation for Defense Evasion	1	Mixed_General_Purpose	Boundary	-0.727787	-0.53252	6.703680835995882
+817	T1127	Trusted Developer Utilities Proxy Execution	1	Mixed_General_Purpose	Interior	-0.000126	-0.53252	5.911788632238657
+818	T1529	System Shutdown/Reboot	0	Evasion_Persistence	Boundary	0.411209	2.632923	7.788789068122055
+819	T1218.014	MMC	1	Mixed_General_Purpose	Interior	-0.258575	-0.53252	6.624807008439712
+820	T1564.010	Process Argument Spoofing	1	Mixed_General_Purpose	Interior	-0.727787	-0.53252	7.53083602489364
+821	T1077	Windows Admin Shares	1	Mixed_General_Purpose	Interior	-0.727787	-0.53252	7.84429780382602
+822	T1574.012	COR_PROFILER	1	Mixed_General_Purpose	Boundary	-0.634845	-0.53252	7.904963713215677

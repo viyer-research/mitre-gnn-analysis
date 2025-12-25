@@ -1,0 +1,824 @@
+Index	ID	Name
+0	T1055.011	Extra Window Memory Injection
+1	T1053.005	Scheduled Task
+2	T1205.002	Socket Filters
+3	T1066	Indicator Removal from Tools
+4	T1560.001	Archive via Utility
+5	T1021.005	VNC
+6	T1047	Windows Management Instrumentation
+7	T1156	Malicious Shell Modification
+8	T1113	Screen Capture
+9	T1027.011	Fileless Storage
+10	T1067	Bootkit
+11	T1037	Boot or Logon Initialization Scripts
+12	T1557	Adversary-in-the-Middle
+13	T1033	System Owner/User Discovery
+14	T1583	Acquire Infrastructure
+15	T1218.011	Rundll32
+16	T1613	Container and Resource Discovery
+17	T1583.007	Serverless
+18	T1143	Hidden Window
+19	T1161	LC_LOAD_DYLIB Addition
+20	T1132.001	Standard Encoding
+21	T1027.009	Embedded Payloads
+22	T1150	Plist Modification
+23	T1556.003	Pluggable Authentication Modules
+24	T1578.004	Revert Cloud Instance
+25	T1148	HISTCONTROL
+26	T1592	Gather Victim Host Information
+27	T1596.003	Digital Certificates
+28	T1056.001	Keylogging
+29	T1564.012	File/Path Exclusions
+30	T1222.002	Linux and Mac File and Directory Permissions Modification
+31	T1110.001	Password Guessing
+32	T1216.001	PubPrn
+33	T1597.002	Purchase Technical Data
+34	T1003	OS Credential Dumping
+35	T1129	Shared Modules
+36	T1602	Data from Configuration Repository
+37	T1561.002	Disk Structure Wipe
+38	T1498.001	Direct Network Flood
+39	T1492	Stored Data Manipulation
+40	T1574.007	Path Interception by PATH Environment Variable
+41	T1213.002	Sharepoint
+42	T1006	Direct Volume Access
+43	T1044	File System Permissions Weakness
+44	T1588.007	Artificial Intelligence
+45	T1666	Modify Cloud Resource Hierarchy
+46	T1564.008	Email Hiding Rules
+47	T1491.002	External Defacement
+48	T1027.013	Encrypted/Encoded File
+49	T1171	LLMNR/NBT-NS Poisoning and Relay
+50	T1590.005	IP Addresses
+51	T1499.001	OS Exhaustion Flood
+52	T1014	Rootkit
+53	T1546.013	PowerShell Profile
+54	T1059.007	JavaScript
+55	T1590.002	DNS
+56	T1501	Systemd Service
+57	T1485.001	Lifecycle-Triggered Deletion
+58	T1514	Elevated Execution with Prompt
+59	T1123	Audio Capture
+60	T1543	Create or Modify System Process
+61	T1133	External Remote Services
+62	T1109	Component Firmware
+63	T1546.006	LC_LOAD_DYLIB Addition
+64	T1539	Steal Web Session Cookie
+65	T1053.007	Container Orchestration Job
+66	T1568.002	Domain Generation Algorithms
+67	T1036.007	Double File Extension
+68	T1548.002	Bypass User Account Control
+69	T1099	Timestomp
+70	T1496.003	SMS Pumping
+71	T1016.001	Internet Connection Discovery
+72	T1548.003	Sudo and Sudo Caching
+73	T1560.003	Archive via Custom Method
+74	T1578	Modify Cloud Compute Infrastructure
+75	T1584.008	Network Devices
+76	T1583.008	Malvertising
+77	T1069	Permission Groups Discovery
+78	T1114	Email Collection
+79	T1003.002	Security Account Manager
+80	T1596.002	WHOIS
+81	T1542.001	System Firmware
+82	T1594	Search Victim-Owned Websites
+83	T1069.003	Cloud Groups
+84	T1574.011	Services Registry Permissions Weakness
+85	T1596.001	DNS/Passive DNS
+86	T1499.003	Application Exhaustion Flood
+87	T1163	Rc.common
+88	T1195.001	Compromise Software Dependencies and Development Tools
+89	T1588.004	Digital Certificates
+90	T1583.002	DNS Server
+91	T1561	Disk Wipe
+92	T1071.004	DNS
+93	T1552.005	Cloud Instance Metadata API
+94	T1555.002	Securityd Memory
+95	T1615	Group Policy Discovery
+96	T1542.003	Bootkit
+97	T1025	Data from Removable Media
+98	T1116	Code Signing
+99	T1218.013	Mavinject
+100	T1522	Cloud Instance Metadata API
+101	T1093	Process Hollowing
+102	T1074.001	Local Data Staging
+103	T1036.005	Match Legitimate Resource Name or Location
+104	T1172	Domain Fronting
+105	T1587.003	Digital Certificates
+106	T1565.001	Stored Data Manipulation
+107	T1110.002	Password Cracking
+108	T1178	SID-History Injection
+109	T1114.001	Local Email Collection
+110	T1555.001	Keychain
+111	T1547	Boot or Logon Autostart Execution
+112	T1003.004	LSA Secrets
+113	T1013	Port Monitors
+114	T1600	Weaken Encryption
+115	T1606.002	SAML Tokens
+116	T1192	Spearphishing Link
+117	T1036.008	Masquerade File Type
+118	T1489	Service Stop
+119	T1587.001	Malware
+120	T1121	Regsvcs/Regasm
+121	T1652	Device Driver Discovery
+122	T1206	Sudo Caching
+123	T1087.002	Domain Account
+124	T1547.014	Active Setup
+125	T1564	Hide Artifacts
+126	T1559.002	Dynamic Data Exchange
+127	T1204.002	Malicious File
+128	T1591.003	Identify Business Tempo
+129	T1063	Security Software Discovery
+130	T1071.005	Publish/Subscribe Protocols
+131	T1592.001	Hardware
+132	T1080	Taint Shared Content
+133	T1484.002	Trust Modification
+134	T1213.006	Databases
+135	T1573.001	Symmetric Cryptography
+136	T1087.001	Local Account
+137	T1167	Securityd Memory
+138	T1586.001	Social Media Accounts
+139	T1176.001	Browser Extensions
+140	T1527	Application Access Token
+141	T1562.009	Safe Mode Boot
+142	T1180	Screensaver
+143	T1542.005	TFTP Boot
+144	T1543.003	Windows Service
+145	T1568.001	Fast Flux DNS
+146	T1497.001	System Checks
+147	T1053.003	Cron
+148	T1069.002	Domain Groups
+149	T1588.006	Vulnerabilities
+150	T1566.002	Spearphishing Link
+151	T1165	Startup Items
+152	T1070.002	Clear Linux or Mac System Logs
+153	T1499.004	Application or System Exploitation
+154	T1137	Office Application Startup
+155	T1218.004	InstallUtil
+156	T1598.003	Spearphishing Link
+157	T1021.004	SSH
+158	T1098.003	Additional Cloud Roles
+159	T1547.012	Print Processors
+160	T1089	Disabling Security Tools
+161	T1487	Disk Structure Wipe
+162	T1566.001	Spearphishing Attachment
+163	T1214	Credentials in Registry
+164	T1027.008	Stripped Payloads
+165	T1559.001	Component Object Model
+166	T1574.001	DLL
+167	T1119	Automated Collection
+168	T1115	Clipboard Data
+169	T1003.007	Proc Filesystem
+170	T1583.005	Botnet
+171	T1555.005	Password Managers
+172	T1103	AppInit DLLs
+173	T1553.001	Gatekeeper Bypass
+174	T1675	ESXi Administration Command
+175	T1608.004	Drive-by Target
+176	T1007	System Service Discovery
+177	T1040	Network Sniffing
+178	T1017	Application Deployment Software
+179	T1553.002	Code Signing
+180	T1530	Data from Cloud Storage
+181	T1565.003	Runtime Data Manipulation
+182	T1552.002	Credentials in Registry
+183	T1135	Network Share Discovery
+184	T1120	Peripheral Device Discovery
+185	T1036.009	Break Process Trees
+186	T1590.004	Network Topology
+187	T1587.002	Code Signing Certificates
+188	T1222.001	Windows File and Directory Permissions Modification
+189	T1137.006	Add-ins
+190	T1505.002	Transport Agent
+191	T1082	System Information Discovery
+192	T1071	Application Layer Protocol
+193	T1574.014	AppDomainManager
+194	T1074.002	Remote Data Staging
+195	T1098.006	Additional Container Cluster Roles
+196	T1053	Scheduled Task/Job
+197	T1218.007	Msiexec
+198	T1162	Login Item
+199	T1590.003	Network Trust Dependencies
+200	T1498.002	Reflection Amplification
+201	T1556.002	Password Filter DLL
+202	T1505.005	Terminal Services DLL
+203	T1059.002	AppleScript
+204	T1176	Software Extensions
+205	T1499.002	Service Exhaustion Flood
+206	T1195.003	Compromise Hardware Supply Chain
+207	T1106	Native API
+208	T1558.005	Ccache Files
+209	T1070.007	Clear Network Connection History and Configurations
+210	T1558.004	AS-REP Roasting
+211	T1058	Service Registry Permissions Weakness
+212	T1584.003	Virtual Private Server
+213	T1059.010	AutoHotKey & AutoIT
+214	T1600.001	Reduce Key Space
+215	T1070.003	Clear Command History
+216	T1202	Indirect Command Execution
+217	T1024	Custom Cryptographic Protocol
+218	T1536	Revert Cloud Instance
+219	T1091	Replication Through Removable Media
+220	T1005	Data from Local System
+221	T1140	Deobfuscate/Decode Files or Information
+222	T1137.005	Outlook Rules
+223	T1562	Impair Defenses
+224	T1586.003	Cloud Accounts
+225	T1586.002	Email Accounts
+226	T1098.007	Additional Local or Domain Groups
+227	T1608.001	Upload Malware
+228	T1195	Supply Chain Compromise
+229	T1190	Exploit Public-Facing Application
+230	T1558	Steal or Forge Kerberos Tickets
+231	T1555	Credentials from Password Stores
+232	T1567	Exfiltration Over Web Service
+233	T1219	Remote Access Tools
+234	T1583.001	Domains
+235	T1560.002	Archive via Library
+236	T1055.003	Thread Execution Hijacking
+237	T1079	Multilayer Encryption
+238	T1036	Masquerading
+239	T1546.011	Application Shimming
+240	T1552	Unsecured Credentials
+241	T1547.010	Port Monitors
+242	T1070.008	Clear Mailbox Data
+243	T1037.002	Login Hook
+244	T1659	Content Injection
+245	T1055	Process Injection
+246	T1567.004	Exfiltration Over Webhook
+247	T1139	Bash History
+248	T1205	Traffic Signaling
+249	T1021.008	Direct Cloud VM Connections
+250	T1503	Credentials from Web Browsers
+251	T1218	System Binary Proxy Execution
+252	T1038	DLL Search Order Hijacking
+253	T1050	New Service
+254	T1070.006	Timestomp
+255	T1557.004	Evil Twin
+256	T1620	Reflective Code Loading
+257	T1016.002	Wi-Fi Discovery
+258	T1480.002	Mutual Exclusion
+259	T1564.011	Ignore Process Interrupts
+260	T1611	Escape to Host
+261	T1518.002	Backup Software Discovery
+262	T1547.009	Shortcut Modification
+263	T1010	Application Window Discovery
+264	T1569.003	Systemctl
+265	T1032	Standard Cryptographic Protocol
+266	T1087.003	Email Account
+267	T1497.003	Time Based Checks
+268	T1182	AppCert DLLs
+269	T1218.003	CMSTP
+270	T1563.001	SSH Hijacking
+271	T1562.002	Disable Windows Event Logging
+272	T1029	Scheduled Transfer
+273	T1021.002	SMB/Windows Admin Shares
+274	T1525	Implant Internal Image
+275	T1572	Protocol Tunneling
+276	T1218.002	Control Panel
+277	T1599.001	Network Address Translation Traversal
+278	T1608.002	Upload Tool
+279	T1547.005	Security Support Provider
+280	T1036.011	Overwrite Process Arguments
+281	T1004	Winlogon Helper DLL
+282	T1009	Binary Padding
+283	T1550	Use Alternate Authentication Material
+284	T1076	Remote Desktop Protocol
+285	T1597.001	Threat Intel Vendors
+286	T1011	Exfiltration Over Other Network Medium
+287	T1602.002	Network Device Configuration Dump
+288	T1589	Gather Victim Identity Information
+289	T1131	Authentication Package
+290	T1181	Extra Window Memory Injection
+291	T1562.004	Disable or Modify System Firewall
+292	T1560	Archive Collected Data
+293	T1152	Launchctl
+294	T1553.003	SIP and Trust Provider Hijacking
+295	T1483	Domain Generation Algorithms
+296	T1185	Browser Session Hijacking
+297	T1021	Remote Services
+298	T1071.003	Mail Protocols
+299	T1556.007	Hybrid Identity
+300	T1595.002	Vulnerability Scanning
+301	T1059.009	Cloud API
+302	T1596	Search Open Technical Databases
+303	T1218.015	Electron Applications
+304	T1562.012	Disable or Modify Linux Audit System
+305	T1207	Rogue Domain Controller
+306	T1553.006	Code Signing Policy Modification
+307	T1610	Deploy Container
+308	T1107	File Deletion
+309	T1145	Private Keys
+310	T1112	Modify Registry
+311	T1543.004	Launch Daemon
+312	T1580	Cloud Infrastructure Discovery
+313	T1555.003	Credentials from Web Browsers
+314	T1574.008	Path Interception by Search Order Hijacking
+315	T1491	Defacement
+316	T1535	Unused/Unsupported Cloud Regions
+317	T1557.003	DHCP Spoofing
+318	T1155	AppleScript
+319	T1563	Remote Service Session Hijacking
+320	T1564.013	Bind Mounts
+321	T1027.001	Binary Padding
+322	T1505.003	Web Shell
+323	T1484.001	Group Policy Modification
+324	T1217	Browser Information Discovery
+325	T1552.004	Private Keys
+326	T1583.004	Server
+327	T1021.006	Windows Remote Management
+328	T1011.001	Exfiltration Over Bluetooth
+329	T1078.001	Default Accounts
+330	T1547.003	Time Providers
+331	T1183	Image File Execution Options Injection
+332	T1085	Rundll32
+333	T1031	Modify Existing Service
+334	T1546.005	Trap
+335	T1574.006	Dynamic Linker Hijacking
+336	T1136.001	Local Account
+337	T1681	Search Threat Vendor Data
+338	T1674	Input Injection
+339	T1092	Communication Through Removable Media
+340	T1070.001	Clear Windows Event Logs
+341	T1585.002	Email Accounts
+342	T1557.001	LLMNR/NBT-NS Poisoning and SMB Relay
+343	T1222	File and Directory Permissions Modification
+344	T1003.001	LSASS Memory
+345	T1053.001	At (Linux)
+346	T1176.002	IDE Extensions
+347	T1179	Hooking
+348	T1595	Active Scanning
+349	T1027.016	Junk Code Insertion
+350	T1547.011	Plist Modification
+351	T1548	Abuse Elevation Control Mechanism
+352	T1134.002	Create Process with Token
+353	T1548.001	Setuid and Setgid
+354	T1547.004	Winlogon Helper DLL
+355	T1019	System Firmware
+356	T1021.003	Distributed Component Object Model
+357	T1042	Change Default File Association
+358	T1117	Regsvr32
+359	T1110.003	Password Spraying
+360	T1090.002	External Proxy
+361	T1056.003	Web Portal Capture
+362	T1589.002	Email Addresses
+363	T1164	Re-opened Applications
+364	T1054	Indicator Blocking
+365	T1598.004	Spearphishing Voice
+366	T1193	Spearphishing Attachment
+367	T1003.005	Cached Domain Credentials
+368	T1098.004	SSH Authorized Keys
+369	T1673	Virtual Machine Discovery
+370	T1215	Kernel Modules and Extensions
+371	T1101	Security Support Provider
+372	T1590.006	Network Security Appliances
+373	T1546.012	Image File Execution Options Injection
+374	T1218.008	Odbcconf
+375	T1593.002	Search Engines
+376	T1177	LSASS Driver
+377	T1591.002	Business Relationships
+378	T1548.005	Temporary Elevated Cloud Access
+379	T1125	Video Capture
+380	T1144	Gatekeeper Bypass
+381	T1045	Software Packing
+382	T1055.013	Process Doppelgänging
+383	T1016	System Network Configuration Discovery
+384	T1578.003	Delete Cloud Instance
+385	T1593.003	Code Repositories
+386	T1574.005	Executable Installer File Permissions Weakness
+387	T1546.008	Accessibility Features
+388	T1496.002	Bandwidth Hijacking
+389	T1504	PowerShell Profile
+390	T1198	SIP and Trust Provider Hijacking
+391	T1087	Account Discovery
+392	T1090	Proxy
+393	T1059	Command and Scripting Interpreter
+394	T1204.005	Malicious Library
+395	T1562.006	Indicator Blocking
+396	T1136.002	Domain Account
+397	T1564.014	Extended Attributes
+398	T1589.003	Employee Names
+399	T1677	Poisoned Pipeline Execution
+400	T1482	Domain Trust Discovery
+401	T1558.001	Golden Ticket
+402	T1020	Automated Exfiltration
+403	T1592.004	Client Configurations
+404	T1562.007	Disable or Modify Cloud Firewall
+405	T1219.001	IDE Tunneling
+406	T1036.002	Right-to-Left Override
+407	T1588.001	Malware
+408	T1027.017	SVG Smuggling
+409	T1542.002	Component Firmware
+410	T1070	Indicator Removal
+411	T1048.001	Exfiltration Over Symmetric Encrypted Non-C2 Protocol
+412	T1137.001	Office Template Macros
+413	T1583.003	Virtual Private Server
+414	T1213.001	Confluence
+415	T1550.003	Pass the Ticket
+416	T1609	Container Administration Command
+417	T1083	File and Directory Discovery
+418	T1568	Dynamic Resolution
+419	T1036.004	Masquerade Task or Service
+420	T1055.004	Asynchronous Procedure Call
+421	T1020.001	Traffic Duplication
+422	T1138	Application Shimming
+423	T1647	Plist File Modification
+424	T1127.003	JamPlus
+425	T1546.009	AppCert DLLs
+426	T1191	CMSTP
+427	T1188	Multi-hop Proxy
+428	T1114.003	Email Forwarding Rule
+429	T1074	Data Staged
+430	T1649	Steal or Forge Authentication Certificates
+431	T1098.005	Device Registration
+432	T1049	System Network Connections Discovery
+433	T1584	Compromise Infrastructure
+434	T1553.005	Mark-of-the-Web Bypass
+435	T1600.002	Disable Crypto Hardware
+436	T1542	Pre-OS Boot
+437	T1612	Build Image on Host
+438	T1055.002	Portable Executable Injection
+439	T1218.012	Verclsid
+440	T1586	Compromise Accounts
+441	T1569.001	Launchctl
+442	T1584.005	Botnet
+443	T1059.008	Network Device CLI
+444	T1552.003	Shell History
+445	T1562.010	Downgrade Attack
+446	T1559.003	XPC Services
+447	T1497	Virtualization/Sandbox Evasion
+448	T1102	Web Service
+449	T1552.001	Credentials In Files
+450	T1568.003	DNS Calculation
+451	T1218.005	Mshta
+452	T1547.015	Login Items
+453	T1608	Stage Capabilities
+454	T1608.005	Link Target
+455	T1104	Multi-Stage Channels
+456	T1657	Financial Theft
+457	T1480	Execution Guardrails
+458	T1619	Cloud Storage Object Discovery
+459	T1606.001	Web Cookies
+460	T1654	Log Enumeration
+461	T1134.001	Token Impersonation/Theft
+462	T1567.001	Exfiltration to Code Repository
+463	T1021.007	Cloud Services
+464	T1205.001	Port Knocking
+465	T1027.012	LNK Icon Smuggling
+466	T1583.006	Web Services
+467	T1528	Steal Application Access Token
+468	T1598.002	Spearphishing Attachment
+469	T1098.001	Additional Cloud Credentials
+470	T1204	User Execution
+471	T1491.001	Internal Defacement
+472	T1564.002	Hidden Users
+473	T1134.003	Make and Impersonate Token
+474	T1552.006	Group Policy Preferences
+475	T1196	Control Panel Items
+476	T1048.002	Exfiltration Over Asymmetric Encrypted Non-C2 Protocol
+477	T1087.004	Cloud Account
+478	T1057	Process Discovery
+479	T1562.003	Impair Command History Logging
+480	T1556.008	Network Provider DLL
+481	T1546.003	Windows Management Instrumentation Event Subscription
+482	T1596.004	CDNs
+483	T1497.002	User Activity Based Checks
+484	T1141	Input Prompt
+485	T1496.004	Cloud Service Hijacking
+486	T1585.003	Cloud Accounts
+487	T1072	Software Deployment Tools
+488	T1041	Exfiltration Over C2 Channel
+489	T1134.004	Parent PID Spoofing
+490	T1591	Gather Victim Org Information
+491	T1060	Registry Run Keys / Startup Folder
+492	T1606	Forge Web Credentials
+493	T1621	Multi-Factor Authentication Request Generation
+494	T1554	Compromise Host Software Binary
+495	T1552.008	Chat Messages
+496	T1059.001	PowerShell
+497	T1023	Shortcut Modification
+498	T1546.001	Change Default File Association
+499	T1055.014	VDSO Hijacking
+500	T1071.002	File Transfer Protocols
+501	T1679	Selective Exclusion
+502	T1122	Component Object Model Hijacking
+503	T1015	Accessibility Features
+504	T1212	Exploitation for Credential Access
+505	T1546.014	Emond
+506	T1102.003	One-Way Communication
+507	T1590	Gather Victim Network Information
+508	T1210	Exploitation of Remote Services
+509	T1502	Parent PID Spoofing
+510	T1142	Keychain
+511	T1534	Internal Spearphishing
+512	T1169	Sudo
+513	T1574.010	Services File Permissions Weakness
+514	T1547.001	Registry Run Keys / Startup Folder
+515	T1199	Trusted Relationship
+516	T1136.003	Cloud Account
+517	T1069.001	Local Groups
+518	T1593	Search Open Websites/Domains
+519	T1562.013	Disable or Modify Network Device Firewall
+520	T1098	Account Manipulation
+521	T1170	Mshta
+522	T1048	Exfiltration Over Alternative Protocol
+523	T1547.006	Kernel Modules and Extensions
+524	T1678	Delay Execution
+525	T1056.002	GUI Input Capture
+526	T1097	Pass the Ticket
+527	T1588.002	Tool
+528	T1052.001	Exfiltration over USB
+529	T1574.013	KernelCallbackTable
+530	T1597	Search Closed Sources
+531	T1053.006	Systemd Timers
+532	T1566	Phishing
+533	T1542.004	ROMMONkit
+534	T1218.001	Compiled HTML File
+535	T1496.001	Compute Hijacking
+536	T1070.005	Network Share Connection Removal
+537	T1090.003	Multi-hop Proxy
+538	T1110	Brute Force
+539	T1059.004	Unix Shell
+540	T1137.003	Outlook Forms
+541	T1219.003	Remote Access Hardware
+542	T1157	Dylib Hijacking
+543	T1562.001	Disable or Modify Tools
+544	T1565	Data Manipulation
+545	T1559	Inter-Process Communication
+546	T1001	Data Obfuscation
+547	T1039	Data from Network Shared Drive
+548	T1584.006	Web Services
+549	T1601	Modify System Image
+550	T1574	Hijack Execution Flow
+551	T1036.012	Browser Fingerprint
+552	T1059.011	Lua
+553	T1027.005	Indicator Removal from Tools
+554	T1204.003	Malicious Image
+555	T1543.005	Container Service
+556	T1078	Valid Accounts
+557	T1571	Non-Standard Port
+558	T1585.001	Social Media Accounts
+559	T1073	DLL Side-Loading
+560	T1055.012	Process Hollowing
+561	T1068	Exploitation for Privilege Escalation
+562	T1564.009	Resource Forking
+563	T1531	Account Access Removal
+564	T1110.004	Credential Stuffing
+565	T1208	Kerberoasting
+566	T1027	Obfuscated Files or Information
+567	T1556.006	Multi-Factor Authentication
+568	T1114.002	Remote Email Collection
+569	T1505.004	IIS Components
+570	T1036.001	Invalid Code Signature
+571	T1564.006	Run Virtual Instance
+572	T1154	Trap
+573	T1027.014	Polymorphic Code
+574	T1201	Password Policy Discovery
+575	T1546	Event Triggered Execution
+576	T1546.004	Unix Shell Configuration Modification
+577	T1187	Forced Authentication
+578	T1134.005	SID-History Injection
+579	T1599	Network Boundary Bridging
+580	T1486	Data Encrypted for Impact
+581	T1488	Disk Content Wipe
+582	T1553	Subvert Trust Controls
+583	T1548.004	Elevated Execution with Prompt
+584	T1592.003	Firmware
+585	T1573	Encrypted Channel
+586	T1174	Password Filter DLL
+587	T1547.002	Authentication Package
+588	T1218.010	Regsvr32
+589	T1002	Data Compressed
+590	T1567.003	Exfiltration to Text Storage Sites
+591	T1081	Credentials in Files
+592	T1592.002	Software
+593	T1128	Netsh Helper DLL
+594	T1056	Input Capture
+595	T1566.004	Spearphishing Voice
+596	T1587.004	Exploits
+597	T1593.001	Social Media
+598	T1213.004	Customer Relationship Management Software
+599	T1546.015	Component Object Model Hijacking
+600	T1589.001	Credentials
+601	T1195.002	Compromise Software Supply Chain
+602	T1036.003	Rename Legitimate Utilities
+603	T1102.002	Bidirectional Communication
+604	T1203	Exploitation for Client Execution
+605	T1595.003	Wordlist Scanning
+606	T1667	Email Bombing
+607	T1562.011	Spoof Security Alerting
+608	T1137.004	Outlook Home Page
+609	T1573.002	Asymmetric Cryptography
+610	T1567.002	Exfiltration to Cloud Storage
+611	T1570	Lateral Tool Transfer
+612	T1574.009	Path Interception by Unquoted Path
+613	T1608.003	Install Digital Certificate
+614	T1168	Local Job Scheduling
+615	T1166	Setuid and Setgid
+616	T1037.005	Startup Items
+617	T1100	Web Shell
+618	T1186	Process Doppelgänging
+619	T1184	SSH Hijacking
+620	T1614.001	System Language Discovery
+621	T1095	Non-Application Layer Protocol
+622	T1075	Pass the Hash
+623	T1059.013	Container CLI/API
+624	T1027.003	Steganography
+625	T1584.002	DNS Server
+626	T1671	Cloud Application Integration
+627	T1001.003	Protocol or Service Impersonation
+628	T1012	Query Registry
+629	T1030	Data Transfer Size Limits
+630	T1028	Windows Remote Management
+631	T1550.004	Web Session Cookie
+632	T1078.002	Domain Accounts
+633	T1218.009	Regsvcs/Regasm
+634	T1546.018	Python Startup Hooks
+635	T1506	Web Session Cookie
+636	T1553.004	Install Root Certificate
+637	T1037.003	Network Logon Script
+638	T1499	Endpoint Denial of Service
+639	T1027.004	Compile After Delivery
+640	T1065	Uncommonly Used Port
+641	T1614	System Location Discovery
+642	T1564.007	VBA Stomping
+643	T1197	BITS Jobs
+644	T1127.001	MSBuild
+645	T1656	Impersonation
+646	T1578.005	Modify Cloud Compute Configurations
+647	T1088	Bypass User Account Control
+648	T1494	Runtime Data Manipulation
+649	T1090.004	Domain Fronting
+650	T1557.002	ARP Cache Poisoning
+651	T1562.008	Disable or Modify Cloud Logs
+652	T1518.001	Security Software Discovery
+653	T1564.003	Hidden Window
+654	T1493	Transmitted Data Manipulation
+655	T1127.002	ClickOnce
+656	T1059.006	Python
+657	T1070.010	Relocate Malware
+658	T1591.004	Identify Roles
+659	T1132	Data Encoding
+660	T1546.010	AppInit DLLs
+661	T1598	Phishing for Information
+662	T1496	Resource Hijacking
+663	T1585	Establish Accounts
+664	T1588	Obtain Capabilities
+665	T1546.002	Screensaver
+666	T1147	Hidden Users
+667	T1556.009	Conditional Access Policies
+668	T1578.002	Create Cloud Instance
+669	T1500	Compile After Delivery
+670	T1555.006	Cloud Secrets Management Stores
+671	T1213.003	Code Repositories
+672	T1565.002	Transmitted Data Manipulation
+673	T1003.008	/etc/passwd and /etc/shadow
+674	T1543.001	Launch Agent
+675	T1569	System Services
+676	T1059.003	Windows Command Shell
+677	T1055.009	Proc Memory
+678	T1223	Compiled HTML File
+679	T1650	Acquire Access
+680	T1601.001	Patch System Image
+681	T1558.002	Silver Ticket
+682	T1213	Data from Information Repositories
+683	T1070.009	Clear Persistence
+684	T1059.012	Hypervisor CLI
+685	T1146	Clear Command History
+686	T1555.004	Windows Credential Manager
+687	T1036.010	Masquerade Account Name
+688	T1519	Emond
+689	T1194	Spearphishing via Service
+690	T1200	Hardware Additions
+691	T1219.002	Remote Desktop Software
+692	T1505	Server Software Component
+693	T1485	Data Destruction
+694	T1132.002	Non-Standard Encoding
+695	T1556.001	Domain Controller Authentication
+696	T1537	Transfer Data to Cloud Account
+697	T1027.006	HTML Smuggling
+698	T1556.005	Reversible Encryption
+699	T1027.010	Command Obfuscation
+700	T1130	Install Root Certificate
+701	T1022	Data Encrypted
+702	T1070.004	File Deletion
+703	T1189	Drive-by Compromise
+704	T1498	Network Denial of Service
+705	T1651	Cloud Administration Command
+706	T1546.016	Installer Packages
+707	T1595.001	Scanning IP Blocks
+708	T1158	Hidden Files and Directories
+709	T1221	Template Injection
+710	T1037.004	RC Scripts
+711	T1134	Access Token Manipulation
+712	T1209	Time Providers
+713	T1111	Multi-Factor Authentication Interception
+714	T1159	Launch Agent
+715	T1027.002	Software Packing
+716	T1584.007	Serverless
+717	T1071.001	Web Protocols
+718	T1059.005	Visual Basic
+719	T1564.005	Hidden File System
+720	T1543.002	Systemd Service
+721	T1668	Exclusive Control
+722	T1563.002	RDP Hijacking
+723	T1136	Create Account
+724	T1547.013	XDG Autostart Entries
+725	T1584.004	Server
+726	T1672	Email Spoofing
+727	T1526	Cloud Service Discovery
+728	T1204.004	Malicious Copy and Paste
+729	T1151	Space after Filename
+730	T1018	Remote System Discovery
+731	T1046	Network Service Discovery
+732	T1590.001	Domain Properties
+733	T1518	Software Discovery
+734	T1538	Cloud Service Dashboard
+735	T1055.005	Thread Local Storage
+736	T1622	Debugger Evasion
+737	T1036.006	Space after Filename
+738	T1547.007	Re-opened Applications
+739	T1608.006	SEO Poisoning
+740	T1550.002	Pass the Hash
+741	T1052	Exfiltration Over Physical Medium
+742	T1574.002	DLL Side-Loading
+743	T1105	Ingress Tool Transfer
+744	T1216.002	SyncAppvPublishingServer
+745	T1098.002	Additional Email Delegate Permissions
+746	T1588.003	Code Signing Certificates
+747	T1126	Network Share Connection Removal
+748	T1648	Serverless Execution
+749	T1548.006	TCC Manipulation
+750	T1084	Windows Management Instrumentation Event Subscription
+751	T1160	Launch Daemon
+752	T1055.008	Ptrace System Calls
+753	T1653	Power Settings
+754	T1027.007	Dynamic API Resolution
+755	T1021.001	Remote Desktop Protocol
+756	T1037.001	Logon Script (Windows)
+757	T1055.015	ListPlanting
+758	T1665	Hide Infrastructure
+759	T1484	Domain or Tenant Policy Modification
+760	T1220	XSL Script Processing
+761	T1596.005	Scan Databases
+762	T1564.001	Hidden Files and Directories
+763	T1578.001	Create Snapshot
+764	T1591.001	Determine Physical Locations
+765	T1137.002	Office Test
+766	T1587	Develop Capabilities
+767	T1173	Dynamic Data Exchange
+768	T1003.003	NTDS
+769	T1602.001	SNMP (MIB Dump)
+770	T1001.002	Steganography
+771	T1204.001	Malicious Link
+772	T1550.001	Application Access Token
+773	T1547.008	LSASS Driver
+774	T1569.002	Service Execution
+775	T1078.004	Cloud Accounts
+776	T1480.001	Environmental Keying
+777	T1008	Fallback Channels
+778	T1680	Local Storage Discovery
+779	T1564.004	NTFS File Attributes
+780	T1558.003	Kerberoasting
+781	T1096	NTFS File Attributes
+782	T1003.006	DCSync
+783	T1124	System Time Discovery
+784	T1053.002	At
+785	T1035	Service Execution
+786	T1055.001	Dynamic-link Library Injection
+787	T1086	PowerShell
+788	T1588.005	Exploits
+789	T1556	Modify Authentication Process
+790	T1546.017	Udev Rules
+791	T1056.004	Credential API Hooking
+792	T1495	Firmware Corruption
+793	T1490	Inhibit System Recovery
+794	T1546.007	Netsh Helper DLL
+795	T1566.003	Spearphishing via Service
+796	T1090.001	Internal Proxy
+797	T1216	System Script Proxy Execution
+798	T1094	Custom Command and Control Protocol
+799	T1102.001	Dead Drop Resolver
+800	T1118	InstallUtil
+801	T1001.001	Junk Data
+802	T1598.001	Spearphishing Service
+803	T1505.006	vSphere Installation Bundles
+804	T1552.007	Container API
+805	T1584.001	Domains
+806	T1505.001	SQL Stored Procedures
+807	T1556.004	Network Device Authentication
+808	T1561.001	Disk Content Wipe
+809	T1213.005	Messaging Applications
+810	T1048.003	Exfiltration Over Unencrypted Non-C2 Protocol
+811	T1027.015	Compression
+812	T1574.004	Dylib Hijacking
+813	T1601.002	Downgrade System Image
+814	T1078.003	Local Accounts
+815	T1669	Wi-Fi Networks
+816	T1211	Exploitation for Defense Evasion
+817	T1127	Trusted Developer Utilities Proxy Execution
+818	T1529	System Shutdown/Reboot
+819	T1218.014	MMC
+820	T1564.010	Process Argument Spoofing
+821	T1077	Windows Admin Shares
+822	T1574.012	COR_PROFILER

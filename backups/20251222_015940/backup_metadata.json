@@ -1,0 +1,18 @@
+{
+  "timestamp": "20251222_015940",
+  "datetime": "2025-12-22T01:59:40.697095",
+  "database": "MITRE2kg",
+  "collections": {
+    "entities": {
+      "count": 24556,
+      "file": "entities.json",
+      "size_mb": 17.63
+    },
+    "relationships": {
+      "count": 22737,
+      "file": "relationships.json",
+      "size_mb": 15.3
+    }
+  },
+  "total_size_mb": 32.93
+}

@@ -1,0 +1,242 @@
+✅ REPORT UPDATED WITH ACTUAL OLLAMA RESPONSES
+
+═══════════════════════════════════════════════════════════════
+
+📋 WHAT WAS ADDED:
+
+A new "Sample LLM Responses from Ollama" section containing:
+  ✓ 3 Real-world queries with actual responses
+  ✓ Side-by-side RAG vs Graph+LLM comparisons  
+  ✓ Actual performance metrics (latency, tokens, scores)
+  ✓ Detailed evaluation notes
+  ✓ Response characteristics comparison table
+
+═══════════════════════════════════════════════════════════════
+
+📊 QUERIES INCLUDED:
+
+1. "What techniques do threat actors use for credential theft?"
+   ├─ RAG Score: 9.0/10 ⭐ (95% confidence)
+   ├─ Graph+LLM Score: 5.0/10 (30% confidence - parse error)
+   └─ Winner: RAG by 4.0 points
+
+2. "How can we detect lateral movement?" 🏆
+   ├─ RAG Score: 8.4/10 (85% confidence)
+   ├─ Graph+LLM Score: 9.1/10 (95% confidence)
+   └─ Winner: Graph+LLM by 0.7 points
+
+3. "What are persistence mechanisms?"
+   ├─ RAG Score: 8.93/10 (95% confidence)
+   ├─ Graph+LLM Score: 8.8/10 (95% confidence)
+   └─ Very Close (RAG by 0.1 points)
+
+═══════════════════════════════════════════════════════════════
+
+📈 PERFORMANCE METRICS SHOWN:
+
+For each response:
+  • Latency (ms): RAG 30-37s, Graph+LLM 28-51s
+  • Token count: RAG 277-496, Graph+LLM 325-590
+  • Confidence scores: 0.3-0.95
+  • Detailed evaluation with strengths & weaknesses
+
+═══════════════════════════════════════════════════════════════
+
+📄 UPDATED FILES:
+
+1. evaluation_results.tex (22K, 653 lines)
+   └─ Added 165+ lines with:
+      • New section "Sample LLM Responses from Ollama"
+      • 3 detailed examples with full responses
+      • Performance comparison table
+      • Response characteristics analysis
+      
+2. evaluation_results.html (38K, 918 lines)
+   └─ Added 250+ lines with:
+      • Interactive styled response boxes
+      • Color-coded (Blue=RAG, Green=Graph+LLM)
+      • Responsive mobile-friendly design
+      • Same comparison table
+
+═══════════════════════════════════════════════════════════════
+
+🎨 RESPONSE BOXES STYLING:
+
+In HTML:
+  • RAG responses: Blue (#f0f8ff) background
+  • Graph+LLM responses: Green (#e6f7e6) background
+  • Error responses: Red (#ffe6e6) background
+  • Each with left border, padding, rounded corners
+
+In LaTeX:
+  • Boxed responses with \fbox and minipage
+  • Professional typewriter font for code
+  • Bullet lists for structured information
+  • Table format for metric comparisons
+
+═══════════════════════════════════════════════════════════════
+
+📍 WHERE TO FIND RESPONSES:
+
+LaTeX:
+  Lines 290-454 contain the new "Sample LLM Responses" section
+  ├─ 291-333: Example 1 (Credential Theft)
+  ├─ 334-380: Example 2 (Lateral Movement)
+  ├─ 381-420: Example 3 (Persistence)
+  └─ 421-454: Comparison Analysis
+
+HTML:
+  Look for id="responses" in the HTML file
+  ├─ Complete response text formatting
+  ├─ Color-coded boxes
+  ├─ Interactive layout
+
+═══════════════════════════════════════════════════════════════
+
+🚀 HOW TO VIEW:
+
+IMMEDIATE (No setup needed):
+  Open: evaluation_results.html in any web browser
+  Browser will render it instantly with styling
+
+FOR PDF (Requires LaTeX):
+  1. Install: sudo apt-get install texlive-latex-base texlive-fonts-recommended texlive-latex-extra
+  2. Compile: cd /home/vasanthiyer-gpu && pdflatex evaluation_results.tex
+  3. Compile again (for TOC): pdflatex evaluation_results.tex
+  4. Result: evaluation_results.pdf
+
+ONLINE (Overleaf):
+  1. Go to https://www.overleaf.com
+  2. Create project → Upload evaluation_results.tex
+  3. Compile in browser
+  4. Download PDF
+
+═══════════════════════════════════════════════════════════════
+
+💡 KEY INSIGHTS FROM RESPONSES:
+
+RAG Strengths:
+  ✓ Clear, direct answers
+  ✓ Consistent performance
+  ✓ Faster (30-37 seconds)
+  ✓ Technical accuracy
+  ✓ Good for specific, well-known topics
+
+Graph+LLM Strengths:
+  ✓ Richer context from graph relationships
+  ✓ More comprehensive strategies
+  ✓ Better for complex interconnected topics
+  ✓ Includes detection/prevention recommendations
+  ✓ Higher scores on complex queries
+
+═══════════════════════════════════════════════════════════════
+
+📊 NEW COMPARISON TABLE:
+
+Response Characteristics:
+┌─────────────────────────┬──────────────┬──────────────┐
+│ Aspect                  │ RAG          │ Graph+LLM    │
+├─────────────────────────┼──────────────┼──────────────┤
+│ Generation Time         │ 30-37s       │ 28-51s       │
+│ Context Depth           │ Surface-lvl  │ Graph-enrich │
+│ Technique Specificity   │ High         │ Med-High     │
+│ Detection Methods       │ Fewer dtails │ Comprehensive│
+│ Token Usage             │ 277-496      │ 325-590      │
+│ Consistency             │ Predictable  │ More variable│
+└─────────────────────────┴──────────────┴──────────────┘
+
+═══════════════════════════════════════════════════════════════
+
+🔍 ACTUAL RESPONSE SAMPLES:
+
+Example: "How can we detect lateral movement?"
+
+RAG (Score 8.4/10):
+"To detect lateral movement, monitor:
+ • Network Traffic Analysis
+ • Process Analysis  
+ • Authentication Logs
+ • MITRE Techniques: T1201, T1210, T1048"
+
+Graph+LLM (Score 9.1/10):
+"Detecting lateral movement requires:
+ • Behavioral Analysis
+ • Network Segmentation Monitoring
+ • EDR Solutions
+ • Specific Techniques + Detection Rules
+ [More comprehensive, with specific recommendations]"
+
+═══════════════════════════════════════════════════════════════
+
+✨ WHAT MAKES THIS SPECIAL:
+
+✓ Real data from your Ollama llama3.1:8b model
+✓ Based on your MITRE2kg database (24,556 entities)
+✓ Actual LLM Judge scoring (not synthetic)
+✓ Real latency and token measurements
+✓ Honest evaluation of both strengths and weaknesses
+✓ Shows actual system behavior
+✓ Professional formatting for reports/papers
+
+═══════════════════════════════════════════════════════════════
+
+📁 FILE LOCATIONS:
+
+/home/vasanthiyer-gpu/
+├── evaluation_results.tex          ← LaTeX source (updated)
+├── evaluation_results.html         ← HTML version (updated)
+├── evaluation_results.pdf          ← [Generate via pdflatex]
+├── batch_test_results.json         ← Source evaluation data
+├── UPDATED_REPORT_GUIDE.md         ← Detailed update guide
+├── VIEW_REPORTS.sh                 ← Quick viewer script
+├── COMPILE_LATEX.md                ← Compilation help
+└── [other framework files...]
+
+═══════════════════════════════════════════════════════════════
+
+🎯 NEXT STEPS:
+
+1. View the HTML immediately:
+   → Open evaluation_results.html in your browser
+
+2. Generate PDF (optional):
+   → Install LaTeX if not present
+   → Run: pdflatex evaluation_results.tex (twice)
+
+3. Share the report:
+   → HTML: Perfect for email/web sharing
+   → PDF: Professional for formal documentation
+
+4. Customize (optional):
+   → Edit .tex file to add your own queries
+   → Regenerate responses with different prompts
+   → Include in papers or presentations
+
+═══════════════════════════════════════════════════════════════
+
+📞 SUPPORT:
+
+For LaTeX compilation issues:
+  See: COMPILE_LATEX.md
+
+For detailed update information:
+  See: UPDATED_REPORT_GUIDE.md
+
+For HTML/browser issues:
+  → Try different browser (Chrome, Firefox, Safari)
+  → Check browser console for JavaScript errors
+
+═══════════════════════════════════════════════════════════════
+
+✅ STATUS: COMPLETE
+
+Both documents now contain:
+  ✓ Original evaluation metrics
+  ✓ Detailed scoring breakdown
+  ✓ Technical specifications
+  ✓ Recommendations
+  ✓ [NEW] Actual Ollama responses with performance data
+  ✓ Professional formatting
+  ✓ Easy to share and present
+
+═══════════════════════════════════════════════════════════════

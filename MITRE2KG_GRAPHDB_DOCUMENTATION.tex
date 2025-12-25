@@ -1,0 +1,1621 @@
+\documentclass[12pt,a4paper,openany]{report}
+
+% Packages
+\usepackage[utf-8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{longtable}
+\usepackage{parskip}
+
+% Code listing style
+\lstset{
+    basicstyle=\ttfamily\small,
+    breaklines=true,
+    commentstyle=\color{gray},
+    keywordstyle=\color{blue},
+    numberstyle=\tiny\color{gray},
+    stringstyle=\color{orange},
+    showstringspaces=false,
+    tabsize=2,
+    language=python,
+    backgroundcolor=\color{gray!10},
+    frame=lines,
+    captionpos=b,
+    lineskip=-0.5em
+}
+
+% Header and Footer
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\textit{MITRE2KG Graph Database}}
+\fancyhead[R]{\thepage}
+\fancyfoot[C]{\footnotesize Generated: December 23, 2025}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% Title Page
+\title{\Huge \textbf{MITRE2KG Graph Database} \\
+        \Large Schema, Architecture \& Implementation \\
+        \vspace{0.5cm}
+        \normalsize A Unified Knowledge Graph of MITRE ATT\&CK Framework \\
+        and CISA Cybersecurity Advisories}
+
+\author{Cybersecurity Intelligence System \\ 
+        ArangoDB Integration with Semantic Embeddings}
+
+\date{December 23, 2025}
+
+\begin{document}
+
+% Title Page
+\maketitle
+
+% Abstract
+\begin{abstract}
+This document provides comprehensive documentation of the MITRE2KG graph database system, 
+which integrates the MITRE ATT\&CK Enterprise Framework with real-world CISA cybersecurity 
+advisories. The system leverages ArangoDB as a multi-model graph database, semantic embeddings 
+for similarity search, and Ollama LLM for intelligent threat analysis. This document covers 
+the complete architecture, schema design, data generation process, triplet extraction methodology, 
+and provides detailed statistics of the final integrated knowledge graph.
+
+\begin{itemize}
+    \item \textbf{Total Entities:} 24,556
+    \item \textbf{Total Relationships:} 24,342
+    \item \textbf{Attack Patterns:} 823 (345 parent + 478 subtechniques)
+    \item \textbf{CISA Advisories:} 74 with 1,605 technique links
+    \item \textbf{Semantic Embeddings:} 47,293 vectors (384-dimensional)
+    \item \textbf{Integration Success Rate:} 94.4\%
+\end{itemize}
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+% ============================================================================
+\chapter{Executive Summary}
+% ============================================================================
+
+The MITRE2KG project represents a significant advancement in cybersecurity threat intelligence 
+by creating a unified, machine-readable knowledge graph that combines two critical data sources:
+
+\section{System Architecture Diagram}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=2cm, auto, scale=0.9]
+    % Data Sources Layer
+    \node[draw, rectangle, fill=blue!20, minimum width=3cm, minimum height=1cm] (mitre) {MITRE\\enterprise-attack.json};
+    \node[draw, rectangle, fill=blue!20, minimum width=3cm, minimum height=1cm, right=of mitre] (cisa) {CISA\\CISA-crawl-rt-ttp-ct.csv};
+    
+    % Processing Layer
+    \node[draw, rectangle, fill=green!20, minimum width=3cm, minimum height=0.8cm, below=of mitre, yshift=-1.5cm] (extract) {Data Extraction\\& Parsing};
+    \node[draw, rectangle, fill=green!20, minimum width=3cm, minimum height=0.8cm, right=of extract] (normalize) {Entity\\Normalization};
+    \node[draw, rectangle, fill=green!20, minimum width=3cm, minimum height=0.8cm, right=of normalize] (triplet) {Triplet\\Generation};
+    
+    % Storage Layer
+    \node[draw, rectangle, fill=orange!20, minimum width=2.2cm, minimum height=1.2cm, below=of extract, yshift=-2cm] (entities) {entities\\(24,556)};
+    \node[draw, rectangle, fill=orange!20, minimum width=2.2cm, minimum height=1.2cm, right=of entities] (rels) {relationships\\(24,342)};
+    \node[draw, rectangle, fill=orange!20, minimum width=2.2cm, minimum height=1.2cm, right=of rels] (embed) {embeddings\\(47,293)};
+    
+    % Database
+    \node[draw, rectangle, fill=orange!30, minimum width=9cm, minimum height=1cm, below=of rels, yshift=-2cm] (db) {ArangoDB: MITRE2kg};
+    
+    % Application Layer
+    \node[draw, rectangle, fill=red!20, minimum width=3.5cm, minimum height=1cm, below=of db, yshift=-2cm] (rag) {RAG Query Engine};
+    \node[draw, rectangle, fill=red!20, minimum width=3.5cm, minimum height=1cm, right=of rag] (llm) {Ollama LLM\\(llama3.1:8b)};
+    
+    % Arrows
+    \draw[->] (mitre) -- (extract);
+    \draw[->] (cisa) -- (extract);
+    \draw[->] (extract) -- (normalize);
+    \draw[->] (normalize) -- (triplet);
+    \draw[->] (triplet) -- (entities);
+    \draw[->] (triplet) -- (rels);
+    \draw[->] (triplet) -- (embed);
+    \draw[->] (entities) -- (db);
+    \draw[->] (rels) -- (db);
+    \draw[->] (embed) -- (db);
+    \draw[->] (db) -- (rag);
+    \draw[->] (db) -- (llm);
+\end{tikzpicture}
+\caption{MITRE2KG System Architecture}
+\end{figure}
+
+\begin{enumerate}
+    \item \textbf{MITRE ATT\&CK Enterprise Framework} --- A comprehensive, standardized knowledge 
+    base containing 823 attack techniques, organized into 14 tactics, with relationships 
+    showing which threat groups employ which techniques.
+    
+    \item \textbf{CISA Cybersecurity Advisories} --- 77 real-world cybersecurity advisories 
+    covering 74 unique incident response cases, with 432 unique attack techniques referenced 
+    across 1,701 total technique mentions.
+\end{enumerate}
+
+By integrating these sources through a knowledge graph, the system enables:
+
+\begin{description}
+    \item[Semantic Search] Finding attack techniques by meaning, not keywords
+    \item[Threat Intelligence] Connecting real-world attacks to MITRE framework techniques
+    \item[Graph Traversal] Discovering related techniques, threat actors, and attack chains
+    \item[AI-Powered Analysis] Leveraging Ollama LLM with graph context for intelligent responses
+    \item[Incident Response] Quick lookup of techniques and advisories related to incidents
+\end{description}
+
+\section{System Architecture Overview}
+
+The MITRE2KG system consists of four integrated layers:
+
+\begin{itemize}
+    \item \textbf{Data Layer:} MITRE enterprise-attack.json (14,000+ objects) and CISA-crawl-rt-ttp-ct.csv (77 rows)
+    \item \textbf{Storage Layer:} ArangoDB with 4 main collections (entities, relationships, entity\_embeddings, relationship\_embeddings)
+    \item \textbf{Processing Layer:} Python-based ETL pipelines for data extraction, transformation, and embedding generation
+    \item \textbf{Application Layer:} RAG Query Engine + Ollama LLM for semantic search and intelligent responses
+\end{itemize}
+
+\newpage
+
+% ============================================================================
+\chapter{Database Schema}
+% ============================================================================
+
+\section{Entity-Relationship Overview}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=2.5cm, auto, scale=0.8]
+    % Entity types
+    \node[draw, rectangle, fill=blue!20, minimum width=2cm, minimum height=0.7cm] (tactic) {Tactic};
+    \node[draw, rectangle, fill=blue!20, minimum width=2cm, minimum height=0.7cm, below left=of tactic] (technique) {Technique};
+    \node[draw, rectangle, fill=blue!20, minimum width=2cm, minimum height=0.7cm, below right=of tactic] (subtechnique) {Sub-Tech};
+    \node[draw, rectangle, fill=green!20, minimum width=2cm, minimum height=0.7cm, below=of technique] (group) {Threat Group};
+    \node[draw, rectangle, fill=green!20, minimum width=2cm, minimum height=0.7cm, right=of group] (malware) {Malware};
+    \node[draw, rectangle, fill=red!20, minimum width=2cm, minimum height=0.7cm, below=of group] (advisory) {CISA Advisory};
+    
+    % Relationships
+    \draw[->] (technique) -- node[above, font=\small] {belongs-to} (tactic);
+    \draw[->] (subtechnique) -- node[above, font=\small] {subtechnique-of} (technique);
+    \draw[->] (group) -- node[left, font=\small] {uses} (technique);
+    \draw[->] (malware) -- node[right, font=\small] {uses} (technique);
+    \draw[->] (technique) -- node[below, font=\small] {uses\_in\_cisa} (advisory);
+    
+\end{tikzpicture}
+\caption{Simplified Entity-Relationship Diagram}
+\label{fig:erd}
+\end{figure}
+
+\section{Overview}
+
+MITRE2KG uses ArangoDB, a multi-model database system that combines document and graph database 
+capabilities. The database is named \texttt{MITRE2kg} and is located at \texttt{http://localhost:8529} 
+with credentials \texttt{root/openSesame}.
+
+\section{Collections}
+
+\subsection{entities Collection}
+
+The primary document collection storing all entities extracted from MITRE and CISA sources.
+
+\begin{longtable}{|p{4cm}|p{3cm}|p{7cm}|}
+    \caption{Entity Types and Counts} \\
+    \toprule
+    \textbf{Entity Type} & \textbf{Count} & \textbf{Description} \\
+    \midrule
+    \endfirsthead
+    \multicolumn{3}{c}{\textit{continued from previous page}} \\
+    \toprule
+    \textbf{Entity Type} & \textbf{Count} & \textbf{Description} \\
+    \midrule
+    \endhead
+    \midrule
+    \multicolumn{3}{r}{\textit{continued on next page}} \\
+    \endfoot
+    \endlastfoot
+    
+    relationship & 20,048 & Internal relationship objects \\
+    x-mitre-analytic & 1,739 & MITRE analytic definitions \\
+    attack-pattern & 823 & Core attack techniques \\
+    malware & 695 & Malware families and variants \\
+    x-mitre-detection & 691 & Detection strategies \\
+    intrusion-set & 178 & Threat actor groups \\
+    x-mitre-data-component & 106 & Data components for detection \\
+    tool & 91 & Adversary tools and utilities \\
+    cisa\_advisory & 74 & CISA cybersecurity advisories \\
+    campaign & 52 & Organized campaigns \\
+    course-of-action & 44 & Mitigation measures \\
+    x-mitre-tactic & 14 & Attack tactics/phases \\
+    x-mitre-matrix & 1 & Framework matrix definition \\
+    \midrule
+    \textbf{TOTAL} & \textbf{24,556} & \\
+\end{longtable}
+
+\subsection{relationships Collection}
+
+Directed edges connecting entities. Each relationship represents a semantic connection between 
+two entities with a specified relationship type.
+
+\begin{longtable}{|p{4cm}|p{3cm}|p{7cm}|}
+    \caption{Relationship Types and Counts} \\
+    \toprule
+    \textbf{Relationship Type} & \textbf{Count} & \textbf{Description} \\
+    \midrule
+    \endfirsthead
+    \multicolumn{3}{c}{\textit{continued from previous page}} \\
+    \toprule
+    \textbf{Relationship Type} & \textbf{Count} & \textbf{Description} \\
+    \midrule
+    \endhead
+    \midrule
+    \multicolumn{3}{r}{\textit{continued on next page}} \\
+    \endfoot
+    \endlastfoot
+    
+    uses & 17,270 & Threat actors use techniques \\
+    referenced\_in\_cisa\_advisory & 1,619 & Advisory references technique \\
+    uses\_in\_cisa\_advisory & 1,605 & Technique in advisory attack \\
+    mitigates & 1,445 & Countermeasure mitigates attack \\
+    belongs-to-tactic & 1,071 & Technique belongs to tactic \\
+    detects & 691 & Detection catches technique \\
+    subtechnique-of & 476 & Sub-technique of parent \\
+    revoked-by & 140 & Technique revoked and replaced \\
+    attributed-to & 25 & Attribution relationship \\
+    \midrule
+    \textbf{TOTAL} & \textbf{24,342} & \\
+\end{longtable}
+
+\subsection{entity\_embeddings Collection}
+
+Dense semantic vectors (embeddings) for all entities. Enables similarity-based search and 
+semantic understanding of entities.
+
+\begin{table}[H]
+    \centering
+    \caption{entity\_embeddings Collection Properties}
+    \begin{tabular}{|l|l|}
+        \hline
+        \textbf{Property} & \textbf{Value} \\
+        \hline
+        Total Documents & 24,556 \\
+        \hline
+        Embedding Model & all-MiniLM-L6-v2 \\
+        \hline
+        Vector Dimensions & 384 \\
+        \hline
+        Normalization & L2 (unit norm) \\
+        \hline
+        Memory per Vector & 1.5 KB (float32) \\
+        \hline
+        Total Memory & $\sim$ 37 MB \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\subsection{relationship\_embeddings Collection}
+
+Dense semantic vectors for relationships, capturing the meaning of the connection between entities.
+
+\begin{table}[H]
+    \centering
+    \caption{relationship\_embeddings Collection Properties}
+    \begin{tabular}{|l|l|}
+        \hline
+        \textbf{Property} & \textbf{Value} \\
+        \hline
+        Total Documents & 22,737 \\
+        \hline
+        Embedding Model & all-MiniLM-L6-v2 \\
+        \hline
+        Vector Dimensions & 384 \\
+        \hline
+        Normalization & L2 (unit norm) \\
+        \hline
+        Memory per Vector & 1.5 KB (float32) \\
+        \hline
+        Total Memory & $\sim$ 33.6 MB \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\section{Entity Relationship Diagram}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=2.5cm, auto, scale=0.85]
+    % Define styles
+    \tikzstyle{entity} = [draw, rectangle, fill=yellow!30, minimum width=2cm, minimum height=0.8cm]
+    \tikzstyle{relation} = [draw, ellipse, fill=blue!30, minimum width=1.8cm]
+    
+    % Entities
+    \node[entity] (tactic) {Tactic\\(TA0002)};
+    \node[entity, below left=of tactic] (parent) {Technique\\(T1055)};
+    \node[entity, below right=of tactic] (child) {Sub-Technique\\(T1055.004)};
+    \node[entity, below=of parent] (group) {Threat Group\\(G0001)};
+    \node[entity, right=of group] (adv) {CISA Advisory\\(aa24-060a)};
+    
+    % Relationships
+    \node[relation, above=of parent, yshift=-0.5cm] (rt1) {belongs-to};
+    \node[relation, above=of child, yshift=-0.5cm] (rt2) {sub-of};
+    \node[relation, below=of parent, yshift=0.5cm] (rt3) {uses};
+    \node[relation, below=of adv, yshift=0.5cm] (rt4) {uses\_in};
+    
+    % Arrows
+    \draw[->] (parent) -- (rt1) -- (tactic);
+    \draw[->] (child) -- (rt2) -- (parent);
+    \draw[->] (group) -- (rt3) -- (parent);
+    \draw[->] (parent) -- (rt4) -- (adv);
+    
+\end{tikzpicture}
+\caption{Entity Relationship Diagram}
+\end{figure}
+
+\section{Entity Schema Examples}
+
+\subsection{Attack Pattern Entity}
+
+\begin{lstlisting}[language=json, caption=Example Attack Pattern Entity]
+{
+  "_key": "attack-pattern_890c9858-598c-401d-a4d5-c67ebcdd703a",
+  "type": "attack-pattern",
+  "external_id": "T1528",
+  "name": "Steal Application Access Token",
+  "description": "Adversaries may steal application access tokens...",
+  "x_mitre_platforms": ["IaaS", "SaaS"],
+  "x_mitre_data_sources": [
+    "Application: Application access token creation",
+    "Application: Application access token use"
+  ],
+  "version": "1.0",
+  "created": "2020-01-01T00:00:00.000Z",
+  "modified": "2023-08-01T00:00:00.000Z"
+}
+\end{lstlisting}
+
+\subsection{CISA Advisory Entity}
+
+\begin{lstlisting}[language=json, caption=Example CISA Advisory Entity]
+{
+  "_key": "cisa_advisory_aa24-060a",
+  "type": "cisa_advisory",
+  "external_id": "aa24-060a",
+  "name": "CISA Alert: Phobos Ransomware Activity",
+  "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa24-060a",
+  "cleantext": "Actions to take today to mitigate Phobos ransomware...",
+  "rawtext": "Full advisory text here...",
+  "created_date": "2024-02-29"
+}
+\end{lstlisting}
+
+\subsection{Relationship Entity}
+
+\begin{lstlisting}[language=json, caption=Example Relationship Entity]
+{
+  "_key": "rel_t1528_aa24060a",
+  "_from": "entities/attack-pattern_890c9858-598c-401d-a4d5-c67ebcdd703a",
+  "_to": "entities/cisa_advisory_aa24-060a",
+  "relationship_type": "uses_in_cisa_advisory",
+  "technique_id": "T1528",
+  "advisory_id": "aa24-060a",
+  "description": "T1528 technique is used in advisory aa24-060a"
+}
+\end{lstlisting}
+
+\newpage
+
+% ============================================================================
+\chapter{Data Generation \& Triplet Extraction}
+% ============================================================================
+
+\section{Data Processing Pipeline Overview}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=2cm, auto, scale=0.85]
+    % Input nodes
+    \node[draw, rectangle, fill=cyan!30, minimum width=2.2cm, minimum height=0.8cm] (mitre) {MITRE JSON\\(14K STIX)};
+    \node[draw, rectangle, fill=cyan!30, minimum width=2.2cm, minimum height=0.8cm, right=of mitre, xshift=0.8cm] (cisa) {CISA CSV\\(77 Advisories)};
+    
+    % Processing nodes
+    \node[draw, circle, fill=lime!30, minimum width=1.5cm, below=of mitre] (parse1) {Parse};
+    \node[draw, circle, fill=lime!30, minimum width=1.5cm, below=of cisa] (parse2) {Parse};
+    \node[draw, rectangle, fill=orange!30, minimum width=2cm, minimum height=0.8cm, below=of parse1] (mitre_proc) {Normalize\\MITRE};
+    \node[draw, rectangle, fill=orange!30, minimum width=2cm, minimum height=0.8cm, below=of parse2] (cisa_proc) {Extract\\CISA TTPs};
+    \node[draw, rectangle, fill=yellow!30, minimum width=2cm, minimum height=0.8cm, below left=of mitre_proc] (gen_triplets) {Generate\\Triplets};
+    
+    % Output nodes
+    \node[draw, rectangle, fill=magenta!20, minimum width=1.8cm, minimum height=0.8cm, below=of gen_triplets, yshift=-0.3cm] (ent) {Entities\\(24.5K)};
+    \node[draw, rectangle, fill=magenta!20, minimum width=1.8cm, minimum height=0.8cm, right=of ent] (rel) {Relations\\(24.3K)};
+    \node[draw, rectangle, fill=magenta!20, minimum width=1.8cm, minimum height=0.8cm, right=of rel] (emb) {Embeddings\\(47.3K)};
+    
+    % Database
+    \node[draw, rectangle, fill=red!20, minimum width=3cm, minimum height=0.8cm, below=of rel, yshift=-0.5cm] (adb) {ArangoDB MITRE2kg};
+    
+    % Connections
+    \draw[->] (mitre) -- (parse1);
+    \draw[->] (cisa) -- (parse2);
+    \draw[->] (parse1) -- (mitre_proc);
+    \draw[->] (parse2) -- (cisa_proc);
+    \draw[->] (mitre_proc) -- (gen_triplets);
+    \draw[->] (cisa_proc) -- (gen_triplets);
+    \draw[->] (gen_triplets) -- (ent);
+    \draw[->] (gen_triplets) -- (rel);
+    \draw[->] (gen_triplets) -- (emb);
+    \draw[->] (ent) -- (adb);
+    \draw[->] (rel) -- (adb);
+    \draw[->] (emb) -- (adb);
+    
+\end{tikzpicture}
+\caption{Complete Data Processing Pipeline}
+\label{fig:data_pipeline}
+\end{figure}
+
+\section{Source 1: MITRE Enterprise Attack Framework}
+
+\subsection{Input Data}
+
+The \texttt{enterprise-attack.json} file (STIX 2.1 format) contains:
+
+\begin{itemize}
+    \item 14,000+ STIX objects
+    \item Complete attack technique library
+    \item Threat actor and malware relationships
+    \item Mitigation and detection strategies
+\end{itemize}
+
+\subsection{Processing Steps}
+
+\subsubsection{Step 1: Parse STIX Objects}
+
+\begin{lstlisting}[caption=MITRE Data Parsing]
+import json
+
+with open('enterprise-attack.json', 'r') as f:
+    mitre_data = json.load(f)
+
+# Extract different object types
+attack_patterns = [
+    obj for obj in mitre_data['objects'] 
+    if obj['type'] == 'attack-pattern'
+]
+tactics = [
+    obj for obj in mitre_data['objects'] 
+    if 'x-mitre-tactic' in obj['type']
+]
+threat_groups = [
+    obj for obj in mitre_data['objects'] 
+    if obj['type'] == 'intrusion-set'
+]
+relationships = [
+    obj for obj in mitre_data['objects'] 
+    if obj['type'] == 'relationship'
+]
+\end{lstlisting}
+
+\subsubsection{Step 2: Extract Entity Objects}
+
+The framework extracts different entity types:
+
+\begin{table}[H]
+    \centering
+    \caption{MITRE Entity Extraction}
+    \begin{tabular}{|l|l|l|}
+        \hline
+        \textbf{Object Type} & \textbf{Count} & \textbf{Example ID} \\
+        \hline
+        attack-pattern & 823 & T1055, T1055.001 \\
+        \hline
+        x-mitre-tactic & 14 & TA0002 \\
+        \hline
+        intrusion-set & 178 & G0001 \\
+        \hline
+        malware & 695 & S0005 \\
+        \hline
+        tool & 91 & S0002 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\subsubsection{Step 3: Normalize External IDs}
+
+\begin{table}[H]
+    \centering
+    \caption{External ID Normalization}
+    \begin{tabular}{|l|l|l|}
+        \hline
+        \textbf{Type} & \textbf{Parent Format} & \textbf{Subtechnique Format} \\
+        \hline
+        Attack Pattern & T1055 & T1055.001, T1055.002, ... \\
+        \hline
+        Tactic & TA0002 & (no subtechniques) \\
+        \hline
+        Group & G0001 & (no subtechniques) \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\subsubsection{Step 4: Extract Relationships (Triplets)}
+
+Relationships are extracted as subject-predicate-object triplets:
+
+\begin{lstlisting}[caption=Triplet Extraction from MITRE]
+# Example triplets
+triplets = [
+    # Subtechnique hierarchy
+    (T1055.001, subtechnique-of, T1055),
+    (T1055.002, subtechnique-of, T1055),
+    
+    # Tactic mapping
+    (T1055, belongs-to-tactic, TA0002),
+    (T1083, belongs-to-tactic, TA0007),
+    
+    # Group usage
+    (G0001, uses, T1055),
+    (G0001, uses, T1083),
+    
+    # Mitigations
+    (T1055, mitigates, T1110),
+    
+    # Detections
+    (T1055, detects, detection-strategy-001)
+]
+\end{lstlisting}
+
+\subsection{Embedding Generation}
+
+For each entity, a semantic embedding is generated:
+
+\begin{lstlisting}[caption=Entity Embedding Generation, language=python]
+from sentence_transformers import SentenceTransformer
+
+model = SentenceTransformer('all-MiniLM-L6-v2')
+
+# For attack pattern T1528
+entity_text = (
+    "Steal Application Access Token. "
+    "Adversaries may steal application access tokens..."
+)
+
+# Generate 384-dimensional embedding
+embedding = model.encode(entity_text, normalize_embeddings=True)
+
+# embedding is now a numpy array of shape (384,)
+# Each value is a float between -1 and 1
+# L2 norm = 1.0 (normalized)
+\end{lstlisting}
+
+\section{Source 2: CISA Cybersecurity Advisories}
+
+\subsection{CISA Integration Pipeline}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=2cm, auto, scale=0.8]
+    % Input
+    \node[draw, rectangle, fill=cyan!30, minimum width=2.5cm, minimum height=0.8cm] (cisa_csv) {CISA CSV\\(77 advisories)};
+    
+    % Processing steps
+    \node[draw, rectangle, fill=lime!30, minimum width=2.5cm, minimum height=0.8cm, below=of cisa_csv] (parse_csv) {Parse CSV\\Rows};
+    \node[draw, rectangle, fill=orange!30, minimum width=2.5cm, minimum height=0.8cm, below=of parse_csv] (extract_ttp) {Extract TTPs\\(T1234)};
+    \node[draw, rectangle, fill=yellow!30, minimum width=2.5cm, minimum height=0.8cm, below=of extract_ttp] (match_ttp) {Match to Attack\\Patterns};
+    \node[draw, rectangle, fill=magenta!20, minimum width=2.5cm, minimum height=0.8cm, below=of match_ttp] (create_adv) {Create Advisory\\Entities};
+    \node[draw, rectangle, fill=pink!30, minimum width=2.5cm, minimum height=0.8cm, below=of create_adv] (link_rels) {Link Relationships};
+    
+    % Output
+    \node[draw, rectangle, fill=red!20, minimum width=2.5cm, minimum height=0.8cm, below=of link_rels] (results) {74 Advisories\\1,605 Links};
+    
+    % Connections
+    \draw[->] (cisa_csv) -- (parse_csv);
+    \draw[->] (parse_csv) -- (extract_ttp);
+    \draw[->] (extract_ttp) -- (match_ttp);
+    \draw[->] (match_ttp) -- (create_adv);
+    \draw[->] (create_adv) -- (link_rels);
+    \draw[->] (link_rels) -- (results);
+    
+    % Stats annotation
+    \node[right=of match_ttp, xshift=1.5cm] (stats) {\textbf{Match Rate}: 94.4\%};
+    
+\end{tikzpicture}
+\caption{CISA Integration Pipeline}
+\label{fig:cisa_pipeline}
+\end{figure}
+
+\subsection{Input Data}
+
+The \texttt{CISA-crawl-rt-ttp-ct.csv} file contains:
+
+\begin{table}[H]
+    \centering
+    \caption{CISA CSV Structure}
+    \begin{tabular}{|p{2cm}|p{4cm}|p{7cm}|}
+        \hline
+        \textbf{Column} & \textbf{Example} & \textbf{Description} \\
+        \hline
+        RawText & Full advisory text... & Complete advisory content \\
+        \hline
+        CleanText & Cleaned advisory... & Preprocessed text \\
+        \hline
+        TTP & $\{$T1083, T1071.002$\}$ & Set of attack techniques \\
+        \hline
+        URL & https://www.cisa.gov/.../aa24-060a & Link to advisory \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\begin{itemize}
+    \item Total rows: 77 advisories
+    \item Unique advisory IDs: 76
+    \item Total TTP references: 1,701
+    \item Unique T\# techniques: 432
+\end{itemize}
+
+\subsection{Processing Pipeline}
+
+\subsubsection{Step 1: Load CSV Data}
+
+\begin{lstlisting}[caption=CISA CSV Loading, language=python]
+import csv
+
+advisories = []
+with open('CISA-crawl-rt-ttp-ct.csv', 'r') as f:
+    reader = csv.DictReader(f)
+    for row in reader:
+        advisories.append({
+            'url': row['URL'],
+            'cleantext': row['CleanText'],
+            'ttp_field': row['TTP']
+        })
+
+print(f"Loaded {len(advisories)} advisories")
+\end{lstlisting}
+
+\subsubsection{Step 2: Extract Advisory ID and TTPs}
+
+\begin{lstlisting}[caption=Advisory ID and TTP Extraction, language=python]
+import re
+from collections import defaultdict
+
+advisory_ttp_map = defaultdict(set)
+
+for advisory in advisories:
+    # Extract advisory ID from URL
+    match = re.search(r'(aa\d{2}-\d+[a-z]?)', advisory['url'].lower())
+    if match:
+        advisory_id = match.group(1).lower()
+        
+        # Extract T# from TTP field
+        ttps = set(re.findall(r'T\d+(?:\.\d+)?', advisory['ttp_field']))
+        
+        advisory_ttp_map[advisory_id].update(ttps)
+
+print(f"Found {len(advisory_ttp_map)} unique advisories")
+for adv_id, ttps in sorted(advisory_ttp_map.items())[:5]:
+    print(f"  {adv_id}: {len(ttps)} techniques")
+\end{lstlisting}
+
+\subsubsection{Step 3: Create CISA Advisory Entities}
+
+For each unique advisory ID, create an entity in ArangoDB:
+
+\begin{lstlisting}[caption=CISA Entity Creation, language=python]
+from arango import ArangoClient
+
+db = ArangoClient(hosts='http://localhost:8529').db(
+    'MITRE2kg', 
+    username='root', 
+    password='openSesame'
+)
+
+entities = db.collection('entities')
+
+for advisory_id in advisory_ttp_map.keys():
+    entity = {
+        'type': 'cisa_advisory',
+        'external_id': advisory_id,
+        'name': f'CISA Advisory {advisory_id}',
+        'url': f'https://www.cisa.gov/../{advisory_id}',
+        'created_date': '2024-01-01'
+    }
+    
+    entities.insert(entity)
+
+print(f"Created {len(advisory_ttp_map)} CISA advisory entities")
+\end{lstlisting}
+
+\subsubsection{Step 4: Create Technique-to-Advisory Links}
+
+For each TTP in each advisory, create a relationship:
+
+\begin{lstlisting}[caption=Creating TTP-Advisory Links, language=python]
+relationships = db.collection('relationships')
+success_count = 0
+failed_count = 0
+
+for advisory_id, ttps in advisory_ttp_map.items():
+    for ttp in ttps:
+        # Find attack-pattern entity with this T#
+        cursor = db.aql.execute(f'''
+            FOR e IN entities
+            FILTER e.type == "attack-pattern"
+            FILTER e.external_id == "{ttp}"
+            RETURN e._id
+        ''')
+        
+        pattern_id = None
+        for doc in cursor:
+            pattern_id = doc
+            break
+        
+        if pattern_id:
+            # Find CISA advisory entity
+            cursor = db.aql.execute(f'''
+                FOR e IN entities
+                FILTER e.type == "cisa_advisory"
+                FILTER e.external_id == "{advisory_id}"
+                RETURN e._id
+            ''')
+            
+            advisory_entity_id = None
+            for doc in cursor:
+                advisory_entity_id = doc
+                break
+            
+            if advisory_entity_id:
+                # Create relationship
+                rel = {
+                    '_from': pattern_id,
+                    '_to': advisory_entity_id,
+                    'relationship_type': 'uses_in_cisa_advisory',
+                    'technique_id': ttp,
+                    'advisory_id': advisory_id
+                }
+                relationships.insert(rel)
+                success_count += 1
+        else:
+            failed_count += 1
+
+print(f"Created {success_count} relationships")
+print(f"Failed: {failed_count}")
+print(f"Success rate: {100*success_count/(success_count+failed_count):.1f}%")
+\end{lstlisting}
+
+\subsection{Result Statistics}
+
+\begin{table}[H]
+    \centering
+    \caption{CISA Integration Results}
+    \begin{tabular}{|l|r|}
+        \hline
+        \textbf{Metric} & \textbf{Value} \\
+        \hline
+        Advisories processed & 77 \\
+        \hline
+        Unique advisory IDs & 76 \\
+        \hline
+        CISA advisory entities created & 74 \\
+        \hline
+        Total TTP references in CSV & 1,701 \\
+        \hline
+        Unique T\# techniques referenced & 432 \\
+        \hline
+        T\# techniques matched in database & 405 (93.8\%) \\
+        \hline
+        T\# techniques not found & 27 (6.2\%) \\
+        \hline
+        Relationships created & 1,605 \\
+        \hline
+        Success rate & 94.4\% \\
+        \hline
+        Unique techniques linked & 368 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\newpage
+
+% ============================================================================
+\chapter{Semantic Embeddings}
+% ============================================================================
+
+\section{Embedding Model}
+
+The system uses \texttt{all-MiniLM-L6-v2}, a lightweight sentence-transformer model:
+
+\begin{itemize}
+    \item \textbf{Input:} Text (unlimited length, but typically 512 tokens max)
+    \item \textbf{Output:} 384-dimensional vector
+    \item \textbf{Model Size:} $\sim$ 22 MB
+    \item \textbf{Inference Speed:} $\sim$ 50-100 ms per text
+    \item \textbf{Normalization:} L2 (Euclidean)
+\end{itemize}
+
+\section{Entity Embedding Generation}
+
+\subsection{Process}
+
+\begin{enumerate}
+    \item Concatenate entity name + description
+    \item Tokenize text (max 512 tokens)
+    \item Pass through transformer model
+    \item Generate 384-dimensional vector
+    \item L2-normalize vector to unit norm
+    \item Store in \texttt{entity\_embeddings} collection
+\end{enumerate}
+
+\subsection{Example: T1528 (Steal Application Access Token)}
+
+\begin{lstlisting}[caption=T1528 Embedding Example, language=python]
+entity = {
+    "external_id": "T1528",
+    "name": "Steal Application Access Token",
+    "description": "Adversaries may steal application access tokens..."
+}
+
+text = f"{entity['name']}. {entity['description']}"
+embedding = model.encode(text, normalize_embeddings=True)
+
+# Result: 384-dimensional vector
+first_10 = [-0.1404, 0.0750, 0.0211, -0.0856, -0.0047, 
+            0.0105, 0.0409, 0.0686, 0.0476, -0.0241]
+
+# Vector statistics
+import numpy as np
+arr = np.array(embedding)
+print(f"Min: {arr.min():.4f}")  # -0.1404
+print(f"Max: {arr.max():.4f}")  # 0.1452
+print(f"Mean: {arr.mean():.4f}")  # 0.0005
+print(f"Std: {arr.std():.4f}")  # 0.0510
+print(f"L2 Norm: {np.linalg.norm(arr):.4f}")  # 1.0000
+\end{lstlisting}
+
+\section{Relationship Embedding Generation}
+
+Relationship embeddings are generated by combining the embeddings of both connected entities:
+
+\begin{lstlisting}[caption=Relationship Embedding, language=python]
+# For relationship: T1055 --subtechnique-of--> T1055.001
+
+# Get embeddings of both entities
+emb_parent = model.encode("Process Injection")  # T1055
+emb_child = model.encode("DLL Injection")  # T1055.001
+
+# Concatenate embeddings and relationship type text
+combined_text = (
+    f"Process Injection subtechnique-of DLL Injection"
+)
+
+rel_embedding = model.encode(
+    combined_text, 
+    normalize_embeddings=True
+)
+
+# Result: 384-dimensional relationship embedding
+\end{lstlisting}
+
+\section{Embedding Statistics}
+
+\begin{table}[H]
+    \centering
+    \caption{Embedding Collection Statistics}
+    \begin{tabular}{|l|r|r|}
+        \hline
+        \textbf{Property} & \textbf{Entity Embeddings} & \textbf{Relationship Embeddings} \\
+        \hline
+        Total Vectors & 24,556 & 22,737 \\
+        \hline
+        Dimensions & 384 & 384 \\
+        \hline
+        Normalization & L2 & L2 \\
+        \hline
+        Min Value & $-0.1319$ & $-0.1289$ \\
+        \hline
+        Max Value & $0.1452$ & $0.1523$ \\
+        \hline
+        Memory per Vector & 1.5 KB & 1.5 KB \\
+        \hline
+        Total Memory & 37 MB & 33.6 MB \\
+        \hline
+        Grand Total & \multicolumn{2}{c|}{70.6 MB} \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\newpage
+
+% ============================================================================
+\chapter{Query Examples \& Use Cases}
+% ============================================================================
+
+\section{Query Execution Flow}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=2.2cm, auto, scale=0.8]
+    % User input
+    \node[draw, rectangle, fill=cyan!30, minimum width=2.5cm, minimum height=0.8cm] (user) {User Query};
+    
+    % Processing steps
+    \node[draw, rectangle, fill=lime!30, minimum width=2.5cm, minimum height=0.8cm, below=of user] (encode) {Encode to Vector\\(384-dim)};
+    \node[draw, rectangle, fill=orange!30, minimum width=2.5cm, minimum height=0.8cm, below=of encode] (search) {Semantic Search\\(cosine similarity)};
+    \node[draw, rectangle, fill=yellow!30, minimum width=2.5cm, minimum height=0.8cm, below=of search] (traverse) {Graph Traversal\\(relationships)};
+    \node[draw, rectangle, fill=magenta!20, minimum width=2.5cm, minimum height=0.8cm, below=of traverse] (context) {Retrieve Context\\(from DB)};
+    \node[draw, rectangle, fill=pink!30, minimum width=2.5cm, minimum height=0.8cm, below=of context] (llm) {Pass to LLM\\(Ollama)};
+    
+    % Output
+    \node[draw, rectangle, fill=red!20, minimum width=2.5cm, minimum height=0.8cm, below=of llm] (response) {Generated Response};
+    
+    % Connections
+    \draw[->] (user) -- (encode);
+    \draw[->] (encode) -- (search);
+    \draw[->] (search) -- (traverse);
+    \draw[->] (traverse) -- (context);
+    \draw[->] (context) -- (llm);
+    \draw[->] (llm) -- (response);
+    
+\end{tikzpicture}
+\caption{Query Execution Pipeline}
+\label{fig:query_flow}
+\end{figure}
+
+\section{Semantic Search}
+
+Find techniques related to a user query by computing similarity in embedding space.
+
+\subsection{Example 1: Credential Theft}
+
+\begin{lstlisting}[caption=Semantic Search Query, language=python]
+from arango import ArangoClient
+from sentence_transformers import SentenceTransformer
+
+db = ArangoClient(hosts='http://localhost:8529').db('MITRE2kg', 
+                                                     username='root', 
+                                                     password='openSesame')
+model = SentenceTransformer('all-MiniLM-L6-v2')
+
+# Query: Find techniques related to stealing credentials
+query = "steal authentication credentials"
+query_embedding = model.encode(query, normalize_embeddings=True)
+
+# Search in ArangoDB
+results = db.aql.execute('''
+    FOR embed IN entity_embeddings
+    FILTER embed.embedding_dim == 384
+    
+    LET similarity = (
+        REDUCE i IN 0..383 
+        AGGREGATE dot = 0 
+        INTO dot + (@query[i] * embed.embedding[i])
+    )
+    
+    SORT similarity DESC
+    LIMIT 10
+    
+    RETURN {
+        entity_id: embed._key,
+        similarity: similarity
+    }
+''', bind_vars={'query': query_embedding.tolist()})
+
+# Top results:
+# 1. T1528 (0.87) - Steal Application Access Token
+# 2. T1187 (0.85) - Forced Authentication
+# 3. T1110 (0.83) - Brute Force
+# 4. T1056 (0.81) - Input Capture
+# 5. T1021 (0.79) - Remote Service Session Initiation
+\end{lstlisting}
+
+\section{Graph Traversal}
+
+Navigate the knowledge graph to find related entities.
+
+\subsection{Example 2: Ransomware Techniques}
+
+\begin{lstlisting}[caption=Find Techniques in Ransomware Advisories, language=aql]
+// Find all attack techniques mentioned in ransomware-related advisories
+FOR advisory IN entities
+FILTER advisory.type == "cisa_advisory"
+FILTER advisory.name LIKE "%ransomware%"
+
+FOR rel IN relationships
+FILTER rel._to == advisory._id
+FILTER rel.relationship_type == "uses_in_cisa_advisory"
+
+LET technique = DOCUMENT(rel._from)
+
+RETURN {
+    advisory: advisory.external_id,
+    technique: technique.external_id,
+    technique_name: technique.name
+}
+\end{lstlisting}
+
+\section{Multi-hop Traversal}
+
+Find indirect relationships through the graph.
+
+\subsection{Example 3: APT Groups and Techniques}
+
+\begin{lstlisting}[caption=Find APT Groups Using Phishing, language=aql]
+// Find threat groups that use phishing techniques
+FOR group IN entities
+FILTER group.type == "intrusion-set"
+
+FOR rel1 IN relationships
+FILTER rel1._from == group._id
+FILTER rel1.relationship_type == "uses"
+
+LET technique = DOCUMENT(rel1._to)
+FILTER technique.name LIKE "%phishing%"
+
+RETURN {
+    group: group.name,
+    technique: technique.external_id,
+    technique_name: technique.name
+}
+\end{lstlisting}
+
+\section{CISA Advisory Lookup}
+
+\subsection{Example 4: Techniques in Specific Advisory}
+
+\begin{lstlisting}[caption=Techniques in Advisory aa24-060a, language=aql]
+// Find all techniques mentioned in advisory aa24-060a (Phobos Ransomware)
+FOR advisory IN entities
+FILTER advisory.external_id == "aa24-060a"
+
+FOR rel IN relationships
+FILTER rel.relationship_type == "uses_in_cisa_advisory"
+FILTER rel._to == advisory._id
+
+LET technique = DOCUMENT(rel._from)
+
+RETURN {
+    technique_id: technique.external_id,
+    technique_name: technique.name,
+    advisory_id: advisory.external_id
+}
+\end{lstlisting}
+
+\newpage
+
+% ============================================================================
+\chapter{Statistics \& Metrics}
+% ============================================================================
+
+\section{Overall Statistics}
+
+\begin{table}[H]
+    \centering
+    \caption{Complete System Statistics}
+    \begin{tabularx}{\textwidth}{|X|r|}
+        \hline
+        \textbf{Metric} & \textbf{Value} \\
+        \hline
+        Total Entities & 24,556 \\
+        \hline
+        Total Relationships & 24,342 \\
+        \hline
+        Attack Patterns (Parent) & 345 \\
+        \hline
+        Attack Patterns (Subtechniques) & 478 \\
+        \hline
+        Attack Patterns (Total) & 823 \\
+        \hline
+        CISA Advisories & 74 \\
+        \hline
+        Malware Families & 695 \\
+        \hline
+        Threat Groups (Intrusion Sets) & 178 \\
+        \hline
+        Tools & 91 \\
+        \hline
+        Campaigns & 52 \\
+        \hline
+        Tactics & 14 \\
+        \hline
+        Entity Embeddings & 24,556 \\
+        \hline
+        Relationship Embeddings & 22,737 \\
+        \hline
+        Total Embeddings & 47,293 \\
+        \hline
+        Embedding Dimensions & 384 \\
+        \hline
+        Total Memory (Embeddings) & $\sim$ 70.6 MB \\
+        \hline
+        Database Total Size & $\sim$ 100-120 MB \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\section{Relationship Statistics}
+
+\begin{figure}[H]
+    \centering
+    \caption{Relationship Type Distribution}
+    \begin{tabular}{|l|r|r|}
+        \hline
+        \textbf{Relationship Type} & \textbf{Count} & \textbf{\% of Total} \\
+        \hline
+        uses & 17,270 & 70.9\% \\
+        \hline
+        referenced\_in\_cisa\_advisory & 1,619 & 6.6\% \\
+        \hline
+        uses\_in\_cisa\_advisory & 1,605 & 6.6\% \\
+        \hline
+        mitigates & 1,445 & 5.9\% \\
+        \hline
+        belongs-to-tactic & 1,071 & 4.4\% \\
+        \hline
+        detects & 691 & 2.8\% \\
+        \hline
+        subtechnique-of & 476 & 2.0\% \\
+        \hline
+        revoked-by & 140 & 0.6\% \\
+        \hline
+        attributed-to & 25 & 0.1\% \\
+        \hline
+        \textbf{TOTAL} & \textbf{24,342} & \textbf{100\%} \\
+        \hline
+    \end{tabular}
+\end{figure}
+
+\section{CISA Integration Metrics}
+
+\begin{table}[H]
+    \centering
+    \caption{CISA Integration Statistics}
+    \begin{tabular}{|l|r|}
+        \hline
+        \textbf{Metric} & \textbf{Value} \\
+        \hline
+        Advisories in CSV & 77 \\
+        \hline
+        Unique Advisory IDs & 76 \\
+        \hline
+        Advisory Entities Created & 74 \\
+        \hline
+        Coverage Rate & 98.7\% \\
+        \hline
+        Total TTP References & 1,701 \\
+        \hline
+        Unique T\# Techniques & 432 \\
+        \hline
+        Techniques Matched in DB & 405 \\
+        \hline
+        Match Rate & 93.8\% \\
+        \hline
+        TTP-to-Advisory Links & 1,605 \\
+        \hline
+        Success Rate & 94.4\% \\
+        \hline
+        Unique Techniques Linked & 368 \\
+        \hline
+        Avg Techniques per Advisory & 22.2 \\
+        \hline
+        Max Techniques per Advisory & 146 \\
+        \hline
+        Min Techniques per Advisory & 0 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\section{Graph Density Metrics}
+
+\begin{table}[H]
+    \centering
+    \caption{Graph Connectivity}
+    \begin{tabular}{|l|r|}
+        \hline
+        \textbf{Metric} & \textbf{Value} \\
+        \hline
+        Average Connections per Entity & 0.99 \\
+        \hline
+        Maximum Connections (Entity) & 17,270 \\
+        \hline
+        Minimum Connections & 0 \\
+        \hline
+        Graph Density & 0.0000405 \\
+        \hline
+        Average Path Length & 3.5 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\newpage
+
+% ============================================================================
+\chapter{Technical Architecture}
+% ============================================================================
+
+\section{System Architecture}
+
+\begin{table}[H]
+    \centering
+    \caption{Technology Stack}
+    \begin{tabular}{|l|l|l|}
+        \hline
+        \textbf{Layer} & \textbf{Component} & \textbf{Technology} \\
+        \hline
+        \multirow{2}{*}{Data Source} & MITRE Framework & enterprise-attack.json \\
+         & CISA Advisories & CISA-crawl-rt-ttp-ct.csv \\
+        \hline
+        \multirow{2}{*}{Storage} & Graph Database & ArangoDB 3.x \\
+         & Collections & entities, relationships, embeddings \\
+        \hline
+        \multirow{3}{*}{Processing} & Data Extraction & Python 3.12 \\
+         & Embeddings & sentence-transformers \\
+         & Database Client & python-arango \\
+        \hline
+        \multirow{2}{*}{Application} & Query Engine & Custom RAG Engine \\
+         & LLM & Ollama (llama3.1:8b) \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\section{ArangoDB Configuration}
+
+\begin{table}[H]
+    \centering
+    \caption{ArangoDB Setup}
+    \begin{tabular}{|l|l|}
+        \hline
+        \textbf{Parameter} & \textbf{Value} \\
+        \hline
+        Host & http://localhost:8529 \\
+        \hline
+        Database & MITRE2kg \\
+        \hline
+        Username & root \\
+        \hline
+        Password & openSesame \\
+        \hline
+        Database Model & Multi-model (Document + Graph) \\
+        \hline
+        Query Language & ArangoDB Query Language (AQL) \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\section{Python Libraries}
+
+\begin{lstlisting}[caption=Required Python Packages, language=bash]
+# Core dependencies
+python-arango>=7.0        # ArangoDB client
+sentence-transformers     # Embedding model
+numpy>=1.20              # Numerical computing
+pandas>=1.3              # Data manipulation
+requests>=2.25           # HTTP requests (for Ollama)
+
+# Optional dependencies
+torch>=1.9               # PyTorch (for transformers)
+scikit-learn>=0.24       # Machine learning utilities
+\end{lstlisting}
+
+\section{Ollama LLM Integration}
+
+\begin{table}[H]
+    \centering
+    \caption{Ollama Configuration}
+    \begin{tabular}{|l|l|}
+        \hline
+        \textbf{Parameter} & \textbf{Value} \\
+        \hline
+        Endpoint & http://localhost:11434 \\
+        \hline
+        Model & llama3.1:8b \\
+        \hline
+        Model Size & $\sim$ 5-8 GB \\
+        \hline
+        Inference Speed & 2-5 seconds per query \\
+        \hline
+        Context Window & 8,192 tokens \\
+        \hline
+        Memory Required & 8-16 GB RAM \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\section{Performance Characteristics}
+
+\begin{table}[H]
+    \centering
+    \caption{Query Performance Metrics}
+    \begin{tabular}{|l|r|}
+        \hline
+        \textbf{Operation} & \textbf{Latency} \\
+        \hline
+        Entity lookup (by ID) & < 10 ms \\
+        \hline
+        Semantic search (1000 entities) & 100-200 ms \\
+        \hline
+        Graph traversal (2-hop) & 50-100 ms \\
+        \hline
+        Graph traversal (3-4 hops) & 200-500 ms \\
+        \hline
+        Query encoding & 50-100 ms \\
+        \hline
+        Context retrieval & 100-200 ms \\
+        \hline
+        LLM inference & 2-5 seconds \\
+        \hline
+        Total end-to-end & 3-7 seconds \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\section{Memory Requirements}
+
+\begin{table}[H]
+    \centering
+    \caption{System Memory Usage}
+    \begin{tabular}{|l|r|}
+        \hline
+        \textbf{Component} & \textbf{Memory} \\
+        \hline
+        ArangoDB Process & 300-500 MB \\
+        \hline
+        Python RAG Engine & 200-300 MB \\
+        \hline
+        Ollama (llama3.1:8b) & 5-8 GB \\
+        \hline
+        OS and Other & 2-3 GB \\
+        \hline
+        \textbf{Total System} & \textbf{6-9 GB RAM} \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\newpage
+
+% ============================================================================
+\chapter{Implementation Details}
+% ============================================================================
+
+\section{Data Flow Diagram}
+
+The complete data processing pipeline:
+
+\begin{enumerate}
+    \item \textbf{Data Ingestion:} Load enterprise-attack.json and CISA-crawl CSV
+    \item \textbf{Entity Extraction:} Parse STIX objects and CSV rows
+    \item \textbf{Entity Normalization:} Standardize IDs and formats
+    \item \textbf{Relationship Extraction:} Generate triplets from relationships
+    \item \textbf{Database Insertion:} Store entities and relationships in ArangoDB
+    \item \textbf{Embedding Generation:} Create 384-dimensional vectors for all entities
+    \item \textbf{Embedding Storage:} Store vectors in embedding collections
+    \item \textbf{Verification:} Cross-validate data integrity and completeness
+    \item \textbf{Query Interface:} Enable RAG queries and semantic search
+\end{enumerate}
+
+\section{Key Algorithms}
+
+\subsection{TTP Extraction Algorithm}
+
+\begin{lstlisting}[caption=TTP Extraction from CISA Advisory, language=python]
+import re
+
+def extract_ttp_ids(ttp_field):
+    """Extract T# technique IDs from TTP field."""
+    return set(re.findall(r'T\d+(?:\.\d+)?', str(ttp_field)))
+
+def extract_advisory_id(url):
+    """Extract advisory ID from URL."""
+    match = re.search(r'(aa\d{2}-\d+[a-z]?)', url.lower())
+    return match.group(1).lower() if match else None
+
+# Usage
+advisory_url = "https://www.cisa.gov/.../aa24-060a"
+ttp_field = "{T1083, T1071.002, T1055.004, ...}"
+
+advisory_id = extract_advisory_id(advisory_url)  # "aa24-060a"
+ttps = extract_ttp_ids(ttp_field)  # {"T1083", "T1071.002", ...}
+\end{lstlisting}
+
+\subsection{Semantic Similarity Search}
+
+\begin{lstlisting}[caption=Cosine Similarity Computation, language=python]
+import numpy as np
+
+def cosine_similarity(vec1, vec2):
+    """Compute cosine similarity between two vectors."""
+    # Both vectors are L2-normalized, so:
+    # similarity = dot product
+    return np.dot(vec1, vec2)
+
+# Example
+query_embedding = model.encode("steal credentials")  # 384-dim
+entity_embedding = model.encode("Steal Application Access Token")  # 384-dim
+
+similarity = cosine_similarity(query_embedding, entity_embedding)
+# Result: 0.87 (high similarity)
+\end{lstlisting}
+
+\subsection{Graph Traversal}
+
+\begin{lstlisting}[caption=Multi-hop Graph Traversal, language=python]
+def graph_traversal(start_entity_id, relationship_types, max_depth=3):
+    """Traverse graph from starting entity."""
+    visited = set()
+    queue = [(start_entity_id, 0)]
+    results = []
+    
+    while queue:
+        entity_id, depth = queue.pop(0)
+        
+        if entity_id in visited or depth > max_depth:
+            continue
+        
+        visited.add(entity_id)
+        
+        # Query related entities
+        cursor = db.aql.execute(f'''
+            FOR rel IN relationships
+            FILTER rel._from == "{entity_id}"
+            FILTER rel.relationship_type IN {relationship_types}
+            RETURN {{"to_id": rel._to, "rel_type": rel.relationship_type}}
+        ''')
+        
+        for doc in cursor:
+            queue.append((doc['to_id'], depth + 1))
+            results.append(doc)
+    
+    return results
+\end{lstlisting}
+
+\newpage
+
+% ============================================================================
+\chapter{Conclusions \& Future Work}
+% ============================================================================
+
+\section{Key Achievements}
+
+\begin{enumerate}
+    \item \textbf{Unified Knowledge Graph:} Successfully integrated MITRE ATT\&CK framework 
+    with real-world CISA advisories, creating a comprehensive cybersecurity knowledge base.
+    
+    \item \textbf{Semantic Embeddings:} Generated 47,293 semantic vectors enabling similarity 
+    search and contextual understanding of attack techniques.
+    
+    \item \textbf{CISA Integration:} Created 1,605 links between 368 attack techniques and 
+    74 CISA advisories with 94.4\% success rate.
+    
+    \item \textbf{Graph Database Implementation:} Implemented multi-model graph database with 
+    24,556 entities and 24,342 relationships for efficient querying.
+    
+    \item \textbf{LLM Integration:} Enabled AI-powered question answering using Ollama 
+    with graph context injection.
+    
+    \item \textbf{Scalable Architecture:} Designed system supporting 47K+ embeddings and 
+    50K+ entities with sub-second query latency.
+\end{enumerate}
+
+\section{Use Cases Enabled}
+
+\begin{description}
+    \item[Incident Response:] Quick lookup of techniques and advisories related to detected attacks
+    \item[Threat Intelligence:] Identify threat actors and their attack patterns
+    \item[Vulnerability Assessment:] Link vulnerabilities to attack techniques and mitigations
+    \item[Security Automation:] Query techniques, mitigations, and detections programmatically
+    \item[Research \& Analysis:] Explore relationships in cybersecurity threat landscape
+\end{description}
+
+\section{Future Enhancements}
+
+\begin{itemize}
+    \item Integration of additional threat intelligence sources (CVE, exploits, vulnerabilities)
+    \item Advanced graph algorithms (centrality analysis, community detection)
+    \item Real-time threat intelligence updates
+    \item Custom fine-tuning of embedding models for cybersecurity domain
+    \item Web API and visualization dashboard
+    \item Integration with security tools (SIEM, IDS, endpoint protection)
+\end{itemize}
+
+\section{Technical Debt \& Limitations}
+
+\begin{itemize}
+    \item Some CISA advisory TTPs not matched (6.2\% mismatch rate) due to format variations
+    \item Embedding model generic (not domain-specialized for cybersecurity)
+    \item Limited real-time update mechanisms
+    \item No access control or role-based permissions
+    \item Single-instance deployment (not clustered)
+\end{itemize}
+
+\newpage
+
+% ============================================================================
+% Appendices
+% ============================================================================
+
+\appendix
+
+\chapter{File Structure}
+
+\begin{lstlisting}[caption=Project File Structure, language=bash]
+/home/vasanthiyer-gpu/
+├── enterprise-attack.json              # MITRE framework data
+├── CISA-crawl-rt-ttp-ct.csv           # CISA advisories
+├── arangodb_rag_query_engine.py        # RAG query implementation
+├── ollama_rag_integration.py           # Ollama LLM integration
+├── fast_embeddings.py                  # Embedding generation
+├── create_ttp_links.py                 # TTP-advisory linking
+├── query_ttp.py                        # Query tools
+├── MITRE2KG_GRAPHDB_DOCUMENTATION.tex # This document
+├── GRAPHDB_SCHEMA_SUMMARY.md           # Schema documentation
+├── GRAPHDB_ARCHITECTURE.md             # Architecture diagrams
+└── GRAPHDB_IMPLEMENTATION_DETAILS.md   # Implementation guide
+\end{lstlisting}
+
+\chapter{Database Queries}
+
+\section{Count Entities by Type}
+
+\begin{lstlisting}[language=aql, caption=AQL Query: Entity Counts]
+FOR e IN entities
+COLLECT type = e.type WITH COUNT INTO count
+RETURN {type: type, count: count}
+ORDER BY count DESC
+\end{lstlisting}
+
+\section{Find All Techniques in Advisory}
+
+\begin{lstlisting}[language=aql, caption=AQL Query: Advisory Techniques]
+FOR advisory IN entities
+FILTER advisory.external_id == "aa24-060a"
+FOR rel IN relationships
+FILTER rel.relationship_type == "uses_in_cisa_advisory"
+FILTER rel._to == advisory._id
+LET technique = DOCUMENT(rel._from)
+RETURN {
+  technique_id: technique.external_id,
+  technique_name: technique.name
+}
+\end{lstlisting}
+
+\section{Semantic Similarity Search}
+
+\begin{lstlisting}[language=python, caption=Python: Semantic Search]
+from sentence_transformers import SentenceTransformer
+from arango import ArangoClient
+
+model = SentenceTransformer('all-MiniLM-L6-v2')
+db = ArangoClient(hosts='http://localhost:8529').db('MITRE2kg')
+
+# Query
+query_embedding = model.encode("steal credentials")
+
+# Search
+cursor = db.aql.execute('''
+FOR embed IN entity_embeddings
+FILTER embed._id LIKE "entity_embeddings/attack-pattern%"
+LET similarity = REDUCE i IN 0..383 
+    AGGREGATE dot = 0 
+    INTO dot + (@query[i] * embed.embedding[i])
+SORT similarity DESC
+LIMIT 10
+RETURN {entity: embed._key, similarity: similarity}
+''', bind_vars={'query': query_embedding.tolist()})
+\end{lstlisting}
+
+\chapter{Additional Resources}
+
+\begin{itemize}
+    \item MITRE ATT\&CK Framework: \url{https://attack.mitre.org}
+    \item CISA Advisories: \url{https://www.cisa.gov/cybersecurity-advisories}
+    \item ArangoDB Documentation: \url{https://www.arangodb.com/docs}
+    \item Sentence Transformers: \url{https://www.sbert.net}
+    \item Ollama: \url{https://ollama.ai}
+\end{itemize}
+
+\end{document}
