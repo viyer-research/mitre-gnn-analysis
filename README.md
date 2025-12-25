@@ -77,7 +77,36 @@ This project combines three powerful approaches for cybersecurity analysis:
    python mitre_graphrag_gnn.py
    ```
 
-## 📊 Key Data Files
+## � Required Datasets
+
+This project requires two external datasets. Download them from the links below and place in a `datasets/` folder:
+
+### 1. MITRE Enterprise ATT&CK Framework
+- **File**: `enterprise-attack.json` (~44 MB)
+- **Source**: [MITRE ATT&CK GitHub](https://github.com/mitre-attack/attack-stix-data/blob/master/enterprise-attack.json)
+- **Description**: Complete MITRE ATT&CK framework with all tactics, techniques, and relationships
+- **Usage**: Core knowledge base for technique analysis
+
+### 2. CISA Crawled Real-Time TTP & CTs Dataset
+- **File**: `CISA-crawl-rt-ttp-ct.csv`
+- **Source**: [CISA ATT&CK Mappings](https://cisagov.github.io/mitre-attack-mappings/) or [CISA GitHub](https://github.com/cisagov)
+- **Description**: CISA's real-time crawled TTP (Tactics, Techniques, Procedures) and Control Techniques mappings
+- **Usage**: Threat intelligence and vulnerability correlation
+
+**Setup Instructions**:
+```bash
+# Create datasets directory
+mkdir -p datasets
+
+# Download the files and place them in the datasets/ folder
+# enterprise-attack.json → datasets/enterprise-attack.json
+# CISA-crawl-rt-ttp-ct.csv → datasets/CISA-crawl-rt-ttp-ct.csv
+
+# Verify downloads
+ls -lh datasets/
+```
+
+## 📊 Generated Data Files
 
 ### Embeddings
 - `embeddings_vectors.tsv` - GNN-generated embeddings
