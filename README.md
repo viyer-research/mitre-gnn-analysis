@@ -83,13 +83,13 @@ This project requires two external datasets. Download them from the links below 
 
 ### 1. MITRE Enterprise ATT&CK Framework
 - **File**: `enterprise-attack.json` (~44 MB)
-- **Source**: [MITRE ATT&CK GitHub](https://github.com/mitre-attack/attack-stix-data/blob/master/enterprise-attack.json)
+- **Source**: [MITRE CTI GitHub](https://github.com/mitre/cti/blob/master/enterprise-attack/enterprise-attack.json)
 - **Description**: Complete MITRE ATT&CK framework with all tactics, techniques, and relationships
 - **Usage**: Core knowledge base for technique analysis
 
 ### 2. CISA Crawled Real-Time TTP & CTs Dataset
 - **File**: `CISA-crawl-rt-ttp-ct.csv`
-- **Source**: [CISA ATT&CK Mappings](https://cisagov.github.io/mitre-attack-mappings/) or [CISA GitHub](https://github.com/cisagov)
+- **Source**: [Zenodo - CISA Dataset](https://zenodo.org/records/14659512)
 - **Description**: CISA's real-time crawled TTP (Tactics, Techniques, Procedures) and Control Techniques mappings
 - **Usage**: Threat intelligence and vulnerability correlation
 
