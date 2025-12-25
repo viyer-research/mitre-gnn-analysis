@@ -267,16 +267,33 @@ See `QUICK_REFERENCE.md` for common tasks and commands.
 
 ### Primary Publication
 
-If you use this project in your research, please cite:
+**Book Chapter**: Instruction-Level Fine-Tuning of Gemma-2B for Cybersecurity and Synthetic Log Generation Aligned with MITRE Adversarial Tactics, Techniques, and Common Knowledge
 
+**Publication Details**:
+- **Book Title**: Artificial Intelligence Driven Forensics
+- **Editors**: S. S. Iyengar, Kenneth G. Furton, Pronab Mohanty, Naveen Kumar Chaudhary
+- **Publisher**: Springer Nature Switzerland
+- **Hardcover ISBN**: 978-3-031-98035-0
+- **eBook ISBN**: 978-3-031-98036-7
+- **Year**: 2025
+- **Authors**: Vasanthi Iyer, Vamshikrishna Challa, Pronab Mohanty, Yashas Hariprasad, S. S. Iyengar
+
+**BibTeX Citation**:
 ```bibtex
-@article{iyer2025gemma,
+@inbook{iyer2025gemma,
+  author={Iyer, Vasanthi and Challa, Vamshikrishna and Mohanty, Pronab and Hariprasad, Yashas and Iyengar, S. S.},
   title={Instruction-Level Fine-Tuning of Gemma-2B for Cybersecurity and Synthetic Log Generation 
           Aligned with MITRE Adversarial Tactics, Techniques, and Common Knowledge},
-  author={Iyer, Vasanthi},
+  booktitle={Artificial Intelligence Driven Forensics},
+  editors={Iyengar, S. S. and Furton, Kenneth G. and Mohanty, Pronab and Chaudhary, Naveen Kumar},
+  publisher={Springer Nature Switzerland},
+  isbn={978-3-031-98035-0},
+  eisbn={978-3-031-98036-7},
   year={2025}
 }
 ```
+
+### Related Frameworks
 
 This work builds upon foundational frameworks:
 
