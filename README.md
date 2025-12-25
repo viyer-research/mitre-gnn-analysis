@@ -263,7 +263,29 @@ See `installer.sh` for automatic setup.
 
 See `QUICK_REFERENCE.md` for common tasks and commands.
 
-## 📄 License
+## � Citation & References
+
+### Primary Publication
+
+If you use this project in your research, please cite:
+
+```bibtex
+@article{iyer2025gemma,
+  title={Instruction-Level Fine-Tuning of Gemma-2B for Cybersecurity and Synthetic Log Generation 
+          Aligned with MITRE Adversarial Tactics, Techniques, and Common Knowledge},
+  author={Iyer, Vasanthi},
+  year={2025}
+}
+```
+
+This work builds upon foundational frameworks:
+
+- **MITRE ATT&CK**: [MITRE Corporation CTI](https://github.com/mitre/cti)
+- **GraphRAG**: Graph-based Retrieval-Augmented Generation
+- **Graph Neural Networks**: PyTorch Geometric framework
+- **Sentence Transformers**: [Hugging Face Models](https://huggingface.co/sentence-transformers)
+
+## �📄 License
 
 This project integrates MITRE ATT&CK framework under appropriate licensing terms.
 
